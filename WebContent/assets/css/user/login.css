@@ -1,0 +1,152 @@
+.container{
+  overflow: hidden;
+
+}
+.container .content{
+  padding-top: 92px;
+
+}
+.at-content{
+  padding: 0 0 50px;
+  display: flex;
+justify-content: center   ; 
+padding: 250px;
+}
+.custom-login{
+  margin-top: 0;
+}
+.login-header{
+  margin: 0;
+  padding: 0;
+}
+.amina-header{
+  padding-bottom: 20px;
+  font-size: 22px;
+}
+.login-body{
+  margin: 0;
+  padding: 0;
+}
+.tab-content-active{
+  display: block;
+}
+.login-weap{
+  margin: 0;
+  padding: 0;
+}
+.magin-bottom{
+  margin-bottom: 0;
+}
+.tab-content input[type=text]{
+  height: 45px;
+  padding: 0 0 0 13px;
+  font-size: 14px;
+  line-height: 45px;
+  width: 485px;
+}
+.login-from .from-group{
+  margin-bottom: 10px;
+}
+.input[type=password]{
+height: 45px;
+padding: 0 0 0 13px;
+font-size: 14px;
+line-height: 45px;
+}
+.tab-content .login-opt{
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.tab-content .login-opt input[type=checkbox]{
+  display: none;
+}
+.tab-content .login-opt input + label{
+  width: 520px;
+  height: 55px;
+  font-size: 16px;
+  padding: 0 28px;
+  line-height: 15px;
+}
+.container{
+
+}
+ .login-opt{
+  display: flex;
+  justify-content: center;
+} 
+.login-btn{
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.login-btn .btn-login{
+  background-color: #D61C6A;
+  padding: 15px 0;
+  width: 100%;
+  font-size: 18px;
+  color: #fff;  
+  cursor: pointer;
+  
+}
+
+.regis-wrap{
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+.ul{
+  margin: 0;
+  padding: 0;
+}
+.regsi-wrap ul li:first-child{
+  margin-top: 0;
+}
+.regis-wrap ul li{
+  position: relative;
+  padding-left: 10px;
+  overflow: hidden;
+}
+.li{
+  list-style: none; 
+}
+
+.regis-wrap ul li a{
+  width: 150px;
+  float: right;
+  display: block;
+  height: 37px;
+  line-height: 37px;
+  font-size: 13px;
+  font-weight: 400px;
+  text-align: center;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.join-n-find-wrap{
+  font-size: 15px;
+  line-height: 3;
+  padding-left: 10px;
+}
+
+.amina-header-lato{
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-align: center;
+}
+.but{
+/* cursor: pointer; */
+}
+
+.form-group{
+  margin-bottom: 20px;
+}
+
+a{
+  text-decoration-line: none;
+}
+
+span{
+  font-size: 13px;
+}

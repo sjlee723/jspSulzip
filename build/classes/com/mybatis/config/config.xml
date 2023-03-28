@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+
+	<typeAliases>
+		<typeAlias type="com.sulzip.app.user.dto.UserDTO" alias="UserDTO"/>
+		<typeAlias type="com.sulzip.app.clientboard.dto.ClientBoardDTO" alias="ClientBoardDTO"/>
+		<typeAlias type="com.sulzip.app.clientboardanswer.dto.ClientBoardAnswerDTO" alias="ClientBoardAnswerDTO"/>
+		<typeAlias type="com.sulzip.app.partners.dto.PartnersDTO" alias="PartnersDTO"/>
+		<typeAlias type="com.sulzip.app.pmbridge.dto.PmBridgeDTO" alias="PmBridgeDTO"/>
+		<typeAlias type="com.sulzip.app.psbridge.dto.PsBridgeDTO" alias="PsBridgeDTO"/>
+		<typeAlias type="com.sulzip.app.file.dto.FileDTO" alias="FileDTO"/>
+		<typeAlias type="com.sulzip.app.myrecipeboard.dto.MyRecipeBoardDTO" alias="MyRecipeBoardDTO"/>
+		<typeAlias type="com.sulzip.app.cart.dto.CartDTO" alias="CartDTO"/>
+		<typeAlias type="com.sulzip.app.order.dto.OrderDTO" alias="OrderDTO"/>
+		<typeAlias type="com.sulzip.app.sulkit.dto.SulkitDTO" alias="SulkitDTO"/>
+		<typeAlias type="com.sulzip.app.product.dto.ProductDTO" alias="ProductDTO"/>
+		<typeAlias type="com.sulzip.app.category.dto.CategoryDTO" alias="CategoryDTO"/>
+		
+	</typeAliases>
+
+	<environments default="mysql">
+		<environment id="mysql">
+		<transactionManager type="JDBC"/>
+		<dataSource type="POOLED">
+			<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+			<property name="url" value="jdbc:mysql://localhost:3306/sulzip"/>
+			<property name="username" value="root"/>
+			<property name="password" value="1234"/>
+		</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="com/mybatis/mapper/PmBridgeMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/PsBridgeMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/CartMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/CategoryMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/ClientBoardAnswerMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/ClientBoardMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/FileMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/MyRecipeBoardMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/OrderMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/PartnersMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/ProductMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/SulkitMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/UserMapper.xml"/>
+	</mappers>
+	
+</configuration>

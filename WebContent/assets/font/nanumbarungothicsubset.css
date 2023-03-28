@@ -1,0 +1,60 @@
+/* @font-face {
+    font-family: 'NanumBarunGothic';
+    font-weight: 400;
+    src: url(/font/nanumbarungothic/NanumBarunGothicSubset.eot);
+    src: url(/font/nanumbarungothic/NanumBarunGothicSubset.eot?#iefix) format('embedded-opentype'),
+         url(/font/nanumbarungothic/NanumBarunGothicSubset.woff) format('woff'),
+         url(/font/nanumbarungothic/NanumBarunGothicSubset.ttf) format('truetype');
+   }
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-weight: 700;
+    src: url(/font/nanumbarungothic/NanumBarunGothicBoldSubset.eot);
+    src: url(/font/nanumbarungothic/NanumBarunGothicBoldSubset.eot?#iefix) format('embedded-opentype'),
+         url(/font/nanumbarungothic/NanumBarunGothicBoldSubset.woff) format('woff'),
+         url(/font/nanumbarungothic/NanumBarunGothicBoldSubset.ttf) format('truetype');
+   }
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-weight: 300;
+    src: url(/font/nanumbarungothic/NanumBarunGothicLightSubset.eot);
+    src: url(/font/nanumbarungothic/NanumBarunGothicLightSubset.eot?#iefix) format('embedded-opentype'),
+         url(/font/nanumbarungothic/NanumBarunGothicLightSubset.woff) format('woff'),
+         url(/font/nanumbarungothic/NanumBarunGothicLightSubset.ttf) format('truetype');
+   }
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-weight: 200;
+    src: url(/font/nanumbarungothic/NanumBarunGothicUltraLightSubset.eot);
+    src: url(/font/nanumbarungothic/NanumBarunGothicUltraLightSubset.eot?#iefix) format('embedded-opentype'),
+         url(/font/nanumbarungothic/NanumBarunGothicUltraLightSubset.woff) format('woff'),
+         url(/font/nanumbarungothic/NanumBarunGothicUltraLightSubset.ttf) format('truetype');
+   } */
+
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+   
+   .nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }

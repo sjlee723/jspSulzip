@@ -1,0 +1,82 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.h-header {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.h-title-page {
+  width: 1050px;
+  height: 100%;
+  margin: 0 auto;
+  /* border-bottom: 1px solid; */
+  /* background-color: wheat; */
+}
+
+.h-top-line {
+  width: 1050px;
+  height: 100px;
+  /* background-color: palevioletred; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.h-logo {
+  width: 110px;
+  height: 100px;
+}
+
+.h-logo > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.h-cart > a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.h-join > a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.h-join {
+  border-right: 1px solid#ddd;
+}
+
+.h-line-right {
+  display: flex;
+  align-items: flex-start;
+}
+
+.h-ctg {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.h-bottom-line > ul > li {
+  margin-right: 60px;
+}
+
+.h-ctg > li > a {
+  color: #d9d9d9;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration-line: none;
+}
