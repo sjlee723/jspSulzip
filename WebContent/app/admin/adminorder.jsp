@@ -1,11 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>adminproduct</title>
-    <link rel="stylesheet" href="../css/adminproduct.css" />
+    <title>Order</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/admin/adminorder.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+    <style>
+      * {
+        font-family: "NanumBarunGothic", sans-serif;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -14,7 +22,7 @@
       </div>
     </header>
     <main>
-      <div class="main-container">
+      <div class="order-container">
         <!-- 사이드바 -->
         <div class="side-bar">
           <ul>
@@ -69,75 +77,50 @@
             <li><a href="">로그아웃</a></li>
           </ul>
         </div>
-        <!-- 상품관리 메인페이지 -->
-        <div class="product-management">
-          <div class="product-title"><span>상품관리</span></div>
-          <div class="product-total">
-            <div class="product-ea"><span>전체</span><span>210</span>개</div>
-            <div class="product-ea"><span>칵테일키트</span><span>36</span>개</div>
-            <div class="product-ea"><span>술</span><span>50</span>개</div>
-            <div class="product-ea"><span>재료</span><span>34</span>개</div>
-            <div class="product-ea"><span>용품</span><span>17</span>개</div>
+        <!-- 주문관리 메인페이지 -->
+        <div class="order-management">
+          <div class="order-title"><span>주문관리</span></div>
+          <div class="order-select">
+            <div class="order-select-ctg"><span>기간</span></div>
+            <div class="date-select">
+              <button>오늘</button>
+              <button>7일</button>
+              <button>1개월</button>
+              <input type="date" />~<input type="date" />
+            </div>
           </div>
-          <div class="new-product"><button>상품등록</button></div>
-          <!-- 상품검색 카테고리 -->
-          <div class="search-title"><span>상품검색</span></div>
-          <div class="product-search">
-            <div class="search-column"><span>상품명</span></div>
+          <div class="order-select2">
+            <div class="order-select-ctg"><span>검색어</span></div>
             <div class="search-select">
-              <select name="국문" id="product-name">
-                <option value="1">국문</option>
-                <option value="2">영문</option>
+              <select name="주문번호" id="order-ctg">
+                <option value="1">주문번호</option>
+                <option value="2">주문자명</option>
+                <option value="3">주문자ID</option>
               </select>
-              <input type="text" />
             </div>
-          </div>
-          <div class="product-search">
-            <div class="search-column2"><span>상품구분</span></div>
-            <div class="search-select2">
-              <span>전체</span><input type="radio" name="product" value="전체" /> <span>칵테일키트</span
-              ><input type="radio" name="product" value="칵테일키트" /> <span>술</span
-              ><input type="radio" name="product" value="술" /> <span>재료</span
-              ><input type="radio" name="product" value="재료" /> <span>용품</span
-              ><input type="radio" name="product" value="용품" />
-            </div>
-          </div>
-          <div class="product-search">
-            <div class="search-column3"><span>상품가격</span></div>
-            <div class="search-select3"><input type="text" /><span>원</span></div>
           </div>
           <div class="search-btn">
             <button>검색</button>
             <button>초기화</button>
           </div>
-          <!-- 상품목록 -->
-          <div class="product-list">
-            <div class="list-title"><span>상품목록</span></div>
-            <div class="product-total"><span>총 </span><span>200</span>개</div>
-            <div class="product-status">
-              <div class="status-btn">
-                <button>진열함</button>
-                <button>진열안함</button>
-                <button>분류수정</button>
-                <button>삭제</button>
-              </div>
-            </div>
-            <div class="product-ctg">
-              <div class="ctg-box">
-                <div class="check"><input type="checkbox" /></div>
-                <div class="code"><span>상품코드</span></div>
-                <div class="ctg"><span>상품구분</span></div>
-                <div class="name"><span>상품명</span></div>
-                <div class="price"><span>판매가</span></div>
-              </div>
-            </div>
+          <div class="order-list-ctg">
+            <div class="ctg-list-title"><span>주문조회</span></div>
             <div class="ctg-list">
-              <div class="ctg-list-box">
-                <div class="list-check"><input type="checkbox" /></div>
-                <div class="list-code"><span>상품코드</span></div>
-                <div class="list-ctg"><span>상품구분</span></div>
-                <div class="list-name"><span>상품명</span></div>
-                <div class="list-price"><span>판매가</span></div>
+              <div class="order-date"><span>주문일</span></div>
+              <div class="order-num"><span>주문번호</span></div>
+              <div class="order-name"><span>주문자</span></div>
+              <div class="order-product-name"><span>상품명</span></div>
+              <div class="order-price"><span>결제금액</span></div>
+              <div class="order-pay"><span>결제수단</span></div>
+            </div>
+            <div class="ctg-list-select">
+              <div class="ctg-list-2">
+                <div class="list-date"><span>주문일</span></div>
+                <div class="list-num"><span>주문번호</span></div>
+                <div class="list-name"><span>주문자</span></div>
+                <div class="list-product-name"><span>상품명</span></div>
+                <div class="list-price"><span>결제금액</span></div>
+                <div class="list-pay"><span>결제수단</span></div>
               </div>
             </div>
           </div>
