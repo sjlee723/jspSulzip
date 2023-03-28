@@ -1,0 +1,153 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sulkitdetail</title>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/sulkit/sulkitdetails.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="asidebar">
+      <div class="list-nav">
+        <span class="text-muted1">홈 >
+          <span class="text-muted2">술키트</span>
+        </span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="${pageContext.request.contextPath}/assets/img/sulkit/cosmopolitan-1.jpg" class="img-fluid rounded-start" alt="코스모폴리탄이미지">
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title">코스모폴리탄 칵테일</h5>
+              <p class="card-text"><small class="text-muted">Cosmopolitan Cocktail</small></p>
+              <p class="card-text">대표적인 레이디킬러 칵테일</p>
+              <div class="row price-area1">
+                <div class="col-3">
+                  <p id="unit_price">31,500</p>
+                </div>
+                <div class="col-9" style="text-align: right;">
+                  <button type="button" class="btn btn-outline-secondary" onclick="fn_price_cal('-');">-</button>
+                  <input type="text" class="select-num" value="1" size="1" readonly="readonly"/>
+                  <button type="button" class="btn btn-outline-secondary" onclick="fn_price_cal('+');">+</button>
+                </div>
+              </div>
+              <div class="row price-area2">
+                <div class="col-12" style="text-align: right;">
+                  <span>총 수량</span><span id="total_num">&nbsp;&nbsp;1</span><span>&nbsp;개&nbsp;&nbsp;|&nbsp;&nbsp;</span><span id="price">15,800</span><span class="won">&nbsp;원</span>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-5"></div>
+                <div class="col-7">
+                  <button class="btn btn-outline-secondary btn-sm">장바구니 담기</button>
+                  <button class="btn btn-danger btn-sm">바로 구매하기</button>
+                </div>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="myrecipe-detail-container">
+    <div class="detail">
+      <!-- 제료 설명 -->
+      <div class="section-1">
+        <div class="ingre-title"><span>레시피 정보</span></div>
+        <div class="ingre-box">
+          <div class="ingre">
+            <div class="ingre-icon"></div>
+            <div class="span">
+              <div class="name"><span>딸기 리큐르</span></div>
+              <div class="vol"><span id="vol">22ml</span></div>
+            </div>
+          </div>
+          <div class="ingre">
+            <div class="ingre-icon"></div>
+            <div class="span">
+              <div class="name"><span>블루 큐라소</span></div>
+              <div class="vol"><span id="vol">22ml</span></div>
+            </div>
+          </div>
+          <div class="ingre">
+            <div class="ingre-icon"></div>
+            <div class="span">
+              <div class="name"><span>우유</span></div>
+              <div class="vol"><span id="vol">10drops</span></div>
+            </div>
+          </div>
+          <div class="ingre">
+            <div class="ingre-icon"></div>
+            <div class="span">
+              <div class="name"><span>보드카</span></div>
+              <div class="vol"><span id="vol">30ml</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 레시피 설명 -->
+      <div class="section-2">
+        <div class="recipe-title"></div>
+        <div class="recipe-box">
+          <p>
+            칵테일 잔 칠링 믹싱글라스에 얼음 보드카 1oz(약하게 먹고싶다면 없애도 된다) 딸기, 블루큐라소 3/4oz 칵테일
+            잔에 따라주고 우유 돌려가며 10방울정도 떨궈주면 완성.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="it-content">
+    <img src="..." alt="상품정보이미지">
+  </div>
+</body>
+
+<script type="text/javascript">
+  function fn_price_cal(sign){
+    let unit_price = $("#unit_price").text();
+    unit_price = unit_price.replace(/\,/g,"");
+    unit_price *= 1;
+
+    let total_num  = $("#total_num").text();
+    total_num *= 1;
+    if(sign == "+"){    
+      $("#total_num").text(total_num+1);
+      $(".select-num").val(total_num+1);
+    }else if(sign == "-"){ 
+      if(total_num == 1){
+         alert("최소 1개이상 선택 가능합니다.");
+         return false; 
+      }
+      $("#total_num").text(total_num-1);
+      $(".select-num").val(total_num-1);
+    }
+
+    let cal_price = $(".select-num").val()*unit_price;
+    cal_price += "";
+    cal_price = cal_price.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+    console.log(cal_price);
+    $("#price").text(cal_price);
+  }
+  </script>
+
+</html>
