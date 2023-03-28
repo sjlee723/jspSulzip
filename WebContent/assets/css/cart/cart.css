@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .cart-header {
+    font-size: 30px;
+    margin: 40px;
+  }
+  
+  .cart-content-title {
+    margin: 25px;
+  }
+  
+  .cart-user-name {
+    color: #D61C6A;
+  }
+  
+  .cart-table {
+    border-top: 2px solid #D61C6A;
+    border-spacing: 0;
+  }
+  
+  .cart-tr1 {
+    height: 50px;
+  }
+  
+  .cart-tr1 > th {
+    border-bottom: 4px solid #f5f5f7;
+  }
+  
+  .cart-tr2 > td {
+    padding: 20px;
+  }
+  
+  .product_name {
+    text-align: left;
+  }
+  
+  .item-name-links {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .cart-tfoot {
+    background-color: #f5f5f7;
+  }
+  
+  .cart-sum-price-notice {
+    text-align: right;
+    padding: 40px 80px 40px 0;
+    font-size: 20px;
+  }
+  
+  .cart-sum-price {
+    color: #D61C6A;
+  }
+  
+  .cart-select-delete {
+    margin: 20px 10px;
+    padding: 7px 10px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    float: left;
+    cursor: pointer;
+  }
+  
+  .cart-select-delete-wrap {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 1400px;
+    margin: 20px auto;
+  }
+  .cart-buy-btn {
+    margin: 20px 10px;
+    padding: 10px 25px;
+    border-radius: 3px;
+    border: 0;
+    text-decoration: none;
+    background-color: #D61C6A;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .cart-buy-btn-wrap {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+  }
+  
+  .cart-table {
+    margin: 0 auto;
+  }
+  
+  .quantity {
+    margin-bottom: 10px;
+  }
+  
+  .quantity::after {
+    content: "개";
+  }

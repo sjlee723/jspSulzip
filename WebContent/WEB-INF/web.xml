@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>sulzip</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file><!-- 메인 페이지 jsp파일 경로 넣기 --></welcome-file>
+  </welcome-file-list>
+  
+  
+    <servlet>
+		<servlet-name>User</servlet-name>
+		<servlet-class>com.sulzip.app.user.UserFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>User</servlet-name>
+		<url-pattern>*.usr</url-pattern>
+	</servlet-mapping>
+
+  
+    <servlet>
+		<servlet-name>ClientBoard</servlet-name>
+		<servlet-class>com.sulzip.app.clientboard.clientBoardFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ClientBoard</servlet-name>
+		<url-pattern>*.clb</url-pattern>
+	</servlet-mapping>
+
+
+    <servlet>
+		<servlet-name>ClientBoardAnswer</servlet-name>
+		<servlet-class>com.sulzip.app.clientboardanswer.clientBoardAnswerFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ClientBoardAnswer</servlet-name>
+		<url-pattern>*.cba</url-pattern>
+	</servlet-mapping>
+
+  
+    <servlet>
+		<servlet-name>Partners</servlet-name>
+		<servlet-class>com.sulzip.app.partners.PartnersFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Partners</servlet-name>
+		<url-pattern>*.ptn</url-pattern>
+	</servlet-mapping>
+  
+  
+  	<servlet>
+		<servlet-name>PmBridge</servlet-name>
+		<servlet-class>com.sulzip.app.pmbridge.PmBridgeFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PmBridge</servlet-name>
+		<url-pattern>*.pmb</url-pattern>
+	</servlet-mapping>
+
+
+  	<servlet>
+		<servlet-name>PsBridge</servlet-name>
+		<servlet-class>com.sulzip.app.psbridge.PsBridgeFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PsBridge</servlet-name>
+		<url-pattern>*.psb</url-pattern>
+	</servlet-mapping>
+
+
+  	<servlet>
+		<servlet-name>File</servlet-name>
+		<servlet-class>com.sulzip.app.file.FileFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>File</servlet-name>
+		<url-pattern>*.fil</url-pattern>
+	</servlet-mapping>  
+
+
+  	<servlet>
+		<servlet-name>MyRecipeBoard</servlet-name>
+		<servlet-class>com.sulzip.app.myrecipeboard.MyRecipeBoardFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MyRecipeBoard</servlet-name>
+		<url-pattern>*.mrb</url-pattern>
+	</servlet-mapping>  
+	
+	
+	<servlet>
+		<servlet-name>Cart</servlet-name>
+		<servlet-class>com.sulzip.app.cart.CartFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Cart</servlet-name>
+		<url-pattern>*.car</url-pattern>
+	</servlet-mapping>  
+  
+  
+  	<servlet>
+		<servlet-name>Order</servlet-name>
+		<servlet-class>com.sulzip.app.order.OrderFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Order</servlet-name>
+		<url-pattern>*.ord</url-pattern>
+	</servlet-mapping>
+  
+  
+    <servlet>
+		<servlet-name>Sulkit</servlet-name>
+		<servlet-class>com.sulzip.app.sulkit.SulkitFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Sulkit</servlet-name>
+		<url-pattern>*.suk</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Product</servlet-name>
+		<servlet-class>com.sulzip.app.product.ProductFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Product</servlet-name>
+		<url-pattern>*.prd</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Category</servlet-name>
+		<servlet-class>com.sulzip.app.category.CategoryFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Category</servlet-name>
+		<url-pattern>*.ctg</url-pattern>
+	</servlet-mapping>
+	
+	
+</web-app>

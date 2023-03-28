@@ -1,0 +1,225 @@
+.container{
+    position: relative;
+    background-color: #efefef;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  .page_location{
+    position: absolute;
+    top: 47px;
+    left: 20px;
+    color: #fff;
+  }
+  .ul{
+    list-style: none;
+  }
+  .location li{
+    display: inline-block;
+    margin: 0 5px 0 0;
+    font-weight: 400;
+  }
+  .location .curr{
+    font-weight: 500;
+  }
+  .a{
+    color: inherit;
+    text-decoration: none;
+  }
+  .page_heading{
+    position: absolute;
+    top: 100px;
+    left: 15px;
+  }
+  .heading_title{
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: -2px;
+  }
+  .heading_desc{
+    margin-top: 20px;
+    font-size: 18px;
+    word-spacing: -0.3px;
+  }
+  .mo_show{
+    display: none !important;
+  }
+  .contents.space_top_none{
+    padding-top: 0;
+  }
+  .contents{
+    max-width: 1320px;
+    margin: 0 auto;
+    min-height: 300px;
+    padding: 70px 20px 10px;
+  }
+  .tab_wrap{
+    margin-bottom: 50px;
+    font-size: 24px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .tab_list{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    list-style: none;
+  }
+  .tab_list {
+    display: table-cell;
+    padding: 0 2px;
+    height: 90px;
+    color: #999;
+    vertical-align: middle;
+    font-weight: 500;
+    border-bottom: 2px solid #f10707;
+  }
+  .ul{
+    list-style: none;
+  }
+  .tab_list a{
+    display: flex;
+    justify-content: center;
+    font-size: 38px;
+    font
+  }
+  .sect_header{
+    position: relative;
+    margin-bottom: 25px;
+  }
+  .sect_header .title_sect{
+    float: left;
+  }
+  .title_sect{
+    position: relative;
+    line-height: 2.2;
+  }
+  .sect_title{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .title_desc{
+    display: inline-block;
+    margin-left: 15px;
+    color: #666;
+  }
+  .txt_star{
+    position: relative;
+    display: inline-block;
+    padding-left: 13px;
+  }
+  .sect_header .header_aside{
+    float: right;
+    margin-top: 12px;
+    text-align: right;
+  }
+  .required{
+    position: relative;
+    padding-left: 20px;
+  }
+  .board_sect{
+    padding: 30px 30px 30px;
+  }
+  .sect_header{
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  .board_sect .board_write{
+    margin-top: -10px;
+  }
+  .form_table{
+    width: 100%;
+    table-layout: fixed;
+  }
+  .form_table th{
+    padding: 20px 0 10px 20px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    vertical-align: top;
+  }
+  .from_table th .required{
+    margin-left: 20px;
+  }
+  .form_table td:last-child{
+  padding-right: 0;
+  }
+  .form_table td{
+    position: relative;
+    padding: 13px 35px 10px 10px;
+  }
+  .form_table .w100{
+    width: 50%;
+    background-color: whitesmoke;
+  }
+  .inpt{
+    height: 50px;
+    padding: 0 10px;
+    color: #333;
+    border: 1px solid #d7d7d7;
+  }
+  .eqitor_area{
+    background-color: whitesmoke;
+  }
+  .board_btm{
+    position: relative;
+    margin-top: -1px;
+    min-height: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+  }
+  .btn-strong.btn_red{
+    border-color: #e30613;
+    color: #e30613;
+  }
+  .board_btm{
+    position: relative;
+    margin-top: -1px;
+    min-height: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    text-align:  center;
+  }
+  .btn_strong.btn_red{
+    border-color: #e30613;
+    color: #e30613;
+  }
+  .btn_basic{
+    display: inline-block;
+    /* min-height: 10px; */
+    height: 30px;
+    padding: 10px 10px 12px;
+    font-weight: 500;
+    border: 1px solid #999;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 16px;
+    vertical-align: middle;
+    transition: all .5s;
+    text-decoration: none
+  }
+  .btn-basic{
+     display: inline-block;
+    /* min-height: 10px; */
+    height: 30px;
+    padding: 10px 10px 12px;
+    font-weight: 500;
+    border: 1px solid red;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 16px;
+    vertical-align: middle;
+    transition: all .5s;
+    color: red;
+      text-decoration: none
+  }
+
+  .img-banner{
+    width: 100%;
+  }
