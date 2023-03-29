@@ -22,7 +22,7 @@
         <div class="side-bar">
           <ul>
             <li>
-              <a href="">
+              <a href="${pageContext.request.contextPath}/admin/user.adm">
                 <div class="user-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <path
@@ -34,7 +34,7 @@
               >
             </li>
             <li>
-              <a href=""
+              <a href="${pageContext.request.contextPath}/admin/product.adm"
                 ><div class="product-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                     <path
@@ -46,7 +46,7 @@
               >
             </li>
             <li>
-              <a href=""
+              <a href="${pageContext.request.contextPath}/admin/order.adm"
                 ><div class="order-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <path
@@ -58,7 +58,7 @@
               >
             </li>
             <li>
-              <a href=""
+              <a href="${pageContext.request.contextPath}/admin/board.adm"
                 ><div class="board-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                     <path
