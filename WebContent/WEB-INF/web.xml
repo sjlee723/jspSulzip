@@ -154,5 +154,15 @@
 		<url-pattern>*.ctg</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>Admin</servlet-name>
+		<servlet-class>com.sulzip.app.admin.AdminFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Admin</servlet-name>
+		<url-pattern>*.adm</url-pattern>
+	</servlet-mapping>
+	
 	
 </web-app>
