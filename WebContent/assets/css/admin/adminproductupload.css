@@ -33,9 +33,9 @@ main {
 
 .upload-container {
   width: 900px;
-  height: 1500px;
-  /* background-color: antiquewhite; */
-  padding: 100px;
+  height: 100%;
+  /* margin: 50px 0; */
+  padding: 50px;
 }
 
 .file-upload {

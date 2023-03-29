@@ -77,11 +77,12 @@
 main {
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 
 .upload-container {
   width: 900px;
-  height: 1500px;
+  height: 1800px;
   /* background-color: antiquewhite; */
   padding: 100px;
 }
@@ -207,6 +208,7 @@ main {
   border-radius: 8px;
   display: flex;
 }
+
 
 .ingre-input-box > span {
   font-size: 18px;

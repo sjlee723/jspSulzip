@@ -7,6 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
+    
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/user/login.css" />
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
+  	<style>
+    	* {font-family: "NanumBarunGothic", sans-serif;}
+  	</style>
     <script>
       function showPopup() {
         let popupX = document.body.offsetWidth / 2 - 400 / 2;
@@ -19,15 +27,10 @@
       }
     </script>
   </head>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/user/login.css" />
-  <style>
-    * {
-      font-family: "NanumBarunGothic", sans-serif;
-    }
-  </style>
   <body>
-    <header></header>
+    <header>
+    	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
+    </header>
     <div id="container">
       <div id="content" class="at-container">
         <div class="at-content">
@@ -108,6 +111,8 @@
         </div>
       </div>
     </div>
-    <footer></footer>
+    <footer>
+    	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+    </footer>
   </body>
 </html>

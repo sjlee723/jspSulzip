@@ -10,6 +10,8 @@
   <title>sulkitdetail</title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/sulkit/sulkitdetails.css">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -21,6 +23,9 @@
 </head>
 
 <body>
+<header>
+	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
+</header>
   <div class="container">
     <div class="asidebar">
       <div class="list-nav">
@@ -39,7 +44,6 @@
             <div class="card-body">
               <h5 class="card-title">코스모폴리탄 칵테일</h5>
               <p class="card-text"><small class="text-muted">Cosmopolitan Cocktail</small></p>
-              <p class="card-text">대표적인 레이디킬러 칵테일</p>
               <div class="row price-area1">
                 <div class="col-3">
                   <p id="unit_price">31,500</p>
@@ -120,6 +124,9 @@
   <div class="it-content">
     <img src="..." alt="상품정보이미지">
   </div>
+<footer>
+	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+</footer>
 </body>
 
 <script type="text/javascript">

@@ -8,9 +8,9 @@
     background-color: lightcyan;
   }
   
-  .find-pw-btn {
+/*   .find-pw-btn {
     background-color: ;
-  }
+  } */
   
   .findIdPw {
     text-align: center;
@@ -18,10 +18,10 @@
     flex-direction: column;
     justify-content: center;
   }
-  
+/*   
   .find-id {
     display: ;
-  }
+  } */
   
   .find-pw {
     display: none;

@@ -16,10 +16,12 @@
 
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/clientboard/service.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
@@ -27,12 +29,12 @@
 
 </head>
 
-<header></header>
-
  
  
 <body>
-
+	<header>
+		<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
+	</header>
     <div class="tabmenu-black">
         <a href="">
             <img src="${pageContext.request.contextPath}/assets/img/banner/csbanner.jpg" alt="">
@@ -260,9 +262,11 @@
 
     </section>
 
+	<footer>
+		<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+	</footer>
 </body>
 
-<footer></footer>
 
 </html>
 

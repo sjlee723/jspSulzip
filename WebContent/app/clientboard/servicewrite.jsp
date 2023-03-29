@@ -9,10 +9,13 @@
   <title>Document</title>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/clientboard/servicewrite.css"/>
   <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
- 
-  <header></header>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
 </head>
 <body>
+<header>
+	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
+</header>
   <section id="conteiner" class="container">
       <img class="img-banner" src="${pageContext.request.contextPath}/assets/img/banner/csbanner.jpg">
       <div class="contents spacr_top_none" id="contents">
@@ -125,6 +128,8 @@
         </div>
     
     </section>
+<footer>
+	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+</footer> 
 </body>
-<footer></footer>
 </html>

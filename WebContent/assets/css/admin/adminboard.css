@@ -34,8 +34,8 @@ main {
 
 .board-container {
   width: 1200px;
-  height: 1200px;
-  /* background-color: thistle; */
+  height: 100%;
+  margin: 50px 0;
   display: flex;
 }
 

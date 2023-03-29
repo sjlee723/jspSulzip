@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>findidpw</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath/assets/css/user/findidpw.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/user/findidpw.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
   </head>
   <body>
@@ -89,6 +89,6 @@
       integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
       crossorigin="anonymous"
     ></script>
-    <script src="../js/findidpw.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/user/findidpw.js"></script>
   </body>
 </html>

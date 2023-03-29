@@ -9,12 +9,14 @@
     <title>cart</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/cart/cart.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
   </head>
   <body>
+  <header>
+  	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
+  </header>
     <div class="cart-header">장바구니</div>
     <div class="cart-content-title">
       <span class="cart-user-name">회원이름</span>님이 장바구니에 담아놓은
@@ -109,7 +111,9 @@
         <button type="button" class="cart-buy-btn">주문하기</button>
       </div>
     </form>
-
+	<footer>
+		<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+	</footer>
     <script
       src="https://code.jquery.com/jquery-3.6.3.js"
       integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
