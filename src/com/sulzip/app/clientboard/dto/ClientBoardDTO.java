@@ -8,15 +8,14 @@ package com.sulzip.app.clientboard.dto;
 //int userNumber;
 
 public class ClientBoardDTO {
-	int boardNumber;
-	String boardDate;
-	String boardTitle;
-	String boardContent;
-	String boardCondition;
-	int userNumber;
+	private int boardNumber;
+	private String boardDate;
+	private String boardTitle;
+	private String boardContent;
+	private String boardCondition;
+	private int userNumber;
 
-	public ClientBoardDTO() {
-	}
+	public ClientBoardDTO() {}
 
 	public int getBoardNumber() {
 		return boardNumber;

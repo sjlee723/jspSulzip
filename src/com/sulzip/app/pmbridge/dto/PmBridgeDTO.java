@@ -5,12 +5,11 @@ package com.sulzip.app.pmbridge.dto;
 //String pmBridgeVol;
 
 public class PmBridgeDTO {
-	int myRecipeNumber;
-	int productNumber;
-	String pmBridgeVol;
+	private int myRecipeNumber;
+	private int productNumber;
+	private String pmBridgeVol;
 
-	public PmBridgeDTO() {
-	}
+	public PmBridgeDTO() {}
 
 	public int getMyRecipeNumber() {
 		return myRecipeNumber;

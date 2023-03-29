@@ -5,12 +5,11 @@ package com.sulzip.app.psbridge.dto;
 //String psBridgeVol;
 
 public class PsBridgeDTO {
-	int sulkitNumber;
-	int productNumber;
-	String psBridgeVol;
+	private int sulkitNumber;
+	private int productNumber;
+	private String psBridgeVol;
 
-	public PsBridgeDTO() {
-	}
+	public PsBridgeDTO() {}
 
 	public int getSulkitNumber() {
 		return sulkitNumber;

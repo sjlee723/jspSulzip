@@ -5,12 +5,11 @@ package com.sulzip.app.file.dto;
 //int myRecipeNumber;
 
 public class FileDTO {
-	String fileSystemName; 
-	String fileOriginalName;
-	int myRecipeNumber;
+	private String fileSystemName; 
+	private String fileOriginalName;
+	private int myRecipeNumber;
 	
-	public FileDTO() {
-	}
+	public FileDTO() {}
 
 	public String getFileSystemName() {
 		return fileSystemName;

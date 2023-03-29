@@ -9,16 +9,15 @@ package com.sulzip.app.partners.dto;
 //int userNumber;
 
 public class PartnersDTO {
-	int partnersNumber;
-	String userContact;
-	String userEmail;
-	String partnersLoc;
-	String partnersLocation;
-	String partnersStatus;
-	int userNumber;
+	private int partnersNumber;
+	private String userContact;
+	private String userEmail;
+	private String partnersLoc;
+	private String partnersLocation;
+	private String partnersStatus;
+	private int userNumber;
 	
-	public PartnersDTO() {
-	}
+	public PartnersDTO() {}
 
 	public int getPartnersNumber() {
 		return partnersNumber;
@@ -82,6 +81,7 @@ public class PartnersDTO {
 				+ userEmail + ", partnersLoc=" + partnersLoc + ", partnersLocation=" + partnersLocation
 				+ ", partnersStatus=" + partnersStatus + ", userNumber=" + userNumber + "]";
 	}
+	
 	
 	
 	

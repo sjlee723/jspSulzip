@@ -4,11 +4,10 @@ package com.sulzip.app.category.dto;
 //String categoryName;
 
 public class CategoryDTO {
-	String categoryNumber;
-	String categoryName;
+	private String categoryNumber;
+	private String categoryName;
 
-	public CategoryDTO() {
-	}
+	public CategoryDTO() {}
 
 	public String getCategoryNumber() {
 		return categoryNumber;

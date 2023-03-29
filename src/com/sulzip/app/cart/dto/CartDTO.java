@@ -7,14 +7,13 @@ package com.sulzip.app.cart.dto;
 //int orderNumber;
 
 public class CartDTO {
-	int userNumber;
-	int productNumber;
-	int productTotalPrice;
-	int productEa;
-	int orderNumber;
+	private int userNumber;
+	private int productNumber;
+	private int productTotalPrice;
+	private int productEa;
+	private int orderNumber;
 	
-	public CartDTO() {
-	}
+	public CartDTO() {}
 
 	public int getUserNumber() {
 		return userNumber;
@@ -61,6 +60,7 @@ public class CartDTO {
 		return "CartDTO [userNumber=" + userNumber + ", productNumber=" + productNumber + ", productTotalPrice="
 				+ productTotalPrice + ", productEa=" + productEa + ", orderNumber=" + orderNumber + "]";
 	}
+	
 	
 	
 }
