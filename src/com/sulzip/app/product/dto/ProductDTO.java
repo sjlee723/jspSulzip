@@ -12,19 +12,18 @@ package com.sulzip.app.product.dto;
 //String productSystemName;
 
 public class ProductDTO {
-	int productNumber;
-	String productNameKor;
-	String productNameEng;
-	int productPrice;
-	String productDesc;
-	String productEa;
-	String productVol;
-	String productAlcoholDegree;
-	String categoryNumber;
-	String productSystemName;
+	private int productNumber;
+	private String productNameKor;
+	private String productNameEng;
+	private int productPrice;
+	private String productDesc;
+	private String productEa;
+	private String productVol;
+	private String productAlcoholDegree;
+	private String categoryNumber;
+	private String productSystemName;
 	
-	public ProductDTO() {
-	}
+	public ProductDTO() {}
 
 	public int getProductNumber() {
 		return productNumber;

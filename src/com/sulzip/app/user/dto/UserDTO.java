@@ -12,19 +12,18 @@ package com.sulzip.app.user.dto;
 //String userRegistrationNumber;
 
 public class UserDTO {
-	int userNumber;
-	String userStatus;
-	String userRegistrationDate;
-	String userId;
-	String userPw;
-	String userName;
-	String userPhone;
-	String userGender;
-	String userEmail;
-	String userRegistrationNumber;
+	private int userNumber;
+	private String userStatus;
+	private String userRegistrationDate;
+	private String userId;
+	private String userPw;
+	private String userName;
+	private String userPhone;
+	private String userGender;
+	private String userEmail;
+	private String userRegistrationNumber;
 
-	public UserDTO() {
-	}
+	public UserDTO() {}
 
 	public int getUserNumber() {
 		return userNumber;

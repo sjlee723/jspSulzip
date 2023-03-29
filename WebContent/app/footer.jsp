@@ -17,17 +17,17 @@
           <div class="f-column">
             <ul class="f-index">
               <li class="f-index-ul">쇼핑 및 레시피</li>
-              <li class="f-index-li"><a href="" class="f-a">칵테일 패키지</a></li>
-              <li class="f-index-li"><a href="" class="f-a">칵테일 재료</a></li>
+              <li class="f-index-li"><a href="${pageContext.request.contextPath}/app/sulkit/sulkit1.jsp" class="f-a">칵테일 패키지</a></li>
+              <li class="f-index-li"><a href="${pageContext.request.contextPath}/app/product/ingredients1.jsp" class="f-a">칵테일 재료</a></li>
             </ul>
           </div>
           <div class="f-column">
             <ul class="f-index">
               <li class="f-index-ul">계정</li>
-              <li class="f-index-li"><a href="" class="f-a">로그인</a></li>
-              <li class="f-index-li"><a href="" class="f-a">회원가입</a></li>
-              <li class="f-index-li"><a href="" class="f-a">마이페이지</a></li>
-              <li class="f-index-li"><a href="" class="f-a">장바구니</a></li>
+              <li class="f-index-li"><a href="${pageContext.request.contextPath}/app/user/login.jsp" class="f-a">로그인</a></li>
+              <li class="f-index-li"><a href="${pageContext.request.contextPath}/app/user/join.jsp" class="f-a">회원가입</a></li>
+              <li class="f-index-li"><a href="${pageContext.request.contextPath}/app/user/mypage.jsp" class="f-a">마이페이지</a></li>
+              <li class="f-index-li"><a href="${pageContext.request.contextPath}/app/cart/cart.jsp" class="f-a">장바구니</a></li>
             </ul>
           </div>
           <div class="f-column">

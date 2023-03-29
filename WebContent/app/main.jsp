@@ -24,19 +24,19 @@
               <a href=""><img src="${pageContext.request.contextPath}/assets/img/logo/mainlogo.jpg" /></a>
             </div>
             <div class="h-line-right">
-              <div class="h-join"><a href="">로그인/회원가입</a></div>
-              <div class="h-cart"><a href="">장바구니</a></div>
+              <div class="h-join"><a href="${pageContext.request.contextPath}/app/user/login.jsp">로그인/회원가입</a></div>
+              <div class="h-cart"><a href="${pageContext.request.contextPath}/app/cart/cart.jsp">장바구니</a></div>
             </div>
           </div>
           <div class="h-bottom-line">
             <ul class="h-ctg">
-              <li><a href="">술키트</a></li>
-              <li><a href="">술</a></li>
-              <li><a href="">재료</a></li>
-              <li><a href="">용품</a></li>
-              <li><a href="">나만의 레시피</a></li>
-              <li><a href="">파트너스</a></li>
-              <li><a href="">고객센터</a></li>
+              <li><a href="${pageContext.request.contextPath}/app/sulkit/sulkit1.jsp">술키트</a></li>
+              <li><a href="${pageContext.request.contextPath}/app/product/alcohol1.jsp">술</a></li>
+              <li><a href="${pageContext.request.contextPath}/app/product/ingredients.jsp">재료</a></li>
+              <li><a href="${pageContext.request.contextPath}/app/product/supplies1.jsp">용품</a></li>
+              <li><a href="${pageContext.request.contextPath}/app/myrecipe/myrecipe.jsp">나만의 레시피</a></li>
+              <li><a href="${pageContext.request.contextPath}/app/partners/partners.jsp">파트너스</a></li>
+              <li><a href="${pageContext.request.contextPath}/app/clientboard/service.jsp">고객센터</a></li>
             </ul>
           </div>
         </div>
@@ -46,7 +46,7 @@
       <div style="overflow: hidden;" class="main">
         <div class="main-img">
           <div class="main-first">
-            <a href="">
+            <a href="${pageContext.request.contextPath}/app/sulkit/sulkit1.jsp">
               <img src="${pageContext.request.contextPath}/assets/img/banner/mainImg.jpg" />
             </a>
           </div>
@@ -56,7 +56,7 @@
             </a>
           </div>
           <div class="main-first">
-            <a href="">
+            <a href="${pageContext.request.contextPath}/app/sulkit/sulkit.jsp">
               <img src="${pageContext.request.contextPath}/assets/img/banner/mainImg.jpg" />
             </a>
           </div>
@@ -76,17 +76,17 @@
             <ul class="slide-box">
               <li>
                 <div class="slide-img">
-                  <a href=""><img src="${pageContext.request.contextPath}/assets/img/sub-banner/brand_image_left.jpg" alt="" /></a>
+                  <a href="${pageContext.request.contextPath}/app/partners/partners.jsp"><img src="${pageContext.request.contextPath}/assets/img/sub-banner/brand_image_left.jpg" alt="" /></a>
                 </div>
               </li>
               <li>
                 <div class="slide-img">
-                  <a href=""><img src="${pageContext.request.contextPath}/assets/img/sub-banner/brand_image_main.jpg" alt="" /></a>
+                  <a href="${pageContext.request.contextPath}/app/sulkit/sulkit1.jsp"><img src="${pageContext.request.contextPath}/assets/img/sub-banner/brand_image_main.jpg" alt="" /></a>
                 </div>
               </li>
               <li>
                 <div class="slide-img">
-                  <a href=""><img src="${pageContext.request.contextPath}/assets/img/sub-banner/brand_image_right.jpg" /></a>
+                  <a href="${pageContext.request.contextPath}/app/myrecipe/myrecipe.jsp"><img src="${pageContext.request.contextPath}/assets/img/sub-banner/brand_image_right.jpg" /></a>
                 </div>
               </li>
             </ul>

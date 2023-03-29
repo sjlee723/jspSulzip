@@ -10,15 +10,14 @@ package com.sulzip.app.sulkit.dto;
 
 
 public class SulkitDTO {
-	int sulkitNumber;
-	String sulkitNameKor;
-	String sulkitNameEng;
-	String sulkitDesc;
-	String sulkitRecipe;
-	int sulkitPrice;
+	private int sulkitNumber;
+	private String sulkitNameKor;
+	private String sulkitNameEng;
+	private String sulkitDesc;
+	private String sulkitRecipe;
+	private int sulkitPrice;
 	
-	public SulkitDTO() {
-	}
+	public SulkitDTO() {}
 
 	public int getSulkitNumber() {
 		return sulkitNumber;

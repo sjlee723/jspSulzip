@@ -9,16 +9,15 @@ package com.sulzip.app.order.dto;
 //int userNumber;
 
 public class OrderDTO {
-	int orderNumber;
-	String orderDate;
-	int productEa;
-	int productTotalPrice;
-	String pickupStore;
-	String orderMessage;
-	int userNumber;
+	private int orderNumber;
+	private String orderDate;
+	private int productEa;
+	private int productTotalPrice;
+	private String pickupStore;
+	private String orderMessage;
+	private int userNumber;
 	
-	public OrderDTO() {
-	}
+	public OrderDTO() {}
 
 	public int getOrderNumber() {
 		return orderNumber;
