@@ -80,7 +80,7 @@
             </tr>
             <tr>
               <td width="100px" height="40px">아이디조회</td>
-              <td width="600px" height="40px">아이디 칸</td>
+              <td width="600px" height="40px">아이/디 칸</td>
             </tr>
             <tr>
               <td width="100px" height="40px">아이디조회</td>
