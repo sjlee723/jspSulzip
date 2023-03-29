@@ -9,6 +9,8 @@
     <title>Order</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/admin/adminorder.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
     <style>
       * {
         font-family: "NanumBarunGothic", sans-serif;
@@ -17,9 +19,7 @@
   </head>
   <body>
     <header>
-      <div class="title-page">
-        <span>header</span>
-      </div>
+		<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
     </header>
     <main>
       <div class="order-container">
@@ -127,6 +127,8 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+    	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"></jsp:include>
+    </footer>
   </body>
 </html>

@@ -9,10 +9,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/user/withdrawal.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
-    
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
 </head>
 <body>
-    <header></header>
+    <header>
+    	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
+    </header>
     <form action="">
         <div class="container">
             <div class="title-text">개인정보 보호를 위한 비밀번호 재확인</div>
@@ -32,13 +35,14 @@
                                 <button type="submit" class="submit-btn">확인</button>
                                 <a href="..."><button type="button" class="cancel-btn" role="button">취소</button></a>
                             </div>
-
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </form>
-    <footer></footer>
+    <footer>
+    	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+    </footer>
 </body>
 </html>

@@ -8,10 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/user/join.css"/>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
     <title>join</title>
 </head>
 <body>
-    <header></header>
+    <header>
+    	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
+    </header>
     <main class="main">
         <section class="section1">
             <div class="title">회원 가입</div>
@@ -113,6 +117,8 @@
             <button type="submit" class="join-btn-submit" accesskey="s">확인</button>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+    	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+    </footer>
 </body>
 </html>

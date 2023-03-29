@@ -9,16 +9,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myrecipe</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/sulkit/sulkit.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header></header>
+    <header>
+    	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
+    </header>
     <div class="container-fluid">
         <div class="img-content">
             <a href="javascript:alert('준비중인 페이지입니다.');">
@@ -188,9 +192,11 @@
                       </nav>
                 </div>
             </div>
-
          </div>
-    <footer></footer>
+       </div>  
+    <footer>
+    	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+    </footer>
     </body>
 
 </html>

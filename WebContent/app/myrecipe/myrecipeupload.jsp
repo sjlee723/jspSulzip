@@ -6,20 +6,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Myrecipe-upload</title>
+    <title>myrecipeupload</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/myrecipe/myrecipeupload.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
+    
     <style>
-      * {
-        font-family: "NanumBarunGothic", sans-serif;
-      }
+      * {font-family: "NanumBarunGothic", sans-serif;}
     </style>
+    
   </head>
   <body>
     <header>
-      <div class="title-page">
-        <span>header</span>
-      </div>
+		<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
     </header>
     <main>
       <div class="upload-container">
@@ -104,8 +104,10 @@
         <div class="upload-btn-box">
           <button><span>업로드</span></button>
         </div>
-      </div>
+        </div>
     </main>
-    <footer></footer>
+    <footer>
+    	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+    </footer>
   </body>
 </html>

@@ -9,9 +9,13 @@
     <title>service-page</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/clientboard/servicepage.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+    	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
+    </header>
     <main>
       <div class="tabmenu-black">
         <a href="">
@@ -49,6 +53,8 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+    	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+    </footer>
   </body>
 </html>

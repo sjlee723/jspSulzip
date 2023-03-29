@@ -9,9 +9,11 @@
     <title>mypage</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/user/mypage.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
 </head>
 <body>
-    <header></header>
+    	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
     <main>
       <div class="manager-container">
         <div class="side-bar">
@@ -104,7 +106,9 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+    	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+    </footer>
 </body>
 
 </html>

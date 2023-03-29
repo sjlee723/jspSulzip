@@ -34,8 +34,8 @@ main {
 
 .main-container {
   width: 1200px;
-  height: 1200px;
-  /* background-color: thistle; */
+  height: 100%;
+  margin: 50px 0;
   display: flex;
 }
 
@@ -96,7 +96,7 @@ main {
 
 .product-management {
   width: 1000px;
-  height: 800px;
+  height: 100%;
   padding: 30px;
   left: 350px;
   /* background-color: rgb(207, 202, 202); */

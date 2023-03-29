@@ -9,12 +9,12 @@
     <title>adminproductupload</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/admin/adminproductupload.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
   </head>
   <body>
     <header>
-      <div class="title-page">
-        <span>header</span>
-      </div>
+		<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
     </header>
     <main>
       <div class="upload-container">
@@ -88,6 +88,8 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+    	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+    </footer>
   </body>
 </html>
