@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,15 +39,19 @@
       <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="${pageContext.request.contextPath}/assets/img/sulkit/cosmopolitan-1.jpg" class="img-fluid rounded-start" alt="코스모폴리탄이미지">
+            <img src="${pageContext.request.contextPath}/assets/img/sulkit/${sulkit.getSulkitImg()}" class="img-fluid rounded-start" alt="코스모폴리탄이미지">
           </div>
           <div class="col-md-6">
             <div class="card-body">
-              <h5 class="card-title">코스모폴리탄 칵테일</h5>
-              <p class="card-text"><small class="text-muted">Cosmopolitan Cocktail</small></p>
+              <h5 class="card-title">
+              	<c:out value="${sulkit.getSulkitNameKor()}"/>
+              </h5>
+              <p class="card-text"><small class="text-muted">
+              	<c:out value="${sulkit.getSulkitNameEng()}"/>
+              </small></p>
               <div class="row price-area1">
                 <div class="col-3">
-                  <p id="unit_price">31,500</p>
+                  <p id="unit_price"><c:out value="${sulkit.getSulkitPrice()}"/></p>
                 </div>
                 <div class="col-9" style="text-align: right;">
                   <button type="button" class="btn btn-outline-secondary" onclick="fn_price_cal('-');">-</button>
@@ -56,7 +61,7 @@
               </div>
               <div class="row price-area2">
                 <div class="col-12" style="text-align: right;">
-                  <span>총 수량</span><span id="total_num">&nbsp;&nbsp;1</span><span>&nbsp;개&nbsp;&nbsp;|&nbsp;&nbsp;</span><span id="price">15,800</span><span class="won">&nbsp;원</span>
+                  <span>총 수량</span><span id="total_num">&nbsp;&nbsp;1</span><span>&nbsp;개&nbsp;&nbsp;|&nbsp;&nbsp;</span><span id="price"><c:out value="${sulkit.getSulkitPrice()}"/></span><span class="won">&nbsp;원</span>
                 </div>
               </div>
               <div class="row mt-3">
@@ -79,7 +84,7 @@
       <div class="section-1">
         <div class="ingre-title"><span>레시피 정보</span></div>
         <div class="ingre-box">
-          <div class="ingre">
+          <div class="ingre" data-num="2">
             <div class="ingre-icon"></div>
             <div class="span">
               <div class="name"><span>딸기 리큐르</span></div>
@@ -114,8 +119,7 @@
         <div class="recipe-title"></div>
         <div class="recipe-box">
           <p>
-            칵테일 잔 칠링 믹싱글라스에 얼음 보드카 1oz(약하게 먹고싶다면 없애도 된다) 딸기, 블루큐라소 3/4oz 칵테일
-            잔에 따라주고 우유 돌려가며 10방울정도 떨궈주면 완성.
+            <c:out value="${sulkit.getSulkitRecipe()}"/>
           </p>
         </div>
       </div>

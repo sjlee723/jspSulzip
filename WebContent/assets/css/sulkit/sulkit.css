@@ -84,3 +84,7 @@
     text-align: right;
     padding-bottom: 50px;
 }
+
+.inside{
+	cursor: pointer;
+}
