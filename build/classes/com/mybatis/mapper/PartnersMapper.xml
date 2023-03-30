@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
+
 <mapper namespace="partners">
-	<insert id="">
-	
+	<insert id="inquiry" parameterType="PartnersDTO">
+		insert into `partners`(partners_contact, partners_email, partners_loc, partners_location, user_number, partners_name, partners_content)
+		values(#{partnersContact}, #{partnersEmail}, #{partnersLoc}, #{partnersLocation}, #{userNumber}, #{partnersName}, #{partnersContent});	
 	</insert>
 </mapper>

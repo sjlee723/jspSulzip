@@ -48,7 +48,7 @@
                     <li>모든 항목은 *필수 기재사항입니다.</li>
                 </ul>
             </section>
-            <form action="..." method="...">
+            <form action="/partners/inquiryOk.ptn" method="POST">
                 <table class="parteners-table">
                     <colgroup class="partners-colgroup">
                         <col class="partners-col1">
@@ -56,40 +56,39 @@
                     </colgroup>
                     <tbody class="partners-tbody">
                         <tr class="partners-tr">
-                            <th class="partners-th">*이름</th>
+                            <th class="partners-th">*상호명</th>
                             <td class="partners-td">
-                                <input type="text" name="partners_name" class="partners_name">
+                                <input type="text" name="partnersName" id="name" class="partners_name" required>
                             </td>
                         </tr>
                         <tr class="partners-tr">
                             <th class="partners-th">*연락처</th>
                             <td class="partners-td">
-                                <input type="text" name="partners_number" class="partners_number">
+                                <input type="text" name="partnersContact" id="contact" class="partners_number" required>
                             </td>
                         </tr>
                         <tr class="partners-tr">
                             <th class="partners-th">*이메일</th>
                             <td class="partners-td">
-                                <input type="text" name="partners_email" class="partners_email"> <span class="text-details">답변은 이메일로 발송드립니다.</span>
+                                <input type="text" name="partnersEmail" id="email" class="partners_email"> <span class="text-details" required>답변은 이메일로 발송드립니다.</span>
                             </td>
                         </tr>
                         <tr class="partners-tr">
-                            <th class="partners-th">*점포보유</th>
+                            <th class="partners-th">*점포지역(구)</th>
                             <td class="partners-td">
-                                <input type="radio" class="radio1" name="radio" value="Yes" checked="checked">Yes
-                                <input type="radio" class="radio2" name="radio" value="No">No
+                                <input type="text" name="partnersLoc" id="loc1" class="partners_loc"> <span class="text-details" required>점포가 위치한 지역구를 기재해주시면 됩니다.</span>
                             </td>
                         </tr>
                         <tr class="partners-tr">
                             <th class="partners-th">*점포지역</th>
                             <td class="partners-td">
-                                <input type="text" name="partners_location" class="partners_location"> <span class="text-details">주소는 상세하게 기재해주시면 됩니다.</span>
+                                <input type="text" name="partnersLocation" id="loc2" class="partners_location"> <span class="text-details" required>점포가 위치한 상세주소를 기재해주시면 됩니다.</span>
                             </td>
                         </tr>
                         <tr class="partners-tr">
                             <th class="partners-th">*문의내용</th>
                             <td class="partners-td">
-                                <textarea name="partners_inquiry" class="partners_inquiry" id="" cols="100" rows="10" placeholder="문의해 주시면 1시간 내에 신속히 답변해 드립니다. (주말과 공휴일에는 답변이 늦어질 수 있습니다.) 이름, 전화번호, 이메일 주소 등은 개인 정보 노출의 위험이 있으므로, 문의 내용에는 입력하지 않는 것이 좋습니다. 또한, 문의 내용에 xml 소스를 입력하는 경우 답변에 제한이 있을 수 있습니다."></textarea>
+                                <textarea name="partnersContent" id="content" class="partners_inquiry" id="" cols="100" rows="10" placeholder="문의해 주시면 1시간 내에 신속히 답변해 드립니다. (주말과 공휴일에는 답변이 늦어질 수 있습니다.) 이름, 전화번호, 이메일 주소 등은 개인 정보 노출의 위험이 있으므로, 문의 내용에는 입력하지 않는 것이 좋습니다. 또한, 문의 내용에 xml 소스를 입력하는 경우 답변에 제한이 있을 수 있습니다." required></textarea>
                             </td>
                         </tr>
                     </tbody>
@@ -97,7 +96,7 @@
             
                 <div class="agree-area">
                     <div class="chk-box">
-                        <input type="checkbox" name="chk-box" class="chk-box">
+                        <input type="checkbox" name="" id="agree" class="chk-box" value="1">
                         <label for="agree-privacy">(아래)개인정보 수집·이용에 동의합니다.</label>
                         <div class="agree-text">
                             <p>수집하는 개인정보의 항목</p>
@@ -124,5 +123,7 @@
     <footer>
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/partners.js"></script>
 </body>
 </html>

@@ -1,23 +1,28 @@
 package com.sulzip.app.partners.dto;
 
 //int partnersNumber;
-//String userContact;
-//String userEmail;
+//String partnersContact;
+//String partnersEmail;
 //String partnersLoc;
 //String partnersLocation;
 //String partnersStatus;
 //int userNumber;
+//String partnersName;
+//String partnersContent;
 
 public class PartnersDTO {
 	private int partnersNumber;
-	private String userContact;
-	private String userEmail;
+	private String partnersContact;
+	private String partnersEmail;
 	private String partnersLoc;
 	private String partnersLocation;
 	private String partnersStatus;
 	private int userNumber;
+	private String partnersName;
+	private String partnersContent;
 	
-	public PartnersDTO() {}
+	public PartnersDTO() {
+	}
 
 	public int getPartnersNumber() {
 		return partnersNumber;
@@ -27,20 +32,20 @@ public class PartnersDTO {
 		this.partnersNumber = partnersNumber;
 	}
 
-	public String getUserContact() {
-		return userContact;
+	public String getPartnersContact() {
+		return partnersContact;
 	}
 
-	public void setUserContact(String userContact) {
-		this.userContact = userContact;
+	public void setPartnersContact(String partnersContact) {
+		this.partnersContact = partnersContact;
 	}
 
-	public String getUserEmail() {
-		return userEmail;
+	public String getPartnersEmail() {
+		return partnersEmail;
 	}
 
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
+	public void setPartnersEmail(String partnersEmail) {
+		this.partnersEmail = partnersEmail;
 	}
 
 	public String getPartnersLoc() {
@@ -75,13 +80,29 @@ public class PartnersDTO {
 		this.userNumber = userNumber;
 	}
 
+	public String getPartnersName() {
+		return partnersName;
+	}
+
+	public void setPartnersName(String partnersName) {
+		this.partnersName = partnersName;
+	}
+
+	public String getPartnersContent() {
+		return partnersContent;
+	}
+
+	public void setPartnersContent(String partnersContent) {
+		this.partnersContent = partnersContent;
+	}
+
 	@Override
 	public String toString() {
-		return "PartnersDTO [partnersNumber=" + partnersNumber + ", userContact=" + userContact + ", userEmail="
-				+ userEmail + ", partnersLoc=" + partnersLoc + ", partnersLocation=" + partnersLocation
-				+ ", partnersStatus=" + partnersStatus + ", userNumber=" + userNumber + "]";
+		return "PartnersDTO [partnersNumber=" + partnersNumber + ", partnersContact=" + partnersContact
+				+ ", partnersEmail=" + partnersEmail + ", partnersLoc=" + partnersLoc + ", partnersLocation="
+				+ partnersLocation + ", partnersStatus=" + partnersStatus + ", userNumber=" + userNumber
+				+ ", partnersName=" + partnersName + ", partnersContent=" + partnersContent + "]";
 	}
-	
 	
 	
 	
