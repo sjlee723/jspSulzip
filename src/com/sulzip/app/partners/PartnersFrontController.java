@@ -21,8 +21,16 @@ public class PartnersFrontController extends HttpServlet {
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		System.out.println(target);
+		
 		switch(target) {
 		
+		case "/partners/partners.ptn":
+			System.out.println("partners!!");
+			req.getRequestDispatcher("/app/partners/partners.jsp").forward(req, resp);
+			break;
+		case "/partners/inquiryOk.ptn": 
+			 new InquiryOkController().execute(req, resp);
+			 break;
 		}
 	}
 }

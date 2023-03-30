@@ -42,7 +42,7 @@
     </div>
 
     <div class="write-btn-box">
-        <button><span>글쓰기</span></button>
+        <a href="${pageContext.request.contextPath}/clientboard/servicepage.clb"><button><span>글쓰기</span></button></a>
     </div>
 
     <section class="main">

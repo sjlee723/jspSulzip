@@ -4,7 +4,7 @@
 
 <mapper namespace="partners">
 	<insert id="inquiry" parameterType="PartnersDTO">
-		insert into tbl_partners(partners_number, user_contact, user_email, partners_loc, partners_location, partners_status, user_number)
-		values(#{partnersNumber}, #{userContact}, #{userEmail}, #{partnersLoc}, #{partnersLocation}, #{partnersStatus}, #{userNumber});	
+		insert into `partners`(partners_contact, partners_email, partners_loc, partners_location, user_number, partners_name, partners_content)
+		values(#{partnersContact}, #{partnersEmail}, #{partnersLoc}, #{partnersLocation}, #{userNumber}, #{partnersName}, #{partnersContent});	
 	</insert>
 </mapper>
