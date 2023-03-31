@@ -4,33 +4,21 @@
 
 <html lang="en">
  
- 
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Document</title>
-
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/clientboard/service.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-
-    
-
 </head>
 
- 
- 
 <body>
 	<header>
 		<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
@@ -42,153 +30,113 @@
     </div>
 
     <div class="write-btn-box">
-        <a href="${pageContext.request.contextPath}/clientboard/servicepage.clb"><button><span>글쓰기</span></button></a>
+       <button type="button" onclick="fn_go_to_link('${pageContext.request.contextPath}/clientboard/servicewrite.clb')"><span>글쓰기</span></button>
     </div>
 
     <section class="main">
-
         <h1 class="d-none">게시판</h1>
-
             <div class="board">
-
                 <table class="table">
-
                     <thead class="thead">
-
                         <tr>
-
                             <td>번호</td>
-
                             <td>글제목</td>
-
                             <td>작성자</td>
-
                             <td>작성일</td>
-
                             <td>조회</td>
-
                         </tr>
-
                     </thead>
 
                     <tbody class="tbody">
-
                         <tr>
-
                             <td>1</td>
-
                             <td><a href="">제목1</a></td>
-
                             <td>홍길동</td>
-
                             <td>2023/01/01</td>
-
                             <td>18</td>
-
                         </tr>
 
                         <tbody class="tbody">
-
                             <tr>
-
                                 <td>2</td>
-
                                 <td><a href="">제목2</a></td>
-
                                 <td>홍길동2</td>
-
                                 <td>2023/01/02</td>
-
                                 <td>1</td>
-
                             </tr>
 
                             <tbody class="tbody">
-
                               <tr>
-  
                                   <td>3</td>
-  
                                   <td><a href="">제목3</a></td>
-  
                                   <td>홍길동3</td>
-  
                                   <td>2023/01/03</td>
-  
                                   <td>3</td>
-  
                               </tr>
 
                               <tbody class="tbody">
-
                                 <tr>
-    
                                     <td>4</td>
-    
                                     <td><a href="">제목4</a></td>
-    
                                     <td>홍길동4</td>
-    
                                     <td>2023/01/04</td>
-    
                                     <td>4</td>
-    
                                 </tr>
 
                                 <tbody class="tbody">
-
                                   <tr>
-      
                                       <td>5</td>
-      
                                       <td><a href="">제목5</a></td>
-      
                                       <td>홍길동5</td>
-      
                                       <td>2023/01/05</td>
-      
                                       <td>11</td>
-      
                                   </tr>
 
                                   <tbody class="tbody">
-
                                     <tr>
-        
                                         <td>6</td>
-        
                                         <td><a href="">제목6</a></td>
-        
                                         <td>홍길동6</td>
-        
                                         <td>2023/01/06</td>
-        
                                         <td>7</td>
-        
                                     </tr>
 
                                     <tbody class="tbody">
-
                                       <tr>
-          
                                           <td>7</td>
-        
                                           <td><a href="">제목7</a></td>
-          
                                           <td>홍길동7</td>
-          
                                           <td>2023/01/07</td>
-          
                                           <td>11</td>
-          
+                                      </tr>
+                                      
+                                     <tbody class="tbody">
+                                      <tr>
+                                          <td>8</td>
+                                          <td><a href="">제목8</a></td>
+                                          <td>홍길동8</td>
+                                          <td>2023/01/12</td>
+                                          <td>13</td>
                                       </tr>
 
-                                      
-              
-
-
-
-
+                                     <tbody class="tbody">
+                                      <tr>
+                                          <td>9</td>
+                                          <td><a href="">제목9</a></td>
+                                          <td>홍길동9</td>
+                                          <td>2023/01/15</td>
+                                          <td>15</td>
+                                      </tr>     
+                                     
+                                     <tbody class="tbody">
+                                      <tr>
+                                          <td>10</td>
+                                          <td><a href="">제목10</a></td>
+                                          <td>홍길동10</td>
+                                          <td>2023/01/18</td>
+                                          <td>23</td>
+                                      </tr>                                 
+             
                         </tbody>
 
                     </tbody>
@@ -266,7 +214,11 @@
 		<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
 	</footer>
 </body>
-
+<script type="text/javascript">
+function fn_go_to_link(link){
+	location.href=`${link}`;
+}
+</script>
 
 </html>
 

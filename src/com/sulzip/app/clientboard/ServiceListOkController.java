@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.sulzip.app.Execute;
 
-public class ServiceWriteOkController implements Execute {
+public class ServiceListOkController implements Execute {
 @Override
 public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	

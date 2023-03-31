@@ -16,120 +16,40 @@
 <header>
 	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
 </header>
-  <section id="conteiner" class="container">
-      <img class="img-banner" src="${pageContext.request.contextPath}/assets/img/banner/csbanner.jpg">
-      <div class="contents spacr_top_none" id="contents">
-        <div class="tab_wrap">
-          <ul class="tab_list">
-            <li>
-              <a>Q&A</a>
-            </li>
-          </ul>
+  <div class="container-fluid">
+        <div class="img-content">
+            <a href="javascript:alert('준비중인 페이지입니다.');">
+                <img class="banner-img" src="${pageContext.request.contextPath}/assets/img/banner/csbanner.jpg" alt="파트너스이미지">
+            </a>
         </div>
-
-  
-  
-        <form id="registerForm" name="registerForm">
-            <div class="sect_comm">
-              <div class="sect_header">
-                <div class="title_sect">
-                  <h3 class="sect_title">Q&A</h3>
-                  <span class="title_desc mo_inb_show">
-                    <em class="txt_star">
-                      부적절하거나 광고 및 홍보성 게시글은 관리자에 의해 삭제될 수 있습니다
-                    </em>
-                  </span>
-                </div>
-            <div class="header_aside pc_show">
-                <span class="required">
-                  <!-- 필수입력 -->
-                </span>
-            </div>
-              </div>
-
-              
-              
-            </form>
-        <!--      -->
-          <div class="test">
-
-            
+    </div>
+    <div class="container">
+        <!-- 작성완료 경로 처리하기 -->
+        <form id="write-form" action="#" method="post" enctype="multipart/form-data">
+          <h1>문의글</h1>
+          <div class="form-group">
+            <label for="title">제목</label>
+            <input type="text" id="title" name="boardTitle" required />
           </div>
-
-       <!--        -->
+          <div class="form-group">
+            <label for="author">작성자</label>
+            <!-- 작성자 서버 연결시 로그인한 회원 아이디로 수정하기 -->
+            <div class="writer">김철수</div>
           </div>
-
-          
-          
-          
-        </div>
-        <!-- 예시-->
-        <div class="cont_sect board_sect qna_save">
-          <div class="board board_write">
-              <table class="form_table">
-                <colgroup>
-                  <col style="width: 18%;">
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th>
-                        <span class="required" title="필수입력">
-                          제목
-                        </span>
-                    </th>
-                    <td>
-                        <input type="text" name="title" value class="inpt w100" placeholder="제목을 입력하세요" maxlength="200">
-                    </td>
-                  </tr>
-        <!--예시-->
-        
-        <div class="cont_sect board_sect qna_save">
-            <div class="board board_write">
-                <table class="form_table">
-                  <colgroup>
-                    <col style="width: 18%;">
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <th>
-                          <span class="required" title="필수입력">
-                            작성자명
-                          </span>
-                      </th>
-                      <td>
-                          <input type="text" name="title" value class="inpt w100" placeholder="이름을 입력하세요" maxlength="200">
-                      </td>
-                    </tr>
-                    <!--ㄹ저ㅔㅐㅓㅔㅐㄷ저ㅐㅔㄷㅈ-->
-                   
-
-                  </div>
-                </div>
-
-                        <tr>
-                          <tb>
-                            <div class="eqitor_area">
-                              <div class="note-editor note-frame">
-                                <div class="note-editable" contenteditable="true" role="textbox" aria-mltiline="true" spellcheck="true"
-                                autocorrect="true" style="height: 300px;">
-                              </div>
-                              </div>
-                            </div>
-                          </tb>
-                        </tr>
-                  </tbody>
-                </table>
-        <div class="board_btm">
-          <div class="btns_area mo_block">
-            <a href="#" class="btn-basic btn-strong btn-red mo_block saveBtn"
-            id="saveBtn">등록</a>
-            <a href="#"class="btn_basic btn_gray mo_block">취소</a>
+          <div class="form-group">
+            <label for="content">내용</label>
+            <textarea id="content" name="boardContent" required></textarea>
           </div>
-        </div>
-    
-    </section>
+          <div class="btn-group">
+            <button type="submit" class="submit-btn">작성 완료</button>
+            <!-- 취소 버튼 js로 처리하기 -->
+            <button type="button" class="cancle-btn">취소</button>
+          </div>
+        </form>
+      </div>
 <footer>
 	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
-</footer> 
+</footer>
+<script src="${pageContext.request.contextPath}/assets/js/clientboard/clientboard.js"></script>
 </body>
 </html>
