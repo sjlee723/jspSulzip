@@ -47,19 +47,19 @@
             </div>
             <div class="list-group">
                 <div class="card-group">
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/havanabeach-1.jpg" class="card-img-top" alt="하바나비치이미지">
+                    <div class="card" data-num="1">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/havanabeach-1.jpg" class="card-img-top inside" alt="하바나비치이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">하바나비치</h5>
+                            <h5 class="card-title inside">하바나비치</h5>
                             <p class="card-text-2"><small class="text-muted">35,800원</small></p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/honeymoon_1.jpg" class="card-img-top" alt="허니문이미지">
+                    <div class="card" data-num="2">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/honeymoon_1.jpg" class="card-img-top inside" alt="허니문이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">허니문</h5>
+                            <h5 class="card-title inside">허니문</h5>
                             <p class="card-text-2"><small class="text-muted">42,000원</small></p>
                         </div>
                     </div>
@@ -195,6 +195,8 @@
     <footer>
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/sulkit/sulkit.js"></script>
     </body>
 
 </html>
