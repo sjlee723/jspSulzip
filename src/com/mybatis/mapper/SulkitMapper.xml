@@ -2,6 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="sulkit">
-
+	<select id="selectSulkit" resultType="SulkitDTO" parameterType="_int">
+		select sulkit_name_kor, sulkit_name_eng, sulkit_desc, sulkit_recipe, sulkit_price, sulkit_img
+		from sulkit
+		where sulkit_number = ${sulkitNumber}
+	</select>
 	
+	<select id="recipe" resultType="SulkitVO" parameterType="_int">
+		select b.psBridge_vol, p.product_name_kor, p.product_system_name  from sulkit s join psbridge b 
+		on s.sulkit_number = ${productNumber} and s.sulkit_number = b.sulkit_number
+		join product p
+		on b.product_number = p.product_number;
+	</select>
+	
+	
+
 </mapper>

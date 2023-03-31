@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> --%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,105 +47,105 @@
             </div>
             <div class="list-group">
                 <div class="card-group">
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/bacardiwhite-1.jpg" class="card-img-top" alt="바카디화이트이미지">
+                    <div class="card" data-num="2">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/bacardiwhite-1.jpg" class="card-img-top inside inside" alt="바카디화이트이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">바카디화이트</h5>
+                            <h5 class="card-title inside">바카디화이트</h5>
                             <p class="card-text-2"><small class="text-muted">35,800원</small></p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/blackjack_1.jpg" class="card-img-top" alt="블랙잭이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/blackjack_1.jpg" class="card-img-top inside" alt="블랙잭이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">블랙잭</h5>
+                            <h5 class="card-title inside">블랙잭</h5>
                             <p class="card-text-2"><small class="text-muted">42,000원</small></p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/blackrussian.jpg" class="card-img-top" alt="블랙러시안이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/blackrussian.jpg" class="card-img-top inside" alt="블랙러시안이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">블랙러시안</h5>
+                            <h5 class="card-title inside">블랙러시안</h5>
                             <p class="card-text-2"><small class="text-muted">33,000원</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="card-group">
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/bluesapphire-1.jpg" class="card-img-top" alt="블랙사파이어이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/bluesapphire-1.jpg" class="card-img-top inside" alt="블랙사파이어이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">블랙사파이어</h5>
+                            <h5 class="card-title inside">블랙사파이어</h5>
                             <p class="card-text-2"><small class="text-muted">27,500원</small></p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/cherryblossom_1.jpg" class="card-img-top" alt="체리블로썸이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/cherryblossom_1.jpg" class="card-img-top inside" alt="체리블로썸이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">체리블로썸</h5>
+                            <h5 class="card-title inside">체리블로썸</h5>
                             <p class="card-text-2"><small class="text-muted">31,500원</small></p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/cosmopolitan-1.jpg" class="card-img-top" alt="코스모폴리탄이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/cosmopolitan-1.jpg" class="card-img-top inside" alt="코스모폴리탄이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">코스모폴리탄</h5>
+                            <h5 class="card-title inside">코스모폴리탄</h5>
                             <p class="card-text-2"><small class="text-muted">31,500원</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="card-group">
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/daiquiri-1.jpg" class="card-img-top" alt="다이키리이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/daiquiri-1.jpg" class="card-img-top inside" alt="다이키리이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">다이키리</h5>
+                            <h5 class="card-title inside">다이키리</h5>
                             <p class="card-text-2"><small class="text-muted">41,000원</small></p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/derby-1.jpg" class="card-img-top" alt="더비이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/derby-1.jpg" class="card-img-top inside" alt="더비이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">더비</h5>
+                            <h5 class="card-title inside">더비</h5>
                             <p class="card-text-2"><small class="text-muted">37,500원</small></p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/eggsour-1.jpg" class="card-img-top" alt="에그사워이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/eggsour-1.jpg" class="card-img-top inside" alt="에그사워이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">에그사워</h5>
+                            <h5 class="card-title inside">에그사워</h5>
                             <p class="card-text-2"><small class="text-muted">20,000원</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="card-group">
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/emeraldcity-1.jpg" class="card-img-top" alt="에메랄드시티이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/emeraldcity-1.jpg" class="card-img-top inside" alt="에메랄드시티이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">에메랄드시티</h5>
+                            <h5 class="card-title inside">에메랄드시티</h5>
                             <p class="card-text-2"><small class="text-muted">32,000원</small></p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/goldrush_1.jpg" class="card-img-top" alt="골드러시이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/goldrush_1.jpg" class="card-img-top inside" alt="골드러시이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">골드러시</h5>
+                            <h5 class="card-title inside">골드러시</h5>
                             <p class="card-text-2"><small class="text-muted">45,000원</small></p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/grandblue_1.jpg" class="card-img-top" alt="그랜드블루이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/sulkit/grandblue_1.jpg" class="card-img-top inside" alt="그랜드블루이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
-                            <h5 class="card-title">그랜드블루</h5>
+                            <h5 class="card-title inside inside">그랜드블루</h5>
                             <p class="card-text-2"><small class="text-muted">41,000원</small></p>
                         </div>
                     </div>
@@ -194,6 +195,8 @@
     <footer>
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    	<script src="${pageContext.request.contextPath}/assets/js/sulkit/sulkit.js"></script>
     </body>
 
 </html>
