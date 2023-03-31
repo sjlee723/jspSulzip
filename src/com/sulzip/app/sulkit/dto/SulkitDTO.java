@@ -16,6 +16,7 @@ public class SulkitDTO {
 	private String sulkitDesc;
 	private String sulkitRecipe;
 	private int sulkitPrice;
+	private String sulkitImg;
 	
 	public SulkitDTO() {}
 
@@ -66,14 +67,20 @@ public class SulkitDTO {
 	public void setSulkitPrice(int sulkitPrice) {
 		this.sulkitPrice = sulkitPrice;
 	}
+	
+	public String getSulkitImg() {
+		return sulkitImg;
+	}
+
+	public void setSulkitImg(String sulkitImg) {
+		this.sulkitImg = sulkitImg;
+	}
 
 	@Override
 	public String toString() {
 		return "SulkitDTO [sulkitNumber=" + sulkitNumber + ", sulkitNameKor=" + sulkitNameKor + ", sulkitNameEng="
 				+ sulkitNameEng + ", sulkitDesc=" + sulkitDesc + ", sulkitRecipe=" + sulkitRecipe + ", sulkitPrice="
-				+ sulkitPrice + "]";
+				+ sulkitPrice + ", sulkitImg=" + sulkitImg + "]";
 	}
-	
-	
-	
+
 }
