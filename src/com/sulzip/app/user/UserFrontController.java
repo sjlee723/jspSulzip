@@ -23,6 +23,13 @@ public class UserFrontController extends HttpServlet {
 		System.out.println(target);
 		switch(target) {
 		
+		case "/user/join.usr" : 
+			System.out.println("user!!!");
+			req.getRequestDispatcher("/app/user/join.jsp").forward(req, resp);
+			break;
+		case "/user/joinOk.usr" :
+			new JoinOkController().execute(req, resp);
+			break;
 		}
 	}
 }
