@@ -1,10 +1,12 @@
 package com.sulzip.app.sulkit.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
-import com.sulzip.app.product.dto.ProductDTO;
 import com.sulzip.app.sulkit.dto.SulkitDTO;
+import com.sulzip.app.sulkit.vo.SulkitVO;
 
 public class SulkitDAO {
 	public SqlSession sqlsession;
@@ -17,7 +19,7 @@ public class SulkitDAO {
 		return sqlsession.selectOne("sulkit.selectSulkit", sulkitNumber);
 	}
 	
-	public ProductDTO recipe(int productNumber) {
-		return sqlsession.selectOne("sulkit.recipe", productNumber);
+	public List<SulkitVO> recipe(int productNumber) {
+		return sqlsession.selectList("sulkit.recipe", productNumber);
 	}
 }

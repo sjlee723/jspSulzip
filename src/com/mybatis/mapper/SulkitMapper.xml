@@ -8,10 +8,13 @@
 		where sulkit_number = ${sulkitNumber}
 	</select>
 	
-	<select id="recipe" resultType="ProductDTO" parameterType="_int">
-		SELECT product_name_kor, product_name_eng, product_price, product_ea, product_vol, product_alcohol_degree, category_number, product_system_name
-		FROM product;
-		where product_number = ${productNumber}
+	<select id="recipe" resultType="SulkitVO" parameterType="_int">
+		select b.psBridge_vol, p.product_name_kor, p.product_system_name  from sulkit s join psbridge b 
+		on s.sulkit_number = ${productNumber} and s.sulkit_number = b.sulkit_number
+		join product p
+		on b.product_number = p.product_number;
 	</select>
+	
+	
 
 </mapper>

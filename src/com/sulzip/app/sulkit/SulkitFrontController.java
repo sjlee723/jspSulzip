@@ -27,10 +27,6 @@ public class SulkitFrontController extends HttpServlet {
 			System.out.println("안녕하세요!!!");
 			new SulkitBoardController().execute(req, resp);
 			break;
-		case "/sulkit/sulkitDetail.suk": 
-			System.out.println("안녕하세요!!!");
-			new SulkitDetailController().execute(req, resp);
-			break;
 		}
 	}
 }

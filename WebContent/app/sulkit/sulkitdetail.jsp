@@ -84,11 +84,24 @@
       <div class="section-1">
         <div class="ingre-title"><span>레시피 정보</span></div>
         <div class="ingre-box">
-          <div class="ingre" data-num="2">
+        
+        <c:forEach var="ingre" items="${ingreList}">
+        	<div class="ingre">
+            <div class="ingre-icon">
+            <img src="${pageContext.request.contextPath}/assets/img/productAll/${ingre.getProductSystemName()}"/>
+            </div>
+            <div class="span">
+              <div class="name"><span>${ingre.getProductNameKor()}</span></div>
+              <div class="vol"><span id="vol">${ingre.getPsBridgeVol()}</span></div>
+            </div>
+          </div>
+        </c:forEach>
+        
+          <%-- <div class="ingre">
             <div class="ingre-icon"></div>
             <div class="span">
-              <div class="name"><span>딸기 리큐르</span></div>
-              <div class="vol"><span id="vol">22ml</span></div>
+              <div class="name"><span>${sulkit2.getProductNameKor()}</span></div>
+              <div class="vol"><span id="vol">${sulkit2.getPsBridgeVol()}</span></div>
             </div>
           </div>
           <div class="ingre">
@@ -111,7 +124,7 @@
               <div class="name"><span>보드카</span></div>
               <div class="vol"><span id="vol">30ml</span></div>
             </div>
-          </div>
+          </div> --%>
         </div>
       </div>
       <!-- 레시피 설명 -->
