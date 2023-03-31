@@ -21,8 +21,12 @@ public class SulkitFrontController extends HttpServlet {
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		System.out.println(target);
-		switch(target) {
 		
+		switch(target) {
+		case "/sulkit/sulkitBoard.suk": 
+			System.out.println("안녕하세요!!!");
+			new SulkitBoardController().execute(req, resp);
+			break;
 		}
 	}
 }
