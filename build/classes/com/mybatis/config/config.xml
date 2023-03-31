@@ -18,6 +18,7 @@
 		<typeAlias type="com.sulzip.app.cart.dto.CartDTO" alias="CartDTO"/>
 		<typeAlias type="com.sulzip.app.order.dto.OrderDTO" alias="OrderDTO"/>
 		<typeAlias type="com.sulzip.app.sulkit.dto.SulkitDTO" alias="SulkitDTO"/>
+		<typeAlias type="com.sulzip.app.sulkit.vo.SulkitVO" alias="SulkitVO"/>
 		<typeAlias type="com.sulzip.app.product.dto.ProductDTO" alias="ProductDTO"/>
 		<typeAlias type="com.sulzip.app.category.dto.CategoryDTO" alias="CategoryDTO"/>
 		
