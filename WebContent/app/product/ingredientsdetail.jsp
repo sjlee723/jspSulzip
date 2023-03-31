@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sulkitdetail</title>
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/sulkit/sulkitdetails.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/product/alcoholdetail.css">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
   <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
   <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
@@ -31,7 +31,7 @@
     <div class="asidebar">
       <div class="list-nav">
         <span class="text-muted1">홈 >
-          <span class="text-muted2">술키트</span>
+          <span class="text-muted2">재료</span>
         </span>
       </div>
     </div>
@@ -39,19 +39,19 @@
       <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="${pageContext.request.contextPath}/assets/img/sulkit/${sulkit.getSulkitImg()}" class="img-fluid rounded-start" alt="코스모폴리탄이미지">
+            <img src="${pageContext.request.contextPath}/assets/img/ingredients/${ingredients.getProductSystemName()}" class="img-fluid rounded-start">
           </div>
           <div class="col-md-6">
             <div class="card-body">
               <h5 class="card-title">
-              	<c:out value="${sulkit.getSulkitNameKor()}"/>
+              	<c:out value="${ingredients.getProductNameKor()}"/>
               </h5>
               <p class="card-text"><small class="text-muted">
-              	<c:out value="${sulkit.getSulkitNameEng()}"/>
+              	<c:out value="${ingredients.getProductNameEng()}"/>
               </small></p>
               <div class="row price-area1">
                 <div class="col-3">
-                  <p id="unit_price"><c:out value="${sulkit.getSulkitPrice()}"/></p>
+                  <p id="unit_price"><c:out value="${ingredients.getProductPrice()}"/></p>
                 </div>
                 <div class="col-9" style="text-align: right;">
                   <button type="button" class="btn btn-outline-secondary" onclick="fn_price_cal('-');">-</button>
@@ -61,7 +61,7 @@
               </div>
               <div class="row price-area2">
                 <div class="col-12" style="text-align: right;">
-                  <span>총 수량</span><span id="total_num">&nbsp;&nbsp;1</span><span>&nbsp;개&nbsp;&nbsp;|&nbsp;&nbsp;</span><span id="price"><c:out value="${sulkit.getSulkitPrice()}"/></span><span class="won">&nbsp;원</span>
+                  <span>총 수량</span><span id="total_num">&nbsp;&nbsp;1</span><span>&nbsp;개&nbsp;&nbsp;|&nbsp;&nbsp;</span><span id="price"><c:out value="${ingredients.getProductPrice()}"/></span><span class="won">&nbsp;원</span>
                 </div>
               </div>
               <div class="row mt-3">
@@ -80,63 +80,6 @@
   </div>
   <div class="myrecipe-detail-container">
     <div class="detail">
-      <!-- 제료 설명 -->
-      <div class="section-1">
-        <div class="ingre-title"><span>레시피 정보</span></div>
-        <div class="ingre-box">
-        
-        <c:forEach var="ingre" items="${ingreList}">
-        	<div class="ingre">
-            <div class="ingre-icon">
-            <img src="${pageContext.request.contextPath}/assets/img/productAll/${ingre.getProductSystemName()}"/>
-            </div>
-            <div class="span">
-              <div class="name"><span>${ingre.getProductNameKor()}</span></div>
-              <div class="vol"><span id="vol">${ingre.getPsBridgeVol()}</span></div>
-            </div>
-          </div>
-        </c:forEach>
-        
-          <%-- <div class="ingre">
-            <div class="ingre-icon"></div>
-            <div class="span">
-              <div class="name"><span>${sulkit2.getProductNameKor()}</span></div>
-              <div class="vol"><span id="vol">${sulkit2.getPsBridgeVol()}</span></div>
-            </div>
-          </div>
-          <div class="ingre">
-            <div class="ingre-icon"></div>
-            <div class="span">
-              <div class="name"><span>블루 큐라소</span></div>
-              <div class="vol"><span id="vol">22ml</span></div>
-            </div>
-          </div>
-          <div class="ingre">
-            <div class="ingre-icon"></div>
-            <div class="span">
-              <div class="name"><span>우유</span></div>
-              <div class="vol"><span id="vol">10drops</span></div>
-            </div>
-          </div>
-          <div class="ingre">
-            <div class="ingre-icon"></div>
-            <div class="span">
-              <div class="name"><span>보드카</span></div>
-              <div class="vol"><span id="vol">30ml</span></div>
-            </div>
-          </div> --%>
-        </div>
-      </div>
-      <!-- 레시피 설명 -->
-      <div class="section-2">
-        <div class="recipe-title"></div>
-        <div class="recipe-box">
-          <p>
-            <c:out value="${sulkit.getSulkitRecipe()}"/>
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 <footer>
 	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
