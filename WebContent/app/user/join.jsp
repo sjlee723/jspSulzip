@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
     <title>join</title>
+<!--     //int userNumber;
+//String userStatus;
+//String userRegistrationDate;
+//String userId;
+//String userPw;
+//String userName;
+//String userPhone;
+//String userGender;
+//String userEmail;
+//String userRegistrationNumber; -->
+    
 </head>
 <body>
     <header>
@@ -21,7 +32,8 @@
             <div class="title">회원 가입</div>
         </section>
         <section class="section2">
-            <div class="sub-title">회원정보입력</div>   
+            <div class="sub-title">회원정보입력</div>
+            <form action="/user/joinOk.usr" method="POST">
             <table class="join-table">
                 <colgroup class="join-colgroup">
                     <col class="join-col1">
@@ -31,44 +43,50 @@
                     <tr class="join-tr">
                         <th class="join-th">아이디</th>
                         <td class="join-td">
-                            <input type="text" name="join_id" class="join_id" autofocus><span class="text-details">&nbsp;영문자, 숫자, _만 입력 가능. 최소 3자 이상 입력하세요.</span>
+                            <input type="text" name="userId" class="join_id" autofocus><span class="text-details">&nbsp;영문자, 숫자, _만 입력 가능. 최소 3자 이상 입력하세요.</span>
                         </td>
                     </tr>
                     <tr class="join-tr">
                         <th class="join-th">비밀번호</th>
                         <td class="join-td">
-                            <input type="text" name="join_pw" class="join_pw">
+                            <input type="text" name="userPw" class="join_pw">
                         </td>
                     </tr>
                     <tr class="join-tr">
                         <th class="join-th">비밀번호 확인</th>
                         <td class="join-td">
-                            <input type="text" name="join_pwconfirm" class="join_pwconfirm">
-                        </td>
+                            <input type="text" class="join_pwconfirm">
+                        </td>	
                     </tr>
                     <tr class="join-tr">
                         <th class="join-th">이름</th>
                         <td class="join-td">
-                            <input type="text" name="join_name" class="join_name">
+                            <input type="text" name="userName" class="join_name">
+                        </td>
+                    </tr>
+                    <tr class="join-tr">
+                        <th class="join-th">주민등록번호</th>
+                        <td class="join-td">
+                            <input type="text" name="userRegistrationNumber" class="join_userRegistrationNumber">
                         </td>
                     </tr>
                     <tr class="join-tr">
                         <th class="join-th">성별</th>
                         <td class="join-td">
-                            <input type="radio" name="join_gender" value="male" class="join_male" checked="checked">남성
-                            <input type="radio" name="join_gender" value="female" class="join_female">여성
+                            <input type="radio" name="userGender" value="M" class="join_male" checked="checked">남성
+                            <input type="radio" name="userGender" value="F" class="join_female">여성
                         </td>
                     </tr>
                     <tr class="join-tr">
                         <th class="join-th">이메일</th>
                         <td class="join-td">
-                            <input type="text" name="join_email" class="join_email">
+                            <input type="text" name="userEmail" class="join_email">
                         </td>
                     </tr>
                     <tr class="join-tr">
                         <th class="join-th">휴대폰번호</th>
                         <td class="join-td">
-                            <input type="text" name="join_contact" class="join_contact">
+                            <input type="text" name="userPhone" class="join_contact">
                         </td>
                     </tr>
                     <!-- <tr class="join-tr">
@@ -116,6 +134,8 @@
             <button type="submit" class="join-btn-cancel" onclick="history.back()">취소</button>
             <button type="submit" class="join-btn-submit" accesskey="s">확인</button>
         </section>
+        </form>
+        
     </main>
     <footer>
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
