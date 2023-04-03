@@ -24,7 +24,10 @@
           <div class="preview"></div>
           <div class="preview"></div>
         </div>
-        <div class="main-img"></div>
+        <div class="main-img">
+        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/빅터프랑켄슈타인.jpg" class="card-img-top inside" alt="빅터프랑켄슈타인이미지">
+        <%-- <img src="${pageContext.request.contextPath}/assets/img/myrecipe/${myRecipe.get사용자가올린mr파일이미지()}" class="card-img-top inside"> --%>
+        </div>
         <div class="info">
           <div class="info-title">
             <div class="kor-name">${myRecipe.getMyRecipeNameKor()}</div>
@@ -65,7 +68,7 @@
               
               <c:forEach var="ingre" items="${ingreList}">
            		<div class="ingre">
-            		<div class="ingre-icon">q
+            		<div class="ingre-icon">
             			<img src="${pageContext.request.contextPath}/assets/img/productAll/${ingre.getProductSystemName()}"/>
             		</div>
             		<div class="span">
@@ -81,9 +84,7 @@
           <div class="section-2">
             <div class="recipe-title"></div>
             <div class="recipe-box">
-              <p>
-                ${myRecipe.getMyRecipeRecipe()}
-              </p>
+              <p>${myRecipe.getMyRecipeRecipe()}</p>
             </div>
           </div>
         </div>

@@ -211,9 +211,11 @@ main {
 
 
 .ingre-input-box > span {
+  width: 26px;
   font-size: 18px;
-  margin-top: 3px;
   margin-right: 10px;
+  text-align: center;
+  line-height: 33px;
 }
 
 .upload-btn-box {
