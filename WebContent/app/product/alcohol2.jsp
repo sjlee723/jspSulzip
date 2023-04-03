@@ -46,105 +46,105 @@
             </div>
             <div class="list-group">
                 <div class="card-group">
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/마티니로쏘(스위트베르무트).png" class="card-img-top" alt="마티니로쏘(스위트베르무트)이미지">
+                    <div class="card" data-num="13">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/마티니로쏘(스위트베르무트).png" class="card-img-top inside" alt="마티니로쏘(스위트베르무트)이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">마티니로쏘(스위트베르무트)</h5>
+                            <h5 class="card-title inside">마티니로쏘</h5>
                             <p class="card-text-2"><small class="text-muted">15,800원</small></p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/볼스(카시스).png" class="card-img-top" alt="볼스(카시스)이미지">
+                    <div class="card" data-num="14">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/볼스(카시스).png" class="card-img-top inside" alt="볼스(카시스)이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">볼스(카시스)</h5>
+                            <h5 class="card-title inside">볼스 카시스</h5>
                             <p class="card-text-2"><small class="text-muted">22,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/블루큐라소.jpg" class="card-img-top" alt="블루큐라소이미지">
+                    <div class="card" data-num="15">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/블루큐라소.jpg" class="card-img-top inside" alt="블루큐라소이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">블루큐라소</h5>
+                            <h5 class="card-title inside">블루큐라소</h5>
                             <p class="card-text-2"><small class="text-muted">33,000원</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="card-group">
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/애플브랜디.png" class="card-img-top" alt="애플브랜디이미지">
+                    <div class="card" data-num="16">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/애플브랜디.png" class="card-img-top inside" alt="애플브랜디이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">애플브랜디</h5>
+                            <h5 class="card-title inside">애플브랜디</h5>
                             <p class="card-text-2"><small class="text-muted">27,500원</small></p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/앱솔루트(보드카).jpg" class="card-img-top" alt="앱솔루트보드카이미지">
+                    <div class="card" data-num="17">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/앱솔루트(보드카).jpg" class="card-img-top inside" alt="앱솔루트보드카이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">앱솔루트(보드카)</h5>
+                            <h5 class="card-title inside">앱솔루트 엑스트랙</h5>
                             <p class="card-text-2"><small class="text-muted">31,500원</small></p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/앱솔루트1(보드카).jpg" class="card-img-top" alt="앱솔루트보드카1이미지">
+                    <div class="card" data-num="18">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/앱솔루트(엑스트랙).jpg" class="card-img-top inside" alt="앱솔루트보드카1이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">앱솔루트(보드카)</h5>
+                            <h5 class="card-title inside">앱솔루트 보드카</h5>
                             <p class="card-text-2"><small class="text-muted">31,500원</small></p>
                         </div>
                     </div>
                 </div>
-                <div class="card-group">
+                <div class="card-group" data-num="19">
                     <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/진빔(버번).jpg" class="card-img-top" alt="진빔이미지">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/진빔(버번).jpg" class="card-img-top inside" alt="진빔이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">진빔(버번)</h5>
+                            <h5 class="card-title inside">진빔</h5>
                             <p class="card-text-2"><small class="text-muted">41,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/진저에일.jpg" class="card-img-top" alt="진저에일이미지">
+                    <div class="card" data-num="20">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/시바스리갈.png" class="card-img-top inside" alt="시바스리갈이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">진저에일</h5>
-                            <p class="card-text-2"><small class="text-muted">37,500원</small></p>
+                            <h5 class="card-title inside">시바스리갈</h5>
+                            <p class="card-text-2"><small class="text-muted">52,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/트리플섹.jpg" class="card-img-top" alt="트리플섹이미지">
+                    <div class="card" data-num="21">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/트리플섹.jpg" class="card-img-top inside" alt="트리플섹이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">트리플섹</h5>
+                            <h5 class="card-title inside">트리플섹</h5>
                             <p class="card-text-2"><small class="text-muted">20,000원</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="card-group">
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/피치트리.jpg" class="card-img-top" alt="피치트리이미지">
+                    <div class="card" data-num="22">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/피치트리.jpg" class="card-img-top inside" alt="피치트리이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">피치트리</h5>
+                            <h5 class="card-title inside">피치트리</h5>
                             <p class="card-text-2"><small class="text-muted">32,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/헤네시(꼬냑).jpg" class="card-img-top" alt="헤네시(꼬냑)이미지">
+                    <div class="card" data-num="23">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/헤네시(꼬냑).jpg" class="card-img-top inside" alt="헤네시(꼬냑)이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">헤네시(꼬냑)</h5>
-                            <p class="card-text-2"><small class="text-muted">45,000원</small></p>
+                            <h5 class="card-title inside">헤네시 X.O</h5>
+                            <p class="card-text-2"><small class="text-muted">275,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/호세쿠엘보(데낄라).png" class="card-img-top" alt="호세쿠엘보(데낄라)이미지">
+                    <div class="card" data-num="24">
+                        <img src="${pageContext.request.contextPath}/assets/img/alcohol/호세쿠엘보(데낄라).png" class="card-img-top inside" alt="호세쿠엘보(데낄라)이미지">
                         <div class="card-body">
                             <p class="card-text-1">술</p>
-                            <h5 class="card-title">호세쿠엘보(데낄라)</h5>
+                            <h5 class="card-title inside">호세쿠엘보 데낄라</h5>
                             <p class="card-text-2"><small class="text-muted">41,000원</small></p>
                         </div>
                     </div>
@@ -177,9 +177,9 @@
                           <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1"><</a>
                           </li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/product/productAlcohol1.prd">1</a></li>
                           <li class="page-item active">
-                            <a class="page-link" href="#">2</a>
+                            <a class="page-link" href="${pageContext.request.contextPath}/product/productAlcohol2.prd">2</a>
                           </li>
                           <li class="page-item"><a class="page-link" href="#">3</a></li>
                           <li class="page-item">
@@ -194,6 +194,8 @@
     <footer>
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/product/alcohol.js"></script>
     </body>
 
 </html>
