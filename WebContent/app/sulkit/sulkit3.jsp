@@ -177,11 +177,11 @@
                           <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1"><</a>
                           </li>
-                          <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/app/sulkit/sulkit1.jsp">1</a></li>
-                          <li class="page-item active">
-                            <a class="page-link" href="${pageContext.request.contextPath}/app/sulkit/sulkit2.jsp">2</a>
+                          <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk">1</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="${pageContext.request.contextPath}/sulkit/productSulkit2.suk">2</a>
                           </li>
-                          <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/app/sulkit/sulkit3.jsp">3</a></li>
+                          <li class="page-item active"><a class="page-link" href="${pageContext.request.contextPath}/sulkit/productSulkit3.suk">3</a></li>
                           <li class="page-item">
                             <a class="page-link" href="#">></a>
                           </li>

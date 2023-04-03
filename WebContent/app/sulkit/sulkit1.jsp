@@ -48,7 +48,7 @@
             </div>
             <div class="list-group">
                 <div class="card-group">
-                    <div class="card" data-num="2">
+                    <div class="card" data-num="1">
                         <img src="${pageContext.request.contextPath}/assets/img/sulkit/bacardiwhite-1.jpg" class="card-img-top inside inside" alt="바카디화이트이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
@@ -56,7 +56,7 @@
                             <p class="card-text-2"><small class="text-muted">35,800원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="2">
                         <img src="${pageContext.request.contextPath}/assets/img/sulkit/blackjack_1.jpg" class="card-img-top inside" alt="블랙잭이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
@@ -64,7 +64,7 @@
                             <p class="card-text-2"><small class="text-muted">42,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="3">
                         <img src="${pageContext.request.contextPath}/assets/img/sulkit/blackrussian.jpg" class="card-img-top inside" alt="블랙러시안이미지">
                         <div class="card-body">
                             <p class="card-text-1">술키트</p>
@@ -179,11 +179,11 @@
                           <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1"><</a>
                           </li>
-                          <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/app/sulkit/sulkit1.jsp">1</a></li>
-                          <li class="page-item active">
-                            <a class="page-link" href="${pageContext.request.contextPath}/app/sulkit/sulkit2.jsp">2</a>
+                          <li class="page-item active"><a class="page-link" href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk">1</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="${pageContext.request.contextPath}/sulkit/productSulkit2.suk">2</a>
                           </li>
-                          <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/app/sulkit/sulkit3.jsp">3</a></li>
+                          <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/sulkit/productSulkit3.suk">3</a></li>
                           <li class="page-item">
                             <a class="page-link" href="#">></a>
                           </li>
