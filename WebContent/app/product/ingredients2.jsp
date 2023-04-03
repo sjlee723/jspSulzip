@@ -46,33 +46,33 @@
             </div>
             <div class="list-group">
                 <div class="card-group">
-                    <div class="card">
+                    <div class="card" data-num="37">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/그레나딘시럽.jpg" class="card-img-top" alt="그레나딘시럽이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
-                            <h5 class="card-title">그래나딘시럽</h5>
+                            <h5 class="card-title">그래나딘 시럽</h5>
                             <p class="card-text-2"><small class="text-muted">10,800원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="38">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/멜론리큐르.jpg" class="card-img-top" alt="멜론리큐르이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
-                            <h5 class="card-title">멜론시럽</h5>
+                            <h5 class="card-title">멜론 시럽</h5>
                             <p class="card-text-2"><small class="text-muted">17,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="39">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/블루큐라소.jpg" class="card-img-top" alt="블루큐라소이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
-                            <h5 class="card-title">블루큐라소시럽</h5>
+                            <h5 class="card-title">블루큐라소 시럽</h5>
                             <p class="card-text-2"><small class="text-muted">23,000원</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="card-group">
-                    <div class="card">
+                    <div class="card" data-num="40">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/레몬오일.jpg" class="card-img-top" alt="레몬오일이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
@@ -80,7 +80,7 @@
                             <p class="card-text-2"><small class="text-muted">9,500원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="41">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/아마레또.jpg" class="card-img-top" alt="아마레또이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
@@ -88,17 +88,17 @@
                             <p class="card-text-2"><small class="text-muted">21,500원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="42">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/칵테일라임즙.jpg" class="card-img-top" alt="칵테일라임즙이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
-                            <h5 class="card-title">칵테일라임즙</h5>
+                            <h5 class="card-title">칵테일 라임즙</h5>
                             <p class="card-text-2"><small class="text-muted">11,500원</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="card-group">
-                    <div class="card">
+                    <div class="card" data-num="43">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/사워믹스.jpg" class="card-img-top" alt="사워믹스이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
@@ -106,41 +106,41 @@
                             <p class="card-text-2"><small class="text-muted">19,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="44">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/칵테일오르쟈시럽.jpg" class="card-img-top" alt="칵테일오르쟈시럽이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
-                            <h5 class="card-title">칵테일오르쟈시럽</h5>
+                            <h5 class="card-title">칵테일 오르쟈 시럽</h5>
                             <p class="card-text-2"><small class="text-muted">17,500원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="45">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/칵테일피치트리.png" class="card-img-top" alt="칵테일피치트리이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
-                            <h5 class="card-title">칵테일피치트리</h5>
+                            <h5 class="card-title">칵테일 피치트리</h5>
                             <p class="card-text-2"><small class="text-muted">20,000원</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="card-group">
-                    <div class="card">
+                    <div class="card" data-num="46">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/크렌베리쥬스.jpg" class="card-img-top" alt="크렌베리쥬스이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
-                            <h5 class="card-title">크렌베리쥬스</h5>
+                            <h5 class="card-title">크렌베리 주스</h5>
                             <p class="card-text-2"><small class="text-muted">12,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="47">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/코코넛밀크.jpg" class="card-img-top" alt="코코넛밀크이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
-                            <h5 class="card-title">코코넛밀크</h5>
+                            <h5 class="card-title">코코넛 밀크</h5>
                             <p class="card-text-2"><small class="text-muted">9,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="48">
                         <img src="${pageContext.request.contextPath}/assets/img/ingredients/체리.jpg" class="card-img-top" alt="체리이미지">
                         <div class="card-body">
                             <p class="card-text-1">재료</p>
@@ -177,9 +177,9 @@
                           <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1"><</a>
                           </li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="${pageContext.request.contextPath}/product/productIngredients1.prd">1</a></li>
                           <li class="page-item active">
-                            <a class="page-link" href="#">2</a>
+                            <a class="page-link" href="${pageContext.request.contextPath}/product/productIngredients2.prd">2</a>
                           </li>
                           <li class="page-item"><a class="page-link" href="#">3</a></li>
                           <li class="page-item">

@@ -27,12 +27,11 @@
 <header>
 	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
 </header>
-<form action="${pageContext.request.contextPath}/product/productAlcoholDetail.prd" method="post">
   <div class="container">
     <div class="asidebar">
       <div class="list-nav">
         <span class="text-muted1">홈 >
-          <span class="text-muted2">술</span>
+          <span class="text-muted2">용품</span>
         </span>
       </div>
     </div>
@@ -40,19 +39,19 @@
       <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="${pageContext.request.contextPath}/assets/img/alcohol/${alcohol.getProductSystemName()}" class="img-fluid rounded-start">
+            <img src="${pageContext.request.contextPath}/assets/img/supplies/${supplies.getProductSystemName()}" class="img-fluid rounded-start">
           </div>
           <div class="col-md-6">
             <div class="card-body">
               <h5 class="card-title">
-              	<c:out value="${alcohol.getProductNameKor()}"/>
+              	<c:out value="${supplies.getProductNameKor()}"/>
               </h5>
               <p class="card-text"><small class="text-muted">
-              	<c:out value="${alcohol.getProductNameEng()}"/>
+              	<c:out value="${supplies.getProductNameEng()}"/>
               </small></p>
               <div class="row price-area1">
                 <div class="col-3">
-                  <p id="unit_price"><c:out value="${alcohol.getProductPrice()}"/></p>
+                  <p id="unit_price"><c:out value="${supplies.getProductPrice()}"/></p>
                 </div>
                 <div class="col-9" style="text-align: right;">
                   <button type="button" class="btn btn-outline-secondary" onclick="fn_price_cal('-');">-</button>
@@ -62,7 +61,7 @@
               </div>
               <div class="row price-area2">
                 <div class="col-12" style="text-align: right;">
-                  <span>총 수량</span><span id="total_num">&nbsp;&nbsp;1</span><span>&nbsp;개&nbsp;&nbsp;|&nbsp;&nbsp;</span><span id="price"><c:out value="${alcohol.getProductPrice()}"/></span><span class="won">&nbsp;원</span>
+                  <span>총 수량</span><span id="total_num">&nbsp;&nbsp;1</span><span>&nbsp;개&nbsp;&nbsp;|&nbsp;&nbsp;</span><span id="price"><c:out value="${supplies.getProductPrice()}"/></span><span class="won">&nbsp;원</span>
                 </div>
               </div>
               <div class="row mt-3">
@@ -82,12 +81,10 @@
   <div class="myrecipe-detail-container">
     <div class="detail">
   </div>
-  </form>
 <footer>
 	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
 </footer>
-    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/product/alcohol.js"></script>
+
 </body>
 
 <script type="text/javascript">

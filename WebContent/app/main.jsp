@@ -30,10 +30,10 @@
           </div>
           <div class="h-bottom-line">
             <ul class="h-ctg">
-              <li><a href="${pageContext.request.contextPath}/app/sulkit/sulkit1.jsp">술키트</a></li>
-              <li><a href="${pageContext.request.contextPath}/app/product/alcohol1.jsp">술</a></li>
-              <li><a href="${pageContext.request.contextPath}/app/product/ingredients.jsp">재료</a></li>
-              <li><a href="${pageContext.request.contextPath}/app/product/supplies1.jsp">용품</a></li>
+              <li><a href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk">술키트</a></li>
+              <li><a href="${pageContext.request.contextPath}/product/productAlcohol1.prd">술</a></li>
+              <li><a href="${pageContext.request.contextPath}/product/productIngredients1.prd">재료</a></li>
+              <li><a href="${pageContext.request.contextPath}/product/productSupplies1.prd">용품</a></li>
               <li><a href="${pageContext.request.contextPath}/app/myrecipe/myrecipe.jsp">나만의 레시피</a></li>
               <li><a href="${pageContext.request.contextPath}/app/partners/partners.jsp">파트너스</a></li>
               <li><a href="${pageContext.request.contextPath}/app/clientboard/service.jsp">고객센터</a></li>
@@ -46,17 +46,17 @@
       <div style="overflow: hidden;" class="main">
         <div class="main-img">
           <div class="main-first">
-            <a href="${pageContext.request.contextPath}/app/sulkit/sulkit1.jsp">
+            <a href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk">
               <img src="${pageContext.request.contextPath}/assets/img/banner/mainImg.jpg" />
             </a>
           </div>
           <div class="main-second">
-            <a href="">
+            <a href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk">
               <img src="${pageContext.request.contextPath}/assets/img/banner/mainimg2.jpg" />
             </a>
           </div>
           <div class="main-first">
-            <a href="${pageContext.request.contextPath}/app/sulkit/sulkit.jsp">
+            <a href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk">
               <img src="${pageContext.request.contextPath}/assets/img/banner/mainImg.jpg" />
             </a>
           </div>
@@ -81,7 +81,7 @@
               </li>
               <li>
                 <div class="slide-img">
-                  <a href="${pageContext.request.contextPath}/app/sulkit/sulkit1.jsp"><img src="${pageContext.request.contextPath}/assets/img/sub-banner/brand_image_main.jpg" alt="" /></a>
+                  <a href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk"><img src="${pageContext.request.contextPath}/assets/img/sub-banner/brand_image_main.jpg" alt="" /></a>
                 </div>
               </li>
               <li>
@@ -103,8 +103,8 @@
           <div class="f-column">
             <ul class="f-index">
               <li class="f-index-ul">쇼핑 및 레시피</li>
-              <li class="f-index-li"><a href="" class="f-a">칵테일 패키지</a></li>
-              <li class="f-index-li"><a href="" class="f-a">칵테일 재료</a></li>
+              <li class="f-index-li"><a href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk" class="f-a">칵테일 패키지</a></li>
+              <li class="f-index-li"><a href="${pageContext.request.contextPath}/product/productIngredients1.prd" class="f-a">칵테일 재료</a></li>
             </ul>
           </div>
           <div class="f-column">

@@ -23,9 +23,18 @@ public class SulkitFrontController extends HttpServlet {
 		System.out.println(target);
 		
 		switch(target) {
-		case "/sulkit/sulkitBoard.suk": 
+		case "/sulkit/sulkitDetail.suk": 
 			System.out.println("안녕하세요!!!");
 			new SulkitBoardController().execute(req, resp);
+			break;
+		case "/sulkit/productSulkit1.suk" : 
+			req.getRequestDispatcher("/app/sulkit/sulkit1.jsp").forward(req, resp);
+			break;
+		case "/sulkit/productSulkit2.suk" : 
+			req.getRequestDispatcher("/app/sulkit/sulkit2.jsp").forward(req, resp);
+			break;
+		case "/sulkit/productSulkit3.suk" : 
+			req.getRequestDispatcher("/app/sulkit/sulkit3.jsp").forward(req, resp);
 			break;
 		}
 	}
