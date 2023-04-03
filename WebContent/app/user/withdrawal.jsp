@@ -64,7 +64,7 @@
 		*/
 		
 		function withdrawal() {
-			if(result == "false"){
+			if(result.equals("false")){
 			alert("탈퇴되었습니다.");
 			window.location.href = "https://localhost:8085/";
 		}
