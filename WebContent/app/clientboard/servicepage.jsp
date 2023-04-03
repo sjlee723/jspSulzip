@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,31 +26,29 @@
       <div class="container">
         <div class="wrap">
           <div class="title-box">
-            <h3>제목칸</h3>
+            <h3><c:out value="${boardRow.getBoardTitle()}"/></h3>
             <div class="text">
               <div class="info">
                 <div class="date">
                   <span><strong>날짜 : </strong></span>
-                  <span>2023-03-03</span>
-                </div>
-                <div class="hit">
-                  <span><strong>조회수 : </strong></span>
-                  <span>22</span>
+                  <span><c:out value="${boardRow.getBoardDate()}"/></span>
                 </div>
                 <div class="id">
                   <span><strong>작성자 : </strong></span>
-                  <span>admin</span>
+                  <span><c:out value="${boardRow.getUserId()}"/></span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="content"></div>
+          <div class="content"> <c:out value="${boardRow.getBoardContent()}" /></div>
+         
         </div>
       </div>
       <div class="btn-box">
         <div class="button">
-          <button><span>목록</span></button>
-          <button><span>업로드</span></button>
+          <button type="button" class="list-btn">목록</button>
+          <button type="button" class="modify-btn">수정</button>
+          <button type="button" class="delete-btn">삭제</button>
         </div>
       </div>
     </main>

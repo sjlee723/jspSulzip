@@ -10,8 +10,39 @@
 
 
 <mapper namespace="clientBoard">
-	<select id="selectAll" resultType="BoardVO" parameterType="map">
+	<insert id="write" parameterType="ClientBoardDTO">
+		insert into
+		`client_board`(board_date, board_title, board_content, board_condition, user_number)
+		values(sysdate(), #{boardTitle}, #{boardContent}, 'N', #{userNumber})
+	</insert>
 	
+	<select id="selectAll" parameterType="map" resultType="ClientBoardDTO">
+		select board_number, board_date, board_title, board_content, board_condition, user_number
+		  , (select a.user_id from `user` a  where a.user_number = client_board.user_number) as user_id
+		from `client_board`
+		order by board_number desc
+		limit #{startRow}, #{rowCount}
 	</select>
+
+	<select id="selectDetail" parameterType="ClientBoardDTO" resultType="ClientBoardDTO">
+		 select board_number, board_date, board_title, board_content, board_condition, user_number
+		  , (select a.user_id from `user` a  where a.user_number = client_board.user_number) as user_id
+		from `client_board`
+		where board_number = #{boardNumber} 
+	</select>
+	
+	
+	<select id="totalCount" resultType="_int">
+		select count(board_number) from
+		`client_board`
+	</select>
+	
+	
+	<update id="update" parameterType="ClientBoardDTO">
+	update `client_board`
+	set board_title = #{boardTitle}, board_content = #{boardContent}
+	where board_number = #{boardNumber}
+	</update>
+	
 	
 </mapper>
