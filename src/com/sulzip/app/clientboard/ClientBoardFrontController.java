@@ -24,7 +24,6 @@ public class ClientBoardFrontController extends HttpServlet {
 		
 		switch(target) {
 		case "/clientboard/serviceListOk.clb":
-			req.getRequestDispatcher("/app/clientboard/service.jsp").forward(req, resp);
 			new ServiceListOkController().execute(req, resp);
 			break;
 		case "/clientboard/serviceReadOk.clb":

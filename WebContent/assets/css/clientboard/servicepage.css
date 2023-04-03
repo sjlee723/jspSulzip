@@ -77,14 +77,28 @@
     border-radius: 4px;
     margin-left: 10px;
     margin-top: 30px;
+    cursor: pointer;
   }
   
-  button > span {
+  .list-btn {
     color: white;
     font-weight: 700;
     font-size: 15px;
   }
+  
+  .modify-btn {
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  
+  .delete-btn {
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+  }
+/*   
   button {
     cursor: pointer;
-  }
+  } */
   

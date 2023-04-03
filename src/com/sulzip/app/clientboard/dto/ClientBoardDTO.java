@@ -14,8 +14,35 @@ public class ClientBoardDTO {
 	private String boardContent;
 	private String boardCondition;
 	private int userNumber;
+	private int startRow;
+	private int rowCount;
+	private String userId;
+
+	public int getStartRow() {
+		return startRow;
+	}
+
+	public void setStartRow(int startRow) {
+		this.startRow = startRow;
+	}
+
+	public int getRowCount() {
+		return rowCount;
+	}
+
+	public void setRowCount(int rowCount) {
+		this.rowCount = rowCount;
+	}
 
 	public ClientBoardDTO() {}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 
 	public int getBoardNumber() {
 		return boardNumber;
@@ -69,8 +96,10 @@ public class ClientBoardDTO {
 	public String toString() {
 		return "ClientBoardDTO [boardNumber=" + boardNumber + ", boardDate=" + boardDate + ", boardTitle=" + boardTitle
 				+ ", boardContent=" + boardContent + ", boardCondition=" + boardCondition + ", userNumber=" + userNumber
-				+ "]";
+				+ ", startRow=" + startRow + ", rowCount=" + rowCount + ", userId=" + userId + "]";
 	}
+
+
 
 	
 	

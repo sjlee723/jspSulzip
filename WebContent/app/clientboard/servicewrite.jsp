@@ -25,7 +25,7 @@
     </div>
     <div class="container">
         <!-- 작성완료 경로 처리하기 -->
-        <form id="write-form" action="#" method="post" enctype="multipart/form-data">
+        <form id="write-form" action="/clientboard/serviceWriteOk.clb" method="post">
           <h1>문의글</h1>
           <div class="form-group">
             <label for="title">제목</label>
