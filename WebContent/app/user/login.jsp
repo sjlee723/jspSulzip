@@ -43,13 +43,14 @@
                 <div class="login-body">
                   <div class="tab-content maber-login active">
                     <div class="login-weap">
+                    <form action="/user/loginOk.usr" method="post">
                       <div class="form-group">
                         <input
                           type="text"
-                          name="mb_id"
+                          name="userId"
                           id="login_id"
                           required
-                          calss="form-control input-sm"
+                          class="form-control input-sm"
                           size="20"
                           maxlength="20"
                           placeholder="아이디"
@@ -57,11 +58,11 @@
                       </div>
                       <div class="form-group">
                         <input
-                          type="text"
-                          name="mb_password"
+                          type="password"
+                          name="userPw"
                           id="login_password"
                           required
-                          calss="form-control input-sm"
+                          class="form-control input-sm"
                           size="20"
                           maxlength="20"
                           placeholder="비밀번호"
@@ -77,12 +78,11 @@
                       </div> -->
 
                       <div class="login-btn">
-                        <a href="https://www.naver.com/"
-                          ><button type="submit" class="btn btn-login">
+                        <button type="submit" class="btn btn-login">
                             로그인
-                          </button></a
-                        >
+                          </button>
                       </div>
+                      </form>
                       <!---->
                       <!-- <div class="login-btn">
                           <a href="">로그인</a>
@@ -92,13 +92,12 @@
                         <ul class="join-n-find-wrap">
                           <li>
                             <span>· 아직 쉐이킷 회원이 아니신가요?</span>
-                            <a href="">쉐이킷 회원가입</a>
+                            <a href="/user/join.usr">쉐이킷 회원가입</a>
                           </li>
                           <li>
                             <span>· 아이디/비밀번호를 잊어버리셨나요?</span>
                             <a href="" onclick="showPopup();"
-                              >아이디/비밀번호 찾기</a
-                            >
+                              >아이디/비밀번호 찾기</a>
                           </li>
                         </ul>
                       </div>
@@ -114,5 +113,7 @@
     <footer>
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
     </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   		<script src="${pageContext.request.contextPath}/assets/js/user/login.js"></script>
   </body>
 </html>
