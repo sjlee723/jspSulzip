@@ -24,17 +24,33 @@ public class ProductFrontController extends HttpServlet {
 		System.out.println(target);
 		
 		switch(target) {
-		case "/product/productAlcohol.prd": 
+		case "/product/productAlcoholDetail.prd": 
 			System.out.println("안녕하세요!!!");
 			new ProductAlcoholController().execute(req, resp);
 			break;
-		case "/product/productIngredients.prd": 
-			System.out.println("안녕하세요!!!");
+		case "/product/productAlcohol1.prd" : 
+			req.getRequestDispatcher("/app/product/alcohol1.jsp").forward(req, resp);
+			break;
+		case "/product/productAlcohol2.prd" : 
+			req.getRequestDispatcher("/app/product/alcohol2.jsp").forward(req, resp);
+			break;
+		case "/product/productIngredientsDetail.prd": 
 			new ProductIngredientsController().execute(req, resp);
 			break;
-		case "/product/productSupplies.prd": 
-			System.out.println("안녕하세요!!!");
+		case "/product/productIngredients1.prd" : 
+			req.getRequestDispatcher("/app/product/ingredients1.jsp").forward(req, resp);
+			break;
+		case "/product/productIngredients2.prd" : 
+			req.getRequestDispatcher("/app/product/ingredients2.jsp").forward(req, resp);
+			break;
+		case "/product/productSuppliesDetail.prd": 
 			new ProductSuppliesController().execute(req, resp);
+			break;
+		case "/product/productSupplies1.prd" : 
+			req.getRequestDispatcher("/app/product/supplies1.jsp").forward(req, resp);
+			break;
+		case "/product/productSupplies2.prd" : 
+			req.getRequestDispatcher("/app/product/supplies2.jsp").forward(req, resp);
 			break;
 		}
 	}

@@ -46,33 +46,33 @@
             </div>
             <div class="list-group">
                 <div class="card-group">
-                    <div class="card" data-num="7">
-                        <img src="${pageContext.request.contextPath}/assets/img/supplies/칵테일잔1.jpg" class="card-img-top inside inside" alt="칵테일잔이미지">
+                    <div class="card" data-num="49">
+                        <img src="${pageContext.request.contextPath}/assets/img/supplies/하이볼글라스.jpg" class="card-img-top inside inside" alt="칵테일잔이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
-                            <h5 class="card-title inside inside">칵테일잔</h5>
+                            <h5 class="card-title inside inside">하이볼 글라스</h5>
                             <p class="card-text-2"><small class="text-muted">32,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/supplies/칵테일잔2.jpg" class="card-img-top inside" alt="칵테일잔이미지">
+                    <div class="card" data-num="50">
+                        <img src="${pageContext.request.contextPath}/assets/img/supplies/마티니글라스.jpg" class="card-img-top inside" alt="칵테일잔이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
-                            <h5 class="card-title inside">칵테일잔</h5>
+                            <h5 class="card-title inside">마티니 글라스</h5>
                             <p class="card-text-2"><small class="text-muted">35,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/supplies/칵테일잔3.jpg" class="card-img-top inside" alt="칵테일잔이미지">
+                    <div class="card" data-num="51">
+                        <img src="${pageContext.request.contextPath}/assets/img/supplies/콜린스글라스.jpg" class="card-img-top inside" alt="칵테일잔이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
-                            <h5 class="card-title inside">칵테일잔</h5>
+                            <h5 class="card-title inside">콜린스 글라스</h5>
                             <p class="card-text-2"><small class="text-muted">31,000원</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="card-group">
-                    <div class="card">
+                    <div class="card" data-num="52">
                         <img src="${pageContext.request.contextPath}/assets/img/supplies/레몬스퀴저.jpg" class="card-img-top inside" alt="레몬스퀴저이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
@@ -80,7 +80,7 @@
                             <p class="card-text-2"><small class="text-muted">15,800원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="53">
                         <img src="${pageContext.request.contextPath}/assets/img/supplies/머들러.jpg" class="card-img-top inside" alt="머들러이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
@@ -88,43 +88,43 @@
                             <p class="card-text-2"><small class="text-muted">13,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="54">
                         <img src="${pageContext.request.contextPath}/assets/img/supplies/메탈푸어로.jpg" class="card-img-top inside" alt="메탈푸어로이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
-                            <h5 class="card-title inside">메탈푸어로</h5>
+                            <h5 class="card-title inside">메탈푸어러</h5>
                             <p class="card-text-2"><small class="text-muted">23,000원</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="card-group">
-                    <div class="card">
+                    <div class="card"data-num="55">
                         <img src="${pageContext.request.contextPath}/assets/img/supplies/소믈리에나이프.jpg" class="card-img-top inside" alt="소믈리에나이프이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
-                            <h5 class="card-title inside">소믈리에나이프</h5>
+                            <h5 class="card-title inside">소믈리에 나이프</h5>
                             <p class="card-text-2"><small class="text-muted">17,500원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="56">
                         <img src="${pageContext.request.contextPath}/assets/img/supplies/바스푼.jpg" class="card-img-top inside" alt="바스푼이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
-                            <h5 class="card-title inside">바스푼</h5>
+                            <h5 class="card-title inside">바 스푼</h5>
                             <p class="card-text-2"><small class="text-muted">11,500원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="57">
                         <img src="${pageContext.request.contextPath}/assets/img/supplies/빨대스푼.jpg" class="card-img-top inside" alt="빨대스푼이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
-                            <h5 class="card-title inside">빨대스푼</h5>
+                            <h5 class="card-title inside">빨대 스푼</h5>
                             <p class="card-text-2"><small class="text-muted">11,500원</small></p>
                         </div>
                     </div>
                 </div>
                 <div class="card-group">
-                    <div class="card">
+                    <div class="card" data-num="58">
                         <img src="${pageContext.request.contextPath}/assets/img/supplies/쉐이커.jpg" class="card-img-top inside" alt="쉐이커이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
@@ -132,7 +132,7 @@
                             <p class="card-text-2"><small class="text-muted">31,000원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="59">
                         <img src="${pageContext.request.contextPath}/assets/img/supplies/스트레이너.jpg" class="card-img-top inside" alt="스트레이너이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
@@ -140,7 +140,7 @@
                             <p class="card-text-2"><small class="text-muted">27,500원</small></p>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-num="60">
                         <img src="${pageContext.request.contextPath}/assets/img/supplies/지거.png" class="card-img-top inside" alt="지거이미지">
                         <div class="card-body">
                             <p class="card-text-1">용품</p>
@@ -177,9 +177,9 @@
                           <li class="page-item disabled">
                             <a class="page-link" href="#" tabindex="-1"><</a>
                           </li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item active">
-                            <a class="page-link" href="#">2</a>
+                          <li class="page-item active"><a class="page-link" href="${pageContext.request.contextPath}/product/productSupplies1.prd">1</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="${pageContext.request.contextPath}/product/productSupplies2.prd">2</a>
                           </li>
                           <li class="page-item"><a class="page-link" href="#">3</a></li>
                           <li class="page-item">

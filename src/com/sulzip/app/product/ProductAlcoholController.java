@@ -24,7 +24,9 @@ public class ProductAlcoholController implements Execute {
 		System.out.println(productDTO);
 		
 		req.setAttribute("alcohol", productDTO);
-		req.getRequestDispatcher("/app/product/alcoholdetail.jsp").forward(req, resp);
+		req.getRequestDispatcher("/app/product/alcoholdetail.jsp").forward(req, resp); //파일경로
+//		resp.sendRedirect("/product/productAlcoholDetail.prd"); //url 경로
+		
 		
 	}
 }
