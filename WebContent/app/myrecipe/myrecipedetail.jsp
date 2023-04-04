@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,15 +24,17 @@
           <div class="preview"></div>
           <div class="preview"></div>
         </div>
-        <div class="main-img"></div>
+        <div class="main-img">
+        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/빅터프랑켄슈타인.jpg" class="card-img-top inside" alt="빅터프랑켄슈타인이미지">
+        <%-- <img src="${pageContext.request.contextPath}/assets/img/myrecipe/${myRecipe.get사용자가올린mr파일이미지()}" class="card-img-top inside"> --%>
+        </div>
         <div class="info">
           <div class="info-title">
-            <div class="kor-name">스텔라녹스</div>
-            <div class="eng-name">StellaNox</div>
+            <div class="kor-name">${myRecipe.getMyRecipeNameKor()}</div>
+            <div class="eng-name">${myRecipe.getMyRecipeNameEng()}</div>
           </div>
           <div class="info-desc">
-            보라색 칵테일을 만들고싶어서 만들어봤습니다. 만들고보니 별밤이 어울릴것같아 라틴어로 번역한게 칵테일의
-            이름이 되었습니다.
+            ${myRecipe.getMyRecipeDesc()}
           </div>
           <div class="abv">
             <span>도수 : 22도</span>
@@ -62,44 +65,26 @@
           <div class="section-1">
             <div class="ingre-title"><span>재료 정보</span></div>
             <div class="ingre-box">
-              <div class="ingre">
-                <div class="ingre-icon"></div>
-                <div class="span">
-                  <div class="name"><span>딸기 리큐르</span></div>
-                  <div class="vol"><span id="vol">22ml</span></div>
-                </div>
-              </div>
-              <div class="ingre">
-                <div class="ingre-icon"></div>
-                <div class="span">
-                  <div class="name"><span>블루 큐라소</span></div>
-                  <div class="vol"><span id="vol">22ml</span></div>
-                </div>
-              </div>
-              <div class="ingre">
-                <div class="ingre-icon"></div>
-                <div class="span">
-                  <div class="name"><span>우유</span></div>
-                  <div class="vol"><span id="vol">10drops</span></div>
-                </div>
-              </div>
-              <div class="ingre">
-                <div class="ingre-icon"></div>
-                <div class="span">
-                  <div class="name"><span>보드카</span></div>
-                  <div class="vol"><span id="vol">30ml</span></div>
-                </div>
-              </div>
+              
+              <c:forEach var="ingre" items="${ingreList}">
+           		<div class="ingre">
+            		<div class="ingre-icon">
+            			<img src="${pageContext.request.contextPath}/assets/img/productAll/${ingre.getProductSystemName()}"/>
+            		</div>
+            		<div class="span">
+              			<div class="name"><span>${ingre.getProductNameKor()}</span></div>
+              			<div class="vol"><span id="vol">${ingre.getPmBridgeVol()}</span></div>
+            		</div>
+          		</div>
+        	  </c:forEach>
+              
             </div>
           </div>
           <!-- 레시피 설명 -->
           <div class="section-2">
             <div class="recipe-title"></div>
             <div class="recipe-box">
-              <p>
-                칵테일 잔 칠링 믹싱글라스에 얼음 보드카 <br />1oz(약하게 먹고싶다면 없애도 된다) <br />딸기, 블루큐라소
-                3/4oz 칵테일 잔에 따라주고 <br />우유 돌려가며 10방울정도 떨궈주면 완성.
-              </p>
+              <p>${myRecipe.getMyRecipeRecipe()}</p>
             </div>
           </div>
         </div>

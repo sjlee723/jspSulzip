@@ -90,12 +90,12 @@
 
 
   	<servlet>
-		<servlet-name>MyRecipeBoard</servlet-name>
-		<servlet-class>com.sulzip.app.myrecipeboard.MyRecipeBoardFrontController</servlet-class>
+		<servlet-name>MyRecipe</servlet-name>
+		<servlet-class>com.sulzip.app.myrecipe.MyRecipeFrontController</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>MyRecipeBoard</servlet-name>
+		<servlet-name>MyRecipe</servlet-name>
 		<url-pattern>*.mrb</url-pattern>
 	</servlet-mapping>  
 	

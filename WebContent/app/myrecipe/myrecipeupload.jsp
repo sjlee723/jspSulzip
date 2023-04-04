@@ -48,8 +48,10 @@
               <span>이미지 업로드</span>
             </div>
           </label>
-          <input type="file" id="ex-file" multiple />
-          <div class="img-preview"></div>
+          <input type="file" id="ex-file" name="myRecipeFile" accept=".jpg, .jpeg, .png" multiple />
+          <div class="img-preview">
+			<img src="${pageContext.request.contextPath}/assets/img/myrecipe/${myRecipe.get사용자가올린mr파일이미지()}" class="card-img-top inside" alt="빅터프랑켄슈타인이미지">
+		  </div>
           <div class="img-preview"></div>
           <div class="img-preview"></div>
         </div>

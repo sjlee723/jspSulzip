@@ -1,4 +1,4 @@
-package com.sulzip.app.myrecipeboard;
+package com.sulzip.app.myrecipe;
 
 import java.io.IOException;
 
@@ -7,7 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class MyRecipeBoardFrontController extends HttpServlet {
+import com.sulzip.app.sulkit.SulkitBoardController;
+
+public class MyRecipeFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doProcess(req, resp);
@@ -22,7 +24,19 @@ public class MyRecipeBoardFrontController extends HttpServlet {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		System.out.println(target);
 		switch(target) {
-		
+		case "/myrecipe/myRecipe.mrb": 
+			System.out.println("2");
+			req.getRequestDispatcher("/app/myrecipe/myrecipe.jsp").forward(req, resp);
+			System.out.println("3");
+			break;
+		case "/myrecipe/myRecipeDetail.mrb": 
+			System.out.println("안녕하세요!!!");
+			new MyRecipeDetailController().execute(req, resp);
+			break;
+		case "/myrecipe/myRecipeWrite.mrb": 
+			System.out.println("안녕하세요!!!");
+			req.getRequestDispatcher("/app/myrecipe/merecipeupload.jsp").forward(req, resp);
+			break;
 		}
 	}
 }
