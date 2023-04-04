@@ -24,14 +24,18 @@ public class MyRecipeFrontController extends HttpServlet {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		System.out.println(target);
 		switch(target) {
-		case "/myrecipe/myRecipeBoard.mrb": 
+		case "/myrecipe/myRecipe.mrb": 
+			System.out.println("2");
+			req.getRequestDispatcher("/app/myrecipe/myrecipe.jsp").forward(req, resp);
+			System.out.println("3");
+			break;
+		case "/myrecipe/myRecipeDetail.mrb": 
 			System.out.println("안녕하세요!!!");
-			new MyRecipeBoardController().execute(req, resp);
-			System.out.println("이게나오면프론트컨트롤러정상");
+			new MyRecipeDetailController().execute(req, resp);
 			break;
 		case "/myrecipe/myRecipeWrite.mrb": 
 			System.out.println("안녕하세요!!!");
-			new MyRecipeWriteController().execute(req, resp);
+			req.getRequestDispatcher("/app/myrecipe/merecipeupload.jsp").forward(req, resp);
 			break;
 		}
 	}

@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sulzip.app.myrecipe.MyRecipeDetailController;
+
 public class FileFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -22,7 +24,10 @@ public class FileFrontController extends HttpServlet {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		System.out.println(target);
 		switch(target) {
-		
+		case "/file/file.file": 
+			System.out.println("안녕하세요!!!");
+			new MyRecipeDetailController().execute(req, resp);
+			break;
 		}
 	}
 }
