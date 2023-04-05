@@ -13,13 +13,22 @@ import com.sulzip.app.clientboard.dto.ClientBoardDTO;
 public class ServiceUpdateOkController implements Execute {
 @Override
 public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	ClientBoardDAO clientboardDAO = new ClientBoardDAO();
-	ClientBoardDTO clientboardDTO = new ClientBoardDTO();
+	ClientBoardDAO clientBoardDAO = new ClientBoardDAO();
+	ClientBoardDTO clientBoardDTO = new ClientBoardDTO();
+	req.setCharacterEncoding("utf-8");
+	int boardNumber = Integer.valueOf(req.getParameter("boardNumber"));
+	String boardTitle = req.getParameter("boardTitle");
+	String boardContent = req.getParameter("boardContent");
 	
-	int boardnumber = 0;
+	clientBoardDTO.setBoardNumber(boardNumber);
+	clientBoardDTO.setBoardTitle(boardTitle);
+	clientBoardDTO.setBoardContent(boardContent);
 	
+	clientBoardDAO.modify(clientBoardDTO);
 	System.out.println("ok컨트롤러 확인");
 	System.out.println(req.getParameter("boardTitle"));
+	
+	resp.sendRedirect("/clientboard/serviceListOk.clb");
 	
 	
 }

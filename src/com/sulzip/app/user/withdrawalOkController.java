@@ -10,7 +10,7 @@ import com.sulzip.app.Execute;
 import com.sulzip.app.user.dao.UserDAO;
 import com.sulzip.app.user.dto.UserDTO;
 
-public class withdrawalOkController implements Execute {
+public class WithdrawalOkController implements Execute {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

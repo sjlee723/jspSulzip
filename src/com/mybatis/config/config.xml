@@ -9,7 +9,8 @@
 	<typeAliases>
 		<typeAlias type="com.sulzip.app.user.dto.UserDTO" alias="UserDTO"/>
 		<typeAlias type="com.sulzip.app.clientboard.dto.ClientBoardDTO" alias="ClientBoardDTO"/>
-		<typeAlias type="com.sulzip.app.clientboardanswer.dto.ClientBoardAnswerDTO" alias="ClientBoardAnswerDTO"/>
+		<typeAlias type="com.sulzip.app.reply.dto.ReplyDTO" alias="ReplyDTO"/>
+		<typeAlias type="com.sulzip.app.reply.vo.ReplyVO" alias="ReplyVO"/>
 		<typeAlias type="com.sulzip.app.partners.dto.PartnersDTO" alias="PartnersDTO"/>
 		<typeAlias type="com.sulzip.app.pmbridge.dto.PmBridgeDTO" alias="PmBridgeDTO"/>
 		<typeAlias type="com.sulzip.app.psbridge.dto.PsBridgeDTO" alias="PsBridgeDTO"/>
@@ -41,7 +42,7 @@
 		<mapper resource="com/mybatis/mapper/PsBridgeMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/CartMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/CategoryMapper.xml"/>
-		<mapper resource="com/mybatis/mapper/ClientBoardAnswerMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/ReplyMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/ClientBoardMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/FileMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/MyRecipeBoardMapper.xml"/>

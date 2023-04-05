@@ -31,8 +31,12 @@ public class ClientBoardDAO {
 		return sqlSession.selectOne("clientBoard.totalCount");
 	}
 	
-	public void update(ClientBoardDTO boardDTO) {
-		sqlSession.update("clientBoard.update", boardDTO);
+	public void modify(ClientBoardDTO boardDTO) {
+		sqlSession.update("clientBoard.modify", boardDTO);
+	}
+	
+	public void delete(ClientBoardDTO boardDTO) {
+		sqlSession.delete("clientBoard.delete", boardDTO);
 	}
 	
 }
