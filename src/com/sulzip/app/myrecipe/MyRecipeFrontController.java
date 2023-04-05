@@ -25,9 +25,7 @@ public class MyRecipeFrontController extends HttpServlet {
 		System.out.println(target);
 		switch(target) {
 		case "/myrecipe/myRecipe.mrb": 
-			System.out.println("2");
 			req.getRequestDispatcher("/app/myrecipe/myrecipe.jsp").forward(req, resp);
-			System.out.println("3");
 			break;
 		case "/myrecipe/myRecipeDetail.mrb": 
 			System.out.println("안녕하세요!!!");
@@ -35,7 +33,11 @@ public class MyRecipeFrontController extends HttpServlet {
 			break;
 		case "/myrecipe/myRecipeWrite.mrb": 
 			System.out.println("안녕하세요!!!");
-			req.getRequestDispatcher("/app/myrecipe/merecipeupload.jsp").forward(req, resp);
+			new MyRecipeWriteController().execute(req, resp);
+			break;
+		case "/myrecipe/myRecipeWriteOk.mrb": 
+			System.out.println("안녕하세요!!!");
+			new MyRecipeWriteOkController().execute(req, resp);
 			break;
 		}
 	}

@@ -49,7 +49,7 @@
                  <button type="button" class="btn btn-light text-secondary" >스테디</button>
              </div>
              <div class="col-2 filter-group mb-5 d-md-flex justify-content-md-end">
-                    <a href="" class="btn" style="color: white; background-color: #d61c6a;">작성하기</a>
+                    <a href="${pageContext.request.contextPath}/myrecipe/myRecipeWrite.mrb" class="btn" style="color: white; background-color: #d61c6a;">작성하기</a>
              </div>
             </div>
             <div class="list-group">

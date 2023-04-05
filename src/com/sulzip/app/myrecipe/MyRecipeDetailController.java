@@ -36,9 +36,9 @@ public class MyRecipeDetailController implements Execute {
 		if (userNumber == null) {
 			path = "/app/user/login.jsp";
 		} else {
-			path = "/app/myrecipe/myrecipedatail.jsp";
+			path = "/app/myrecipe/myrecipedetail.jsp";
 		}
-		
+//		req.getParameterValues(path)
 		req.getRequestDispatcher(path).forward(req, resp);
 
 	}

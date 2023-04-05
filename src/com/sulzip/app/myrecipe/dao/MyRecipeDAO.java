@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import com.mybatis.config.MyBatisConfig;
 import com.sulzip.app.myrecipe.dto.MyRecipeDTO;
 import com.sulzip.app.myrecipe.vo.MyRecipeVO;
+import com.sulzip.app.product.dto.ProductDTO;
 
 public class MyRecipeDAO {
 	public SqlSession sqlSession;
@@ -20,10 +21,14 @@ public class MyRecipeDAO {
 	   }
 	
 	public MyRecipeDTO select(int myRecipeNumber) {
-		return sqlSession.selectOne("myRecipe.select",myRecipeNumber);
+		return sqlSession.selectOne("myRecipe.select", myRecipeNumber);
 	}
 	
 	public List<MyRecipeVO> ingre(int myRecipeNumber) {
-		return sqlSession.selectList("myRecipe.ingre",myRecipeNumber);
+		return sqlSession.selectList("myRecipe.ingre", myRecipeNumber);
+	}
+	
+	public List<ProductDTO> category(int categoryNumber){
+		return sqlSession.selectList("myRecipe.category", categoryNumber);
 	}
 }
