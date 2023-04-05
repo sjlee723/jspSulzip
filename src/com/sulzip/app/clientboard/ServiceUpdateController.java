@@ -16,9 +16,10 @@ public class ServiceUpdateController implements Execute {
 		int boardNumber = Integer.valueOf(req.getParameter("boardNumber"));
 		ClientBoardDAO clientBoardDAO = new ClientBoardDAO();
 		ClientBoardDTO clientBoardDTO = new ClientBoardDTO();
-		
+		req.setCharacterEncoding("utf-8");
 		clientBoardDTO.setBoardNumber(boardNumber);
 		req.setAttribute("clientBoard", clientBoardDAO.selectDetail(clientBoardDTO));
+		req.getRequestDispatcher("/app/clientboard/serviceupdate.jsp").forward(req, resp);
 		
 	}
 }

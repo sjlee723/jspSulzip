@@ -50,6 +50,6 @@
 <footer>
 	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
 </footer>
-<script src="${pageContext.request.contextPath}/assets/js/clientboard/clientboard.js"></script>
+<%-- <script src="${pageContext.request.contextPath}/assets/js/clientboard/clientboardwrite.js"></script> --%>
 </body>
 </html>

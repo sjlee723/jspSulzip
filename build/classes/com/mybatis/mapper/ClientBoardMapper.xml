@@ -31,18 +31,20 @@
 		where board_number = #{boardNumber} 
 	</select>
 	
-	
 	<select id="totalCount" resultType="_int">
 		select count(board_number) from
 		`client_board`
 	</select>
 	
-	
-	<update id="update" parameterType="ClientBoardDTO">
+	<update id="modify" parameterType="ClientBoardDTO">
 	update `client_board`
 	set board_title = #{boardTitle}, board_content = #{boardContent}
 	where board_number = #{boardNumber}
 	</update>
 	
+	<delete id="delete" parameterType="ClientBoardDTO">
+	delete from `client_board`
+	where board_number = #{boardNumber}
+	</delete>
 	
 </mapper>

@@ -8,6 +8,23 @@
 		#{userPw}, #{userName}, #{userPhone}, #{userGender}, #{userEmail}, #{userRegistrationNumber});
 	</insert>
 	
+	<select id="login" parameterType="UserDTO" resultType="_int" >
+		select user_number from`user` where user_id=#{userId} and user_pw=#{userPw} 
+	</select>
+	
+	<update id="withdrawal" parameterType="UserDTO" >
+		update `user`
+		set user_status = '0'
+		where user_id = #{userId} and user_pw = #{userPw}
+	</update>
+	
+	<select id="withCheck" parameterType="UserDTO" resultType="_int">
+		select user_status
+		from `user`
+		where user_id = #{userId} and user_pw = #{userPw}
+	</select>
+	
+	
 	
 	
 </mapper>

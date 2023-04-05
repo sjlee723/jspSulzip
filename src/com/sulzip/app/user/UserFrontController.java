@@ -34,7 +34,7 @@ public class UserFrontController extends HttpServlet {
 			req.getRequestDispatcher("/app/user/withdrawal.jsp").forward(req, resp);
 			break;
 		case "/user/withdrawalOk.usr" :
-			new withdrawalOkController().execute(req, resp);
+			new WithdrawalOkController().execute(req, resp);
 			break;
 		case "/user/login.usr" : 
 			System.out.println("login!!!");
