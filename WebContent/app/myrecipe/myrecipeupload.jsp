@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +22,7 @@
     <header>
 		<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
     </header>
-    <main>
+    <main>	
       <div class="upload-container">
         <!-- 나만의 레시피 상단박스  -->
         <div class="upload-box">
@@ -36,6 +37,8 @@
             </div>
           </div>
         </div>
+        
+        <form action="">
         <!-- 첨부파일-->
         <div class="file-upload">
           <label for="ex-file">
@@ -48,66 +51,64 @@
               <span>이미지 업로드</span>
             </div>
           </label>
-          <input type="file" id="ex-file" multiple />
+          <input type="file" id="ex-file" name="myRecipeFile" accept=".jpg, .jpeg, .png" multiple />
           <div class="img-preview"></div>
           <div class="img-preview"></div>
           <div class="img-preview"></div>
         </div>
+        
+        
         <!-- 상품 이름 입력 -->
         <div class="name-title"><span>칵테일 이름</span></div>
-        <input type="text" class="input" />
+        <input type="text" class="input" name="myRecipeNameKor"/>
         <div class="name-title"><span>칵테일 영문 이름</span></div>
-        <input type="text" class="input" />
+        <input type="text" class="input" name="myRecipeNameEng"/>
         <!-- 상품 설명 -->
         <div class="pro-info-title"><span>칵테일 설명</span></div>
         <!-- <input type="text" class="info-input" /> -->
-        <textarea name="" id="" cols="30" rows="10" class="info-input"></textarea>
+        <textarea name="myRecipeDesc" id="" cols="30" rows="10" class="info-input"></textarea>
         <!-- 재료 -->
         <div class="ingredient-title"><span>재료 정보</span></div>
-        <div class="ingre-input-box">
-          <span>1. </span><input type="text" class="ingre-input" placeholder="재료명" />
-          <input type="text" class="ingre-input" placeholder="단위" />
-          <span>6. </span><input type="text" class="ingre-input" placeholder="재료명" />
-          <input type="text" class="ingre-input" placeholder="단위" />
-        </div>
-        <div class="ingre-input-box">
-          <span>2. </span><input type="text" class="ingre-input" placeholder="재료명" />
-          <input type="text" class="ingre-input" placeholder="단위" />
-          <span>7. </span><input type="text" class="ingre-input" placeholder="재료명" />
-          <input type="text" class="ingre-input" placeholder="단위" />
-        </div>
-        <div class="ingre-input-box">
-          <span>3. </span><input type="text" class="ingre-input" placeholder="재료명" />
-          <input type="text" class="ingre-input" placeholder="단위" />
-          <span>8. </span><input type="text" class="ingre-input" placeholder="재료명" />
-          <input type="text" class="ingre-input" placeholder="단위" />
-        </div>
-        <div class="ingre-input-box">
-          <span>4. </span><input type="text" class="ingre-input" placeholder="재료명" />
-          <input type="text" class="ingre-input" placeholder="단위" />
-          <span>9. </span><input type="text" class="ingre-input" placeholder="재료명" />
-          <input type="text" class="ingre-input" placeholder="단위" />
-        </div>
-        <div class="ingre-input-box">
-          <span>5. </span><input type="text" class="ingre-input" placeholder="재료명" />
-          <input type="text" class="ingre-input" placeholder="단위" />
-          <span>10. </span><input type="text" class="ingre-input" placeholder="재료명" />
-          <input type="text" class="ingre-input" placeholder="단위" />
-        </div>
+       
+       
+        <select name="category" class="myrecipe-category">
+          <option value="1" selected>카테고리</option>
+          <option value="2">술</option>
+          <option value="3">재료</option>
+        </select>	
+        <select name="category"  class="myrecipe-alcohol">
+          <option value="">술</option>
+        	<c:forEach var="alcohol" items="${alcoholList}">
+        		<option value="${alcohol.getProductNumber()}">
+        			<c:out value="${alcohol.getProductNameKor()}"/>
+        		</option>
+        	</c:forEach>
+        </select>
+        <select name="category" class="myrecipe-ingre">
+          <option value="" >재료</option>
+        	<c:forEach var="ingre" items="${ingreList}">
+        		<option value="${ingre.getProductNumber()}">
+        			<c:out value="${ingre.getProductNameKor()}"/>
+        		</option>
+        	</c:forEach>
+        </select>
+        
         <!-- 레시피 -->
         <div class="recipe-title"><span>레시피</span></div>
         <div class="input-box">
           <!-- <input type="text" class="recipe-input" /> -->
-          <textarea name="" id="" cols="30" rows="10" class="recipe-input"></textarea>
+          <textarea name="myRecipeRecipe" id="" cols="30" rows="10" class="recipe-input"></textarea>
         </div>
         <!-- 등록버튼 -->
         <div class="upload-btn-box">
           <button><span>업로드</span></button>
         </div>
-        </div>
+        </form>
     </main>
     <footer>
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/myrecipe/myrecipeupload.js"></script>
   </body>
 </html>

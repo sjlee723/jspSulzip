@@ -11,8 +11,16 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
+    <style>
+      * {
+        font-family: "NanumBarunGothic", sans-serif;
+      }
+    </style>
   </head>
   <body>
+  <header>
+		<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
+    </header>
     <main>
       <div class="manager-container">
         <!-- 사이드바 -->
@@ -163,7 +171,8 @@
         </div>
       </div>
     </main>
-    <footer></footer>
->>>>>>> work/admin01
+    <footer>
+    	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
+    </footer>
   </body>
 </html>
