@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
+    <style>
+      * {
+        font-family: "NanumBarunGothic", sans-serif;
+      }
+    </style>
   </head>
   <body>
     <header>

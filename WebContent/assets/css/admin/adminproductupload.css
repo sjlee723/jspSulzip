@@ -161,7 +161,7 @@ main {
 .ingre-input-box > span {
   font-size: 18px;
   margin-top: 3px;
-  margin-right: 10px;
+  width: 35px;
 }
 
 .recipe-input {

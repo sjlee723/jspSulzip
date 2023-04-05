@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="myRecipe">
+
+	<insert id="insert" parameterType="MyRecipeDTO">
+		insert into myrecipe
+		(myRecipe_name_kor, myRecipe_name_eng, myRecipe_desc, myRecipe_recipe,
+		myRecipe_hits,
+		user_number)
+		values(#{myRecipeNameKor},
+		#{myRecipeNameEng},#{myRecipeDesc}, #{myRecipeRecipe}, 0,
+		#{userNumber})
+	</insert>
+	
+	<select id="select" parameterType="_int"
+		resultType="MyRecipeDTO">
+		select myRecipe_name_kor, myRecipe_name_eng, myRecipe_desc, myRecipe_recipe, myRecipe_hits, user_number
+		from myrecipe
+		where myRecipe_number = #{myRecipeNumber}
+	</select>
+	
+	<select id="ingre" parameterType="_int" resultType="MyRecipeVO">
+		select p.product_name_kor, p.product_system_name, b.pmBridge_vol
+		from myrecipe m, pmbridge b, product p
+		where m.myRecipe_number = #{myRecipeNumber} and b.product_number = p.product_number
+	</select>
+	
+	<select id="category" parameterType="_int" resultType="ProductDTO">
+		select product_number, product_name_kor, product_system_name
+		from product
+		where category_number = #{categoryNumber}
+	</select>
+	
+	
+</mapper>
+
+
+
+
+
+
+
+
+

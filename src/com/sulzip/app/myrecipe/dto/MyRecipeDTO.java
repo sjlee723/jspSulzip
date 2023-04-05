@@ -1,4 +1,4 @@
-package com.sulzip.app.myrecipeboard.dto;
+package com.sulzip.app.myrecipe.dto;
 
 //int myRecipeNumber;
 //String myRecipeNameKor;
@@ -8,7 +8,7 @@ package com.sulzip.app.myrecipeboard.dto;
 //int myRecipeHits;
 //int userNumber;
 
-public class MyRecipeBoardDTO {
+public class MyRecipeDTO {
 	private int myRecipeNumber;
 	private String myRecipeNameKor;
 	private String myRecipeNameEng;
@@ -16,6 +16,10 @@ public class MyRecipeBoardDTO {
 	private String myRecipeRecipe;
 	private int myRecipeHits;
 	private int userNumber;
+	
+	public MyRecipeDTO() {
+	}
+	
 	public int getMyRecipeNumber() {
 		return myRecipeNumber;
 	}
