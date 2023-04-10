@@ -138,7 +138,7 @@ main {
 
 .user-management {
   width: 1000px;
-  height: 800px;
+  height: 100%;
   padding: 30px;
   left: 350px;
   /* background-color: rgb(207, 202, 202); */
@@ -402,3 +402,42 @@ main {
   border-radius: 4px;
   margin-left: 10px;
 }
+
+.search-result-box {
+  list-style-type: none;
+  display: flex;
+}
+
+.search-result-box > li:nth-child(1) {
+  border-left: 1px solid#ddd;
+  width: 47px;
+}
+.search-result-box > li:nth-child(2) {
+  width: 110.5px;
+}
+.search-result-box > li:nth-child(3) {
+  width: 139.5px;
+}
+.search-result-box > li:nth-child(4) {
+  width: 185.5px;
+}
+.search-result-box > li:nth-child(5) {
+  width: 92px;
+}
+.search-result-box > li:nth-child(6) {
+  width: 186.5px;
+}
+
+.search-result-div {
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid#ddd;
+  border-left: none;
+  border-top: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+

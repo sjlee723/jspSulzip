@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -81,11 +83,11 @@
         <div class="product-management">
           <div class="product-title"><span>상품관리</span></div>
           <div class="product-total">
-            <div class="product-ea"><span>전체</span><span>210</span>개</div>
-            <div class="product-ea"><span>칵테일키트</span><span>36</span>개</div>
-            <div class="product-ea"><span>술</span><span>50</span>개</div>
-            <div class="product-ea"><span>재료</span><span>34</span>개</div>
-            <div class="product-ea"><span>용품</span><span>17</span>개</div>
+            <div class="product-ea"><span>전체 <a href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk"><c:out value="${dataTotal }"/></a></span>개</div>
+            <div class="product-ea"><span>칵테일키트<a href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk"><c:out value="${sulkit }"/></a></span>개</div>
+            <div class="product-ea"><span>술</span><a href="${pageContext.request.contextPath}/product/productAlcohol1.prd"><c:out value="${atotal }"/></a>개</div>
+            <div class="product-ea"><span>재료</span><a href="${pageContext.request.contextPath}/product/productIngredients1.prd"><c:out value="${itotal }"/></a>개</div>
+            <div class="product-ea"><span>용품</span><a href="${pageContext.request.contextPath}/product/productSupplies1.prd"><c:out value="${stotal }"/></a>개</div>
           </div>
           <div class="new-product"><button>상품등록</button></div>
           <!-- 상품검색 카테고리 -->
@@ -93,35 +95,35 @@
           <div class="product-search">
             <div class="search-column"><span>상품명</span></div>
             <div class="search-select">
-              <select name="국문" id="product-name">
+              <select name="pro-name" id="product-name">
                 <option value="1">국문</option>
                 <option value="2">영문</option>
               </select>
-              <input type="text" />
+              <input type="text" id="search-keyword"/>
             </div>
           </div>
           <div class="product-search">
             <div class="search-column2"><span>상품구분</span></div>
             <div class="search-select2">
-              <span>전체</span><input type="radio" name="product" value="전체" /> <span>칵테일키트</span
-              ><input type="radio" name="product" value="칵테일키트" /> <span>술</span
-              ><input type="radio" name="product" value="술" /> <span>재료</span
-              ><input type="radio" name="product" value="재료" /> <span>용품</span
-              ><input type="radio" name="product" value="용품" />
+              <span>전체</span><input type="radio" name="product" value="0" checked/> <span>칵테일키트</span
+              ><input type="radio" name="product" value="1" /> <span>술</span
+              ><input type="radio" name="product" value="2" /> <span>재료</span
+              ><input type="radio" name="product" value="3" /> <span>용품</span
+              ><input type="radio" name="product" value="4" />
             </div>
           </div>
-          <div class="product-search">
+          <!-- <div class="product-search">
             <div class="search-column3"><span>상품가격</span></div>
             <div class="search-select3"><input type="text" /><span>원</span></div>
-          </div>
+          </div> -->
           <div class="search-btn">
-            <button>검색</button>
+            <button id="search-btn">검색</button>
             <button>초기화</button>
           </div>
           <!-- 상품목록 -->
           <div class="product-list">
             <div class="list-title"><span>상품목록</span></div>
-            <div class="product-total"><span>총 </span><span>200</span>개</div>
+            <div class="product-total"><span>총  </span> <c:out value="${fn:length(joined)}"></c:out>개</div>
             <div class="product-status">
               <div class="status-btn">
                 <button>진열함</button>
@@ -132,7 +134,7 @@
             </div>
             <div class="product-ctg">
               <div class="ctg-box">
-                <div class="check"><input type="checkbox" /></div>
+                <div class="check"><input type="checkbox" id="checkAll" name="abox"/></div>
                 <div class="code"><span>상품코드</span></div>
                 <div class="ctg"><span>상품구분</span></div>
                 <div class="name"><span>상품명</span></div>
@@ -140,13 +142,42 @@
               </div>
             </div>
             <div class="ctg-list">
-              <div class="ctg-list-box">
+            
+            <c:forEach var="admin" items="${joined}">
+            	<div class="ctg-list-box">
+               	 <div class="list-check"><input type="checkbox" class="cbox"/></div>
+                	<div class="list-code"> <c:out value="${admin.number}"/> </div>
+                	<div class="list-ctg">
+                	<c:choose>
+                		<c:when test="${admin.category == 0}">
+		                	<c:out value="칵테일 키트"/>     
+		                </c:when>           		
+                		<c:when test="${admin.category == 2}">
+		                	<c:out value="술"/>  
+		                </c:when>              		
+                		<c:when test="${admin.category == 3}">
+		                	<c:out value="재료"/>                		
+                		</c:when>
+                		<c:when test="${admin.category == 4}">
+		                	<c:out value="용품"/>                		
+                		</c:when>
+                	</c:choose>
+                	</div>
+                	<div class="list-name"><c:out value="${admin.nameKor}"/></div>
+              	  <div class="list-price"><c:out value="${admin.price}"/></div>
+              </div>
+            </c:forEach>
+            
+            
+             <%--  <div class="ctg-list-box">
                 <div class="list-check"><input type="checkbox" /></div>
-                <div class="list-code"><span>상품코드</span></div>
+                <div class="list-code"> <c:out value="${sulkitList[1].number}"/> </div>
                 <div class="list-ctg"><span>상품구분</span></div>
                 <div class="list-name"><span>상품명</span></div>
                 <div class="list-price"><span>판매가</span></div>
-              </div>
+              </div> --%>
+              
+              
             </div>
           </div>
         </div>
@@ -155,5 +186,7 @@
     <footer>
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/admin/adminproduct.js"></script>
   </body>
 </html>
