@@ -24,6 +24,11 @@
 		where user_id = #{userId} and user_pw = #{userPw}
 	</select>
 	
+	<select id="checkId" parameterType="string" resultType="_int">
+      select count(user_number) from user
+      where user_id = #{userId} 
+   	</select>
+	
 	<select id="getUserId" parameterType="_int" resultType="string">
 	select user_id
 	from `user`
