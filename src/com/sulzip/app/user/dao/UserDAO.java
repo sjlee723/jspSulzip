@@ -28,6 +28,10 @@ public class UserDAO {
 		return sqlSession.selectOne("user.withCheck", userDTO);
 	}
 	
+	public boolean checkId(String userId) {
+		return (Integer)sqlSession.selectOne("user.checkId", userId) <1;
+	}
+	
 	public String getUserId(int userNumber) {
 		return sqlSession.selectOne("user.getUserId", userNumber);
 	}

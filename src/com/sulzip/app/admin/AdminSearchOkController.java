@@ -31,7 +31,7 @@ public class AdminSearchOkController implements Execute{
 		PrintWriter out = resp.getWriter();
 		out.print(json.toString());
 		
-		List<SearchVO> searchList = 	
+
 	}
 }
 

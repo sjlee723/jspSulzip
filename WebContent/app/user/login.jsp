@@ -83,11 +83,9 @@
                           </button>
                       </div>
                       </form>
-                      <!---->
-                      <!-- <div class="login-btn">
-                          <a href="">로그인</a>
-                      </div> -->
-                      <!---->
+          			  <div class="login-btn">
+ <%--          			  	<a href="${pageContaxt.request.contaxtPath}/user/findidpw.jsp">로그인</a> --%>
+          			  </div>
                       <div class="regis-wrap">
                         <ul class="join-n-find-wrap">
                           <li>
@@ -96,8 +94,9 @@
                           </li>
                           <li>
                             <span>· 아이디/비밀번호를 잊어버리셨나요?</span>
-                            <a href="" onclick="showPopup();"
-                              >아이디/비밀번호 찾기</a>
+<!--                             <a href="" onclick="showPopup();" -->
+								<a href="${pageContaxt.request.contaxtPath}/app/user/findidpw.jsp" onclick="window.open(this.href,'', 'width=400, height=500'); return false;">
+                              아이디/비밀번호 찾기</a>
                           </li>
                         </ul>
                       </div>

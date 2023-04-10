@@ -33,7 +33,7 @@
         </section>
         <section class="section2">
             <div class="sub-title">회원정보입력</div>
-            <form action="/user/joinOk.usr" method="POST">
+<form action="/user/joinOk.usr" method="POST" class="form-sub">
             <table class="join-table">
                 <colgroup class="join-colgroup">
                     <col class="join-col1">
@@ -43,19 +43,33 @@
                     <tr class="join-tr">
                         <th class="join-th">아이디</th>
                         <td class="join-td">
-                            <input type="text" name="userId" class="join_id" autofocus><span class="text-details">&nbsp;영문자, 숫자, _만 입력 가능. 최소 3자 이상 입력하세요.</span>
+                            <input type="text" name="userId" class="join_id" id="id" autofocus>
+                            <span class="text-details">&nbsp;영문자, 숫자, _만 입력 가능. 최소 3자 이상 입력하세요.<br></span>
+							<span class="check-msg" id="check-id-msg"></span>
+
+
+                        
+<!--                         	<button type="button" onclick="fn_dbCheckId()" name="dbCheckId" class="checkId">
+                        		중복확인
+                        	</button> -->
+                      
+                        	
                         </td>
                     </tr>
                     <tr class="join-tr">
                         <th class="join-th">비밀번호</th>
                         <td class="join-td">
-                            <input type="text" name="userPw" class="join_pw">
+                            <input type="password" name="userPw" class="join_pw" id="pw" required/>
+                        <br>
+                        <span class="check-msg" id="check-pw-msg"></span>
                         </td>
                     </tr>
                     <tr class="join-tr">
                         <th class="join-th">비밀번호 확인</th>
                         <td class="join-td">
-                            <input type="text" class="join_pwconfirm">
+                            <input type="password" name="userPw" class="join_pw" id="pw2" required/>
+                            <br>
+                            <span class="check-msg" id="check-pw-msg2"></span>
                         </td>	
                     </tr>
                     <tr class="join-tr">
@@ -134,11 +148,13 @@
             <button type="submit" class="join-btn-cancel" onclick="history.back()">취소</button>
             <button type="submit" class="join-btn-submit" accesskey="s">확인</button>
         </section>
-        </form>
+</form>
         
     </main>
     <footer>
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/user/join.js"></script>
 </body>
 </html>
