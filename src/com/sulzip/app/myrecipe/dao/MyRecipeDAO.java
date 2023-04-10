@@ -5,8 +5,10 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
+import com.sulzip.app.file.dto.FileDTO;
 import com.sulzip.app.myrecipe.dto.MyRecipeDTO;
 import com.sulzip.app.myrecipe.vo.MyRecipeVO;
+import com.sulzip.app.pmbridge.dto.PmBridgeDTO;
 import com.sulzip.app.product.dto.ProductDTO;
 
 public class MyRecipeDAO {
@@ -17,8 +19,8 @@ public class MyRecipeDAO {
 	}
 	
 	public void insert(MyRecipeDTO myRecipeDTO) {
-	      sqlSession.insert("myRecipe.insert", myRecipeDTO);
-	   }
+	    sqlSession.insert("myRecipe.insert", myRecipeDTO);
+	}
 	
 	public MyRecipeDTO select(int myRecipeNumber) {
 		return sqlSession.selectOne("myRecipe.select", myRecipeNumber);
@@ -30,5 +32,17 @@ public class MyRecipeDAO {
 	
 	public List<ProductDTO> category(int categoryNumber){
 		return sqlSession.selectList("myRecipe.category", categoryNumber);
+	}
+	
+	public void uploadFile(FileDTO fileDTO) {
+		sqlSession.insert("file.insert", fileDTO);
+	}
+	
+	public int getSequence() {
+		return sqlSession.selectOne("myRecipe.getSequence");
+	}
+	
+	public void insertPmBridge(PmBridgeDTO pmBridgeDTO) {
+		sqlSession.insert("PmBridge.insert", pmBridgeDTO);
 	}
 }
