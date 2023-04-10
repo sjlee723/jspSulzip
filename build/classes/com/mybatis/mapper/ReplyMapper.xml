@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 	private int replyNumber;
+	private String replyContent;
+	private String replyDate;
+	private int boardNumber;
+	private int userNumber; -->
+
+<mapper namespace="reply">
+	<select id="selectAll" parameterType="_int" resultType="ReplyVO">
+		select reply_number, reply_content, reply_date, board_number, r.user_number, user_id
+		from `user`m join `reply` r
+		on board_number = #{boardNumber} and m.user_number = r.user_number
+		order by reply_date desc
+	</select>
+	
+	<insert id="insert" parameterType="ReplyDTO">
+		insert into `reply`(reply_content, board_number, user_number, reply_date)
+		values(#{replyContent}, #{boardNumber}, #{userNumber}, sysdate() )
+	</insert>
+	
+	<delete id="delete" parameterType="_int">
+		delete from `reply`
+		where reply_number = #{replyNumber}
+	</delete>
+	
+	<update id="update" parameterType="ReplyDTO">
+		update `reply`
+		set reply_content = #{replyContent}
+		where reply_number = #{replyNumber}
+	</update>
+	
+</mapper>

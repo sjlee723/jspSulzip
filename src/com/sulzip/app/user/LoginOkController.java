@@ -31,6 +31,7 @@ public class LoginOkController implements Execute {
 		
 		try {
 			userNumber= userDAO.login(userDTO);
+			userId= userDAO.getUserId(userNumber);
 			path = "/";
 			
 			if(remember != null) {
@@ -40,6 +41,7 @@ public class LoginOkController implements Execute {
 				resp.addCookie(cookie);
 			}
 				session.setAttribute("userNumber", userNumber);
+				session.setAttribute("userId", userId);
 		} catch (NullPointerException e) {
 				path = "/user/login.usr?result=false";
 		}catch (Exception e) {

@@ -34,7 +34,7 @@ public class UserFrontController extends HttpServlet {
 			req.getRequestDispatcher("/app/user/withdrawal.jsp").forward(req, resp);
 			break;
 		case "/user/withdrawalOk.usr" :
-			new withdrawalOkController().execute(req, resp);
+			new WithdrawalOkController().execute(req, resp);
 			break;
 		case "/user/login.usr" : 
 			System.out.println("login!!!");
@@ -46,6 +46,19 @@ public class UserFrontController extends HttpServlet {
 		case "/user/logoutOk.usr" :
 			new LogoutOkController().execute(req, resp);
 			break;
+		case "/user/mypage.usr" :
+			new MypageController().execute(req, resp);
+			break;
+		case "/user/mypageOk.usr" :
+			new MypageOkController().execute(req, resp);
+			break;
+		case "/user/edituserinfo.usr" :
+			new EdituserinfoController().execute(req, resp);
+			break;
+		case "/user/edituserinfoOk.usr" :
+			new EdituserinfoOkController().execute(req, resp);
+			break;
+			
 		}
 	}
 }
