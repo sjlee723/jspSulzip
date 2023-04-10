@@ -19,26 +19,66 @@ $('.ctg-list').on('click', '.cbox' , function(){
 
 
 $('#search-btn').on('click', function(){
-	let searchKeyword = $('#search-keyword').val();
-	let product = $('input[name=product]:checked').val();
+	let keyword = $('#search-keyword').val();
+	let category = $('input[name=product]:checked').val();
 	
-	console.log(product);
-	console.log(searchKeyword);
+	console.log(category);
+	console.log(keyword);
 
-	console.log()
 	$.ajax({
 		url : '/admin/search.adm',
 		type : 'get',
 		data : {
-			keyword : searchKeyword,
-			category : product	
+			keyword : keyword,
+			category : category	
 		},
-		data: 'json',
+		dataType: 'json',
 		success : function(result){
-			console.log(result.aa);
+			showList(result);
 		},
 		error : function(a,b,c){
 			console.error(c);
 		}
 	});
 });
+
+function showReply(replies){
+	  let text = "";
+	  replies.forEach(reply => {
+      text += `
+      `
+})};
+
+function showList(list){
+	let text = "";
+	
+	list.forEach(content => {
+		text += `
+			<div class="ctg-list-box">
+               	 <div class="list-check"><input type="checkbox" class="cbox"/></div>
+                	<div class="list-code"> ${content.number}</div>
+                	<div class="list-ctg">`
+
+		if(content.category == 0){
+			text+= '칵테일 키트';
+		}else if(content.category == 2){
+			text += '술';
+		}else if(content.category == 3){
+			text += '재료';
+		}else if(content.category == 4){
+			text += '용품';
+		}
+		text +=	`</div>
+                	<div class="list-name">${content.nameKor}</div>
+              	  <div class="list-price">${content.price}</div>
+              </div>
+		`;
+	});
+	
+	
+	$('.ctg-list').html(text);
+}
+
+
+
+
