@@ -5,12 +5,8 @@
 
 	<insert id="insert" parameterType="MyRecipeDTO">
 		insert into myrecipe
-		(myRecipe_name_kor, myRecipe_name_eng, myRecipe_desc, myRecipe_recipe,
-		myRecipe_hits,
-		user_number)
-		values(#{myRecipeNameKor},
-		#{myRecipeNameEng},#{myRecipeDesc}, #{myRecipeRecipe}, 0,
-		#{userNumber})
+		(myRecipe_name_kor, myRecipe_name_eng, myRecipe_desc, myRecipe_recipe, myRecipe_hits, user_number)
+		values(#{myRecipeNameKor}, #{myRecipeNameEng},#{myRecipeDesc}, #{myRecipeRecipe}, 0, #{userNumber})
 	</insert>
 	
 	<select id="select" parameterType="_int"
@@ -32,7 +28,9 @@
 		where category_number = #{categoryNumber}
 	</select>
 	
-	
+	<select id="getSequence" resultType="_int">
+		select last_insert_id()
+	</select>
 </mapper>
 
 
