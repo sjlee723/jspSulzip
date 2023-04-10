@@ -32,8 +32,7 @@ public class ServiceWriteOkController implements Execute {
 		clientboardDTO.setBoardTitle(req.getParameter("boardTitle"));
 		clientboardDTO.setBoardContent(req.getParameter("boardContent"));
 		clientboardDTO.setBoardCondition(req.getParameter("boardCondition"));
-//		clientboardDTO.setUserNumber(Integer.valueOf(req.getParameter("userNumber")));
-		clientboardDTO.setUserNumber(1);
+		clientboardDTO.setUserNumber((Integer)session.getAttribute("userNumber"));
 
 		
 		clientboardDAO.write(clientboardDTO);

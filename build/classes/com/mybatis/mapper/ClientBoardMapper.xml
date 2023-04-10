@@ -47,4 +47,5 @@
 	where board_number = #{boardNumber}
 	</delete>
 	
+	
 </mapper>

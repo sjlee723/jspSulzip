@@ -24,6 +24,24 @@
 		where user_id = #{userId} and user_pw = #{userPw}
 	</select>
 	
+	<select id="getUserId" parameterType="_int" resultType="string">
+	select user_id
+	from `user`
+	where user_number = #{userNumber}
+	</select>
+	
+	<select id="selectDetail" parameterType="_int" resultType="UserDTO">
+		select user_status, user_registration_date, user_id, user_pw, user_name,
+		 user_phone, user_gender, user_email, user_registration_number
+		from `user`
+		where user_number = #{userNumber}
+	</select>
+	
+	<update id="modify" parameterType="UserDTO">
+		update `user`
+		set user_pw = #{userPw}, user_email = #{userEmail}, user_phone = #{userPhone}
+		where user_number = #{userNumber}
+	</update>
 	
 	
 	

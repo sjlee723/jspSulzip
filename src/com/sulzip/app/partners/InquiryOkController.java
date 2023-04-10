@@ -34,14 +34,13 @@ public class InquiryOkController implements Execute {
 		partnersDTO.setPartnersEmail(req.getParameter("partnersEmail"));
 		partnersDTO.setPartnersLoc(req.getParameter("partnersLoc"));
 		partnersDTO.setPartnersLocation(req.getParameter("partnersLocation"));
-		partnersDTO.setUserNumber(2);
-//		partnersDTO.setUserNumber((Integer)session.getAttribute("userNumber"));
+		partnersDTO.setUserNumber((Integer)session.getAttribute("userNumber"));
 		partnersDTO.setPartnersName(req.getParameter("partnersName"));
 		partnersDTO.setPartnersContent(req.getParameter("partnersContent"));
 		
 		partnersDAO.inquiry(partnersDTO);
 		
-		resp.sendRedirect("/user/login.usr");
+//		resp.sendRedirect("/");
 		
 	}
 	

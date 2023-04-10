@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,7 +58,7 @@
 			                        	</a>
 			                        </td>
 			                        <td class="author"><c:out value="${board.getUserId()}"/></td>
-			                        <td class="date"><c:out value="${board.getBoardDate()}"/> </td>
+			                        <td class="date"><c:out value="${board.getBoardDate()}"/></td>
 			                     </tr>
 			                  </c:forEach>
 			               </c:when>
@@ -112,9 +112,7 @@
 	                        <li class="page-item <c:out value='${disabledClass}' />">
 	                        	<a class="page-link" href="?page=<c:out value='${pageNum}'/>"><c:out value="${pageNum}"/></a>
                         	</li>
-
 </c:forEach>
-
 						<c:if test="${next}">
                          	<li class="page-item">
                             	<a class="page-link" href="?page=<c:out value='${endPage+1}'/>">></a>
@@ -123,22 +121,11 @@
                         </ul>
                       </nav>
                 </div>
-
-
             </div>
-
     </section>
-
 	<footer>
 		<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
 	</footer>
 </body>
-<script type="text/javascript">
-function fn_go_to_link(link){
-	location.href=link;
-}
-</script>
-
+<script type="text/javascript">function fn_go_to_link(link){location.href=link;}</script>
 </html>
-
- 

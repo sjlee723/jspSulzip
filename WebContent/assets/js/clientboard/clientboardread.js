@@ -9,26 +9,12 @@
 	private int userNumber; -->*/
 
 
-/*let $listBtn = $('.list-btn');
-let $modifyBtn = $('.modify-btn');
-let $deleteBtn = $('.delete-btn');*/
+let href = window.location.href;
+let url = new URL(href);
 
-// 자바스크립트에서 data속성을 소문자로 인식함 *** 
-/*let boardNumber = $listBtn.data('boardnumber');
-
-$listBtn.on('click', () => {
-   window.location.href = '/board/boardListOk.bo';
-});
-
-$modifyBtn.on('click', () => {
-   window.location.href = '/board/boardUpdate.bo?boardNumber='+boardNumber;
-});
-
-$deleteBtn.on('click', () => {
-   window.location.href = '/board/boardDeleteOk.bo?boardNumber='+boardNumber;
-});*/
-
-
+console.log(url)
+let search = url.searchParams;
+let boardNumber = search.get('boardNumber');
 
 replyAjax();
 
@@ -105,7 +91,7 @@ $('.comment-list').on('click', '.comment-delete', function(){
    console.log(replyNumber);
    
    $.ajax({
-      url : "/reply/replyDeleteOk.re",
+      url : "/reply/replyDeleteOk.rep",
       type : "get",
       data : {replyNumber : replyNumber},
       success : function() {
@@ -145,7 +131,7 @@ $('.comment-list').on('click', '.comment-modify', function(){
       console.log(replyNumber);
       
       $.ajax({
-         url : '/reply/replyUpdateOk.re',
+         url : '/reply/replyUpdateOk.rep',
          type : 'get',
          data : {
             replyNumber : replyNumber,

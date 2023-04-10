@@ -15,7 +15,8 @@
 		<typeAlias type="com.sulzip.app.pmbridge.dto.PmBridgeDTO" alias="PmBridgeDTO"/>
 		<typeAlias type="com.sulzip.app.psbridge.dto.PsBridgeDTO" alias="PsBridgeDTO"/>
 		<typeAlias type="com.sulzip.app.file.dto.FileDTO" alias="FileDTO"/>
-		<typeAlias type="com.sulzip.app.myrecipeboard.dto.MyRecipeBoardDTO" alias="MyRecipeBoardDTO"/>
+		<typeAlias type="com.sulzip.app.myrecipe.dto.MyRecipeDTO" alias="MyRecipeDTO"/>
+		<typeAlias type="com.sulzip.app.myrecipe.vo.MyRecipeVO" alias="MyRecipeVO"/>
 		<typeAlias type="com.sulzip.app.cart.dto.CartDTO" alias="CartDTO"/>
 		<typeAlias type="com.sulzip.app.order.dto.OrderDTO" alias="OrderDTO"/>
 		<typeAlias type="com.sulzip.app.sulkit.dto.SulkitDTO" alias="SulkitDTO"/>
@@ -45,7 +46,7 @@
 		<mapper resource="com/mybatis/mapper/ReplyMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/ClientBoardMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/FileMapper.xml"/>
-		<mapper resource="com/mybatis/mapper/MyRecipeBoardMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/MyRecipeMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/OrderMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/PartnersMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/ProductMapper.xml"/>

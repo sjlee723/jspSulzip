@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>partners</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/partners/partners.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/font/nanumbarungothicsubset.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,8 +18,18 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+    function fn_access_check(){
+    	let userId = '${userId}';
+    	console.log(userId);
+    	if(userId == null || userId == ""){
+    		alert("로그인 회원전용 페이지입니다. 메인으로 이동합니다.");
+    		location.href="/";
+    	}
+    }
+    </script>
 </head>
-<body>
+<body onload="fn_access_check()">
     <header>
     	<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
     </header>
@@ -42,13 +51,13 @@
             </div>
             <section class="partners-section">
                 <ul>
-                    <li>술.zip 회원이 아니거나 로그인이 불가능하면 메일로 문의할 수 있습니다.</li>
+                    <li>술.zip 회원이 아니거나 로그인이 불가능하면 문의할 수 없습니다.</li>
                     <li>답변은 메일로 받을 수 있으며, 문의 내역에서 조회할 수 없습니다.</li>
                     <li>제휴 문의는 전문가와 상담해 보세요.</li>
                     <li>모든 항목은 *필수 기재사항입니다.</li>
                 </ul>
             </section>
-            <form action="/partners/inquiryOk.ptn" method="POST">
+            <form id="partnersFrm" action="/partners/inquiryOk.ptn" method="POST">
                 <table class="parteners-table">
                     <colgroup class="partners-colgroup">
                         <col class="partners-col1">
@@ -116,7 +125,7 @@
                         </div>
                     </div> 
                 </div>
-                <div class="submit-div"><button type="submit" class="submit-btn">상담신청</button></div>
+                <div class="submit-div"><button onclick="fn_partners_submit();" class="submit-btn">상담신청</button></div>
             </form>
         </div>
     </div>
@@ -124,6 +133,7 @@
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="${pageContext.request.contextPath}/assets/js/partners.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/partners/partners.js"></script>
+  
 </body>
 </html>

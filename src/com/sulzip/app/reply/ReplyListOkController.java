@@ -24,7 +24,7 @@ public class ReplyListOkController implements Execute {
 		JsonArray replies = new JsonArray();
 		
 		List<ReplyVO> replyList = replyDAO.selectAll(boardNumber);
-		
+		System.out.println(replyList);
 		for(ReplyVO reply : replyList) {
 			
 			String replyJson = gson.toJson(reply);
