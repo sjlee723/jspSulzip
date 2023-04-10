@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
+import com.sulzip.app.admin.vo.SearchVO;
 import com.sulzip.app.product.vo.ProductVO;
 
 public class AdminDAO {
@@ -30,8 +31,16 @@ public class AdminDAO {
 		return sqlsession.selectList("admin.productList");
 	}
 	
-	public ProductVO searchName(ProductVO productVO) {
-		return sqlsession.selectOne("admin.searchName", productVO);
+	public List<ProductVO> searchPro(SearchVO searchVO){
+		return sqlsession.selectList("admin.searchPro", searchVO);
+	}
+	
+	public List<ProductVO> searchSul(SearchVO searchVO){
+		return sqlsession.selectList("admin.searchSul", searchVO);
+	}
+	
+	public List<ProductVO> searchProAll(SearchVO searchVO){
+		return sqlsession.selectList("admin.searchProAll", searchVO);
 	}
 	
 }

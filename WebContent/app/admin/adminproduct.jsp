@@ -143,7 +143,7 @@
             </div>
             <div class="ctg-list">
             
-            <c:forEach var="admin" items="${joined}">
+            	 <c:forEach var="admin" items="${joined}">
             	<div class="ctg-list-box">
                	 <div class="list-check"><input type="checkbox" class="cbox"/></div>
                 	<div class="list-code"> <c:out value="${admin.number}"/> </div>
