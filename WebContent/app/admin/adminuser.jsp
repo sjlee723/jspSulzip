@@ -162,6 +162,26 @@
                 <div class="search-list-div"><span>가입일</span></div>
               </li>
             </ul>
+            <ul class="search-result-box">
+              <li>
+                <div class="search-result-div"><input type="checkbox" /></div>
+              </li>
+              <li>
+                <div class="search-result-div"><span>이름</span></div>
+              </li>
+              <li>
+                <div class="search-result-div"><span>ID</span></div>
+              </li>
+              <li>
+                <div class="search-result-div"><span>전화번호</span></div>
+              </li>
+              <li>
+                <div class="search-result-div"><span>성별</span></div>
+              </li>
+              <li>
+                <div class="search-result-div"><span>가입일</span></div>
+              </li>
+            </ul>
             <!-- 검색 결과창 -->
             <div class="search-result"></div>
             <div class="delete-box">
