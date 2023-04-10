@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +35,7 @@
           <div class="form-group">
             <label for="author">작성자</label>
             <!-- 작성자 서버 연결시 로그인한 회원 아이디로 수정하기 -->
-            <div class="writer">김철수</div>
+            <div class="writer"><c:out value="${userId}" /></div>
           </div>
           <div class="form-group">
             <label for="content">내용</label>

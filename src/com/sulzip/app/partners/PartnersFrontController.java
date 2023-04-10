@@ -25,7 +25,6 @@ public class PartnersFrontController extends HttpServlet {
 		switch(target) {
 		
 		case "/partners/partners.ptn":
-			System.out.println("partners!!");
 			req.getRequestDispatcher("/app/partners/partners.jsp").forward(req, resp);
 			break;
 		case "/partners/inquiryOk.ptn": 

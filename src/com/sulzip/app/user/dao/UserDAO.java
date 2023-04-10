@@ -27,4 +27,16 @@ public class UserDAO {
 	public int withCheck(UserDTO userDTO) {
 		return sqlSession.selectOne("user.withCheck", userDTO);
 	}
+	
+	public String getUserId(int userNumber) {
+		return sqlSession.selectOne("user.getUserId", userNumber);
+	}
+	
+	public UserDTO getUserDetail(int userNumber) {
+		return sqlSession.selectOne("user.selectDetail", userNumber);
+	}
+	
+	public void modify(UserDTO userDTO) {
+		sqlSession.update("user.modify", userDTO);
+	}
 }

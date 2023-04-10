@@ -20,71 +20,79 @@
         <section class="section1">
             <div class="title">회원 정보 수정</div>
         </section>
-        <section class="section2">
-            <div class="sub-title">회원정보입력</div>
-            <table class="edit-table">
-                <colgroup class="edit-colgroup">
-                    <col class="edit-col1">
-                    <col class="edit-col2">
-                </colgroup>
-                <tbody class="edit-tbody">
-                    <tr class="edit-tr">
-                        <th class="edit-th">아이디</th>
-                        <td class="edit-td">
-                            <input type="text" name="edit_id" class="edit_id" autofocus><span class="text-details">&nbsp;영문자, 숫자, _만 입력 가능. 최소 3자 이상 입력하세요.</span>
-                        </td>
-                    </tr>
-                    <tr class="edit-tr">
-                        <th class="edit-th">비밀번호</th>
-                        <td class="edit-td">
-                            <input type="text" name="edit_pw" class="edit_pw">
-                        </td>
-                    </tr>
-                    <tr class="edit-tr">
-                        <th class="edit-th">비밀번호 확인</th>
-                        <td class="edit-td">
-                            <input type="text" name="edit_pwconfirm" class="edit_pwconfirm">
-                        </td>
-                    </tr>
-                    <tr class="edit-tr">
-                        <th class="edit-th">이름</th>
-                        <td class="edit-td">
-                            <input type="text" name="edit_name" class="edit_name" readonly>
-                        </td>
-                    </tr>
-                    <tr class="edit-tr">
-                        <th class="edit-th">성별</th>
-                        <td class="edit-td">
-                            <input type="radio" name="edit_gender" value="male" class="edit_male" checked="checked">남성
-                            <input type="radio" name="edit_gender" value="female" class="edit_female">여성
-                        </td>
-                    </tr>
-                    <tr class="edit-tr">
-                        <th class="edit-th">이메일</th>
-                        <td class="edit-td">
-                            <input type="text" name="edit_email" class="edit_email">
-                        </td>
-                    </tr>
-                    <tr class="edit-tr">
-                        <th class="edit-th">휴대폰번호</th>
-                        <td class="edit-td">
-                            <input type="text" name="edit_contact" class="edit_contact">
-                        </td>
-                    </tr>
-                    <!-- <tr class="edit-tr">
-                        <th class="edit-th">주소</th>
-                        <td class="edit-td">
-                            <input type="text" name="edit_address1" class="edit_address1"><br/>
-                            <input type="text" name="edit_address2" class="edit_address2"><br/>
-                            <input type="text" name="edit_address3" class="edit_address3">
-                        </td>
-                    </tr> -->
-                </tbody>
-            </table>
-        </section>
+        <form action="/user/edituserinfoOk.usr" method="POST">
+	        <section class="section2">
+	            <div class="sub-title">회원정보입력</div>
+	            <table class="edit-table">
+	                <colgroup class="edit-colgroup">
+	                    <col class="edit-col1">
+	                    <col class="edit-col2">
+	                </colgroup>
+	                <tbody class="edit-tbody">
+	                    <tr class="edit-tr">
+	                        <th class="edit-th">아이디</th>
+	                        <td class="edit-td">
+	                            <input type="text" name="userId" value="${userDTO.userId}" class="edit_id" readonly>
+	                        </td>
+	                    </tr>
+	                    <tr class="edit-tr">
+	                        <th class="edit-th">기존 비밀번호</th>
+	                        <td class="edit-td">
+	                            <input type="text" name="userPw" class="edit_pw" autofocus>
+	                        </td>
+	                    </tr>
+	                    <tr class="edit-tr">
+	                        <th class="edit-th">변경 할 비밀번호</th>
+	                        <td class="edit-td">
+	                            <input type="text" name="userChangePw" class="edit_pw" autofocus>
+	                        </td>
+	                    </tr>
+	                    <tr class="edit-tr">
+	                        <th class="edit-th">변경 할 비밀번호 확인</th>
+	                        <td class="edit-td">
+	                            <input type="text" name="userChangePwConfirm" class="edit_pwconfirm">
+	                        </td>
+	                    </tr>
+	                    <tr class="edit-tr">
+	                        <th class="edit-th">이름</th>
+	                        <td class="edit-td">
+	                            <input type="text" name="userName" value="${userDTO.userName}" class="edit_name" readonly>
+	                        </td>
+	                    </tr>
+	                    <tr class="edit-tr">
+	                        <th class="edit-th">성별</th>
+	                        <td class="edit-td">
+	                            <input type="radio" name="userGender" value="M" ${userDTO.userGender eq 'M'?'checked':''} class="edit_male" checked="checked" onclick="javascript:return false;">남성
+	                            <input type="radio" name="userGender" value="F" ${userDTO.userGender eq 'F'?'checked':''} class="edit_female" onclick="javascript:return false;">여성
+	                        </td>
+	                    </tr>
+	                    <tr class="edit-tr">
+	                        <th class="edit-th">이메일</th>
+	                        <td class="edit-td">
+	                            <input type="text" name="userEmail" value="${userDTO.userEmail}" class="edit_email">
+	                        </td>
+	                    </tr>
+	                    <tr class="edit-tr">
+	                        <th class="edit-th">휴대폰번호</th>
+	                        <td class="edit-td">
+	                            <input type="text" name="userPhone" value="${userDTO.userPhone}" class="edit_contact">
+	                        </td>
+	                    </tr>
+	                    <!-- <tr class="edit-tr">
+	                        <th class="edit-th">주소</th>
+	                        <td class="edit-td">
+	                            <input type="text" name="edit_address1" class="edit_address1"><br/>
+	                            <input type="text" name="edit_address2" class="edit_address2"><br/>
+	                            <input type="text" name="edit_address3" class="edit_address3">
+	                        </td>
+	                    </tr> -->
+	                </tbody>
+	            </table>
+	        </section>
+        </form>
         <section class="section3">
             <button type="submit" class="edit-btn-cancel" onclick="history.back()">취소</button>
-            <button type="submit" class="edit-btn-submit" accesskey="s">정보수정</button>
+            <button type="submit" class="edit-btn-submit" >정보수정</button>
         </section>
     </main>
     <footer>

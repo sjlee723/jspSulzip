@@ -14,3 +14,13 @@ $('form').on('submit', function(e){
       alert('약관에 동의해주세요!');
    }
 });
+function fn_partners_submit(){
+	$.ajax({
+		type : 'post',
+		data : $("#partnersFrm").serialize(),
+		success:function(){
+			alert("제출되었습니다.");
+			location.reload();
+		},
+	});
+}

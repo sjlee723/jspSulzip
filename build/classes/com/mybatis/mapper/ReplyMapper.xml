@@ -12,11 +12,12 @@
 		select reply_number, reply_content, reply_date, board_number, r.user_number, user_id
 		from `user`m join `reply` r
 		on board_number = #{boardNumber} and m.user_number = r.user_number
+		order by reply_date desc
 	</select>
 	
 	<insert id="insert" parameterType="ReplyDTO">
-		insert into `reply`(reply_content, board_number, user_number)
-		values(#{replyContent}, #{boardNumber}, #{userNumber})
+		insert into `reply`(reply_content, board_number, user_number, reply_date)
+		values(#{replyContent}, #{boardNumber}, #{userNumber}, sysdate() )
 	</insert>
 	
 	<delete id="delete" parameterType="_int">

@@ -47,8 +47,10 @@
       <div class="btn-box">
         <div class="button">
           <button type="button" class="list-btn" onclick="fn_go_to_link('${pageContext.request.contextPath}/clientboard/serviceListOk.clb')">목록</button>
+ <c:if test="${boardRow.getUserId() == userId }">
           <button type="button" class="modify-btn" onclick="location.href='${pageContext.request.contextPath}/clientboard/serviceUpdate.clb?boardNumber=${boardRow.getBoardNumber()}'" >수정</button>
           <button type="button" class="delete-btn" onclick="location.href='${pageContext.request.contextPath}/clientboard/serviceDeleteOk.clb?boardNumber=${boardRow.getBoardNumber()}'">삭제</button>
+</c:if>
         </div>
       </div>
       
@@ -92,6 +94,6 @@
   <script type="text/javascript"> function fn_go_to_link(link){location.href=link;}</script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script> let userNumber = "${sessionScope.userNumber}"; </script>
-  <script src="${pageContext.request.contextPath}/assets/js/clientboardread.js"></script>
+  <script src="${pageContext.request.contextPath}/assets/js/clientboard/clientboardread.js"></script>
   
 </html>
