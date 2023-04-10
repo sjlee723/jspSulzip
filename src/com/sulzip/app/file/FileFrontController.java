@@ -24,10 +24,10 @@ public class FileFrontController extends HttpServlet {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		System.out.println(target);
 		switch(target) {
-		case "/file/file.file": 
-			System.out.println("안녕하세요!!!");
-			new MyRecipeDetailController().execute(req, resp);
-			break;
+//		case "/file/file.file": 
+//			System.out.println("안녕하세요!!!");
+//			new MyRecipeDetailController().execute(req, resp);
+//			break;
 		}
 	}
 }

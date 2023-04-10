@@ -31,13 +31,13 @@ public class MyRecipeFrontController extends HttpServlet {
 			System.out.println("안녕하세요!!!");
 			new MyRecipeDetailController().execute(req, resp);
 			break;
-		case "/myrecipe/myRecipeWrite.mrb": 
+		case "/myrecipe/myRecipeUpload.mrb": 
 			System.out.println("안녕하세요!!!");
-			new MyRecipeWriteController().execute(req, resp);
+			new MyRecipeUploadController().execute(req, resp);
 			break;
-		case "/myrecipe/myRecipeWriteOk.mrb": 
+		case "/myrecipe/myRecipeUploadOk.mrb": 
 			System.out.println("안녕하세요!!!");
-			new MyRecipeWriteOkController().execute(req, resp);
+			new MyRecipeUploadOkController().execute(req, resp);
 			break;
 		}
 	}

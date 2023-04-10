@@ -49,12 +49,20 @@
                  <button type="button" class="btn btn-light text-secondary" >스테디</button>
              </div>
              <div class="col-2 filter-group mb-5 d-md-flex justify-content-md-end">
-                    <a href="${pageContext.request.contextPath}/myrecipe/myRecipeWrite.mrb" class="btn" style="color: white; background-color: #d61c6a;">작성하기</a>
+                    <a href="${pageContext.request.contextPath}/myrecipe/myRecipeUpload.mrb" class="btn" style="color: white; background-color: #d61c6a;">작성하기</a>
              </div>
             </div>
             <div class="list-group">
                 <div class="card-group">
-                    <div class="card" data-num="1">
+                	<div class="card" data-num="1">
+                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/빅터프랑켄슈타인.jpg" class="card-img-top inside" alt="빅터프랑켄슈타인이미지">
+                        <div class="card-body">
+                            <p class="card-text-1">레시피</p>
+                            <h5 class="card-title inside">빅터프랑켄슈타인</h5>
+                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
+                        </div>
+                    </div>
+                    <%-- <div class="card" data-num="1">
                         <img src="${pageContext.request.contextPath}/assets/img/myrecipe/빅터프랑켄슈타인.jpg" class="card-img-top inside" alt="빅터프랑켄슈타인이미지">
                         <div class="card-body">
                             <p class="card-text-1">레시피</p>
@@ -155,7 +163,7 @@
                             <h5 class="card-title inside">카페와바시그니처ABC</h5>
                             <p class="card-text-2"><small class="text-muted">HIT</small></p>
                         </div>
-                    </div>
+                    </div> --%>
                 </div>
                 <div class="pagination-area ">
                     <style>
