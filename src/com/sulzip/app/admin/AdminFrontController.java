@@ -26,13 +26,17 @@ public class AdminFrontController extends HttpServlet{
 			req.getRequestDispatcher("/app/admin/adminuser.jsp").forward(req, resp);
 			break;
 		case "/admin/product.adm":
-			req.getRequestDispatcher("/app/admin/adminproduct.jsp").forward(req, resp);
+//			req.getRequestDispatcher("/app/admin/adminproduct.jsp").forward(req, resp);
+			new AdminProductController().execute(req, resp);
 			break;
 		case "/admin/order.adm":
 			req.getRequestDispatcher("/app/admin/adminorder.jsp").forward(req, resp);
 			break;
 		case "/admin/board.adm":
 			req.getRequestDispatcher("/app/admin/adminboard.jsp").forward(req, resp);
+			break;
+		case "/admin/search.adm":
+			new AdminSearchOkController().execute(req, resp);
 			break;
 		}
 	}
