@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header.css" />
     <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footer.css" />
     <title>edituserinfo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/user/edituserinfo.js"></script>
 </head>
 <body>
     <header>
@@ -20,7 +22,7 @@
         <section class="section1">
             <div class="title">회원 정보 수정</div>
         </section>
-        <form action="/user/edituserinfoOk.usr" method="POST">
+        <form action="/user/edituserinfoOk.usr" id="edituserFrm" method="POST">
 	        <section class="section2">
 	            <div class="sub-title">회원정보입력</div>
 	            <table class="edit-table">
@@ -35,22 +37,23 @@
 	                            <input type="text" name="userId" value="${userDTO.userId}" class="edit_id" readonly>
 	                        </td>
 	                    </tr>
-	                    <tr class="edit-tr">
+	                   <!--  <tr class="edit-tr">
 	                        <th class="edit-th">기존 비밀번호</th>
 	                        <td class="edit-td">
 	                            <input type="text" name="userPw" class="edit_pw" autofocus>
 	                        </td>
-	                    </tr>
+	                    </tr> -->
 	                    <tr class="edit-tr">
 	                        <th class="edit-th">변경 할 비밀번호</th>
 	                        <td class="edit-td">
-	                            <input type="text" name="userChangePw" class="edit_pw" autofocus>
+	                        	<input type="hidden" id="userPw" name="userPw" />
+	                            <input type="password" id="userChangePw" class="edit_pw" autofocus>
 	                        </td>
 	                    </tr>
 	                    <tr class="edit-tr">
 	                        <th class="edit-th">변경 할 비밀번호 확인</th>
 	                        <td class="edit-td">
-	                            <input type="text" name="userChangePwConfirm" class="edit_pwconfirm">
+	                            <input type="password" id="userChangePwConfirm" class="edit_pwconfirm">
 	                        </td>
 	                    </tr>
 	                    <tr class="edit-tr">
@@ -89,11 +92,12 @@
 	                </tbody>
 	            </table>
 	        </section>
+	        <section class="section3">
+	            <button type="button" class="edit-btn-cancel" onclick="history.back()">취소</button>
+	            <button type="button" onclick="fn_edituser('${userDTO.userId}');" class="edit-btn-submit" >정보수정</button>
+	        </section>
         </form>
-        <section class="section3">
-            <button type="submit" class="edit-btn-cancel" onclick="history.back()">취소</button>
-            <button type="submit" class="edit-btn-submit" >정보수정</button>
-        </section>
+        
     </main>
     <footer>
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>

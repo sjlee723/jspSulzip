@@ -4,7 +4,7 @@
 	<insert id="join" parameterType="UserDTO">
 		insert into `user`(user_status, user_registration_date, user_id, user_pw, user_name,
 		 user_phone, user_gender, user_email, user_registration_number)
-		values (#{userStatus}, #{userRegistrationDate}, #{userId},
+		values (#{userStatus}, sysdate(), #{userId},
 		#{userPw}, #{userName}, #{userPhone}, #{userGender}, #{userEmail}, #{userRegistrationNumber});
 	</insert>
 	
@@ -44,7 +44,10 @@
 	
 	<update id="modify" parameterType="UserDTO">
 		update `user`
-		set user_pw = #{userPw}, user_email = #{userEmail}, user_phone = #{userPhone}
+		set user_email = #{userEmail}, user_phone = #{userPhone}
+		<if test='userPw != null and userPw != ""'>
+			,user_pw = #{userPw}
+		</if>
 		where user_number = #{userNumber}
 	</update>
 	
