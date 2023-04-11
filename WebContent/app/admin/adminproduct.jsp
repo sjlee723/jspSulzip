@@ -123,12 +123,12 @@
           <!-- 상품목록 -->
           <div class="product-list">
             <div class="list-title"><span>상품목록</span></div>
-            <div class="product-total"><span>총  </span> <c:out value="${fn:length(joined)}"></c:out>개</div>
+            <div class="product-total"> <span>총</span><span class="ea"><c:out value="${fn:length(joined)}"></c:out></span><span>개</span> </div>
             <div class="product-status">
               <div class="status-btn">
-                <button>진열함</button>
-                <button>진열안함</button>
                 <button>분류수정</button>
+                <button>이름수정</button>
+                <button>가격수정</button>
                 <button>삭제</button>
               </div>
             </div>
@@ -163,7 +163,7 @@
                 		</c:when>
                 	</c:choose>
                 	</div>
-                	<div class="list-name"><c:out value="${admin.nameKor}"/></div>
+                	<div class="list-name"><c:out value="${admin.nameKor}"/><br><c:out value="${admin.nameEng}"/></div>
               	  <div class="list-price"><c:out value="${admin.price}"/></div>
               </div>
             </c:forEach>

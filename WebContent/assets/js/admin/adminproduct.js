@@ -6,9 +6,9 @@
 $('#checkAll').on('click', function(){
 	
 	if($(this).is(':checked')){
-		$('.cbox').attr('checked', true);	
+		$('.cbox').prop('checked', true);	
 	}else{
-		$('.cbox').attr('checked', false);	
+		$('.cbox').prop('checked', false);	
 	}
 });
 
@@ -21,20 +21,23 @@ $('.ctg-list').on('click', '.cbox' , function(){
 $('#search-btn').on('click', function(){
 	let keyword = $('#search-keyword').val();
 	let category = $('input[name=product]:checked').val();
-	
-	console.log(category);
-	console.log(keyword);
+	let language = $('#product-name').val();
+	let resultEa = 0;
 
 	$.ajax({
 		url : '/admin/search.adm',
 		type : 'get',
 		data : {
 			keyword : keyword,
-			category : category	
+			category : category,
+			language : language	
 		},
 		dataType: 'json',
 		success : function(result){
 			showList(result);
+			resultEa = result.length;
+			$('.ea').text(resultEa);
+		/*	console.log(resultEa);*/
 		},
 		error : function(a,b,c){
 			console.error(c);
@@ -69,7 +72,7 @@ function showList(list){
 			text += '용품';
 		}
 		text +=	`</div>
-                	<div class="list-name">${content.nameKor}</div>
+                	<div class="list-name">${content.nameKor} <br/> ${content.nameEng}</div>
               	  <div class="list-price">${content.price}</div>
               </div>
 		`;
@@ -78,6 +81,22 @@ function showList(list){
 	
 	$('.ctg-list').html(text);
 }
+
+$('.ea')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

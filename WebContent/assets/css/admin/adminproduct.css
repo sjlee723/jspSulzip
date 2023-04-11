@@ -455,6 +455,7 @@ main {
   align-items: center;
   border-right: 1px solid#ddd;
   border-bottom: 1px solid#ddd;
+  text-align: center;
 }
 .list-price {
   width: 170px;
