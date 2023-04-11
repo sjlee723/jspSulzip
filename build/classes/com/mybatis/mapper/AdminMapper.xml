@@ -21,16 +21,23 @@
 		from product 
 	</select>
 	
-	<select id="searchName" parameterType="ProductVO" resultType="ProductVO">
+	<select id="searchProAll"  parameterType="SearchVO" resultType="ProductVO">
 		select product_number "number" , category_number  "category", product_name_kor "name_kor" , product_name_eng "name_eng" , product_price  price
 		from product 
-		where category_number = #{category} and product_name_kor like concat('%', '#{keyword}', '%')
+		where product_name_kor like concat('%', #{keyword}, '%')
 	</select>
 	
-	<select id="search" parameterType="SearchVO" resultType="ProductVO">
-		
+	<select id="searchPro" parameterType="SearchVO" resultType="ProductVO">
+		select product_number "number" , category_number  "category", product_name_kor "name_kor" , product_name_eng "name_eng" , product_price  price
+		from product 
+		where category_number = #{category} and product_name_kor like concat('%', #{keyword}, '%')
 	</select>
 	
+	<select id="searchSul" parameterType="SearchVO" resultType="ProductVO">
+		select sulkit_number "number", sulkit_name_kor "name_kor", sulkit_name_eng "name_eng", sulkit_price "price" from sulkit s
+		where sulkit_name_kor like concat('%', #{keyword}, '%')
+	</select>
+
 </mapper>
 
 

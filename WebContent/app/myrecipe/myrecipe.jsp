@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,8 +54,11 @@
              </div>
             </div>
             <div class="list-group">
-                <div class="card-group">
-                	<div class="card" data-num="1">
+<c:forEach items="${list}" varStatus="idx">
+	<c:if test="${idx.count % 3 == 1}">
+					<div class="card-group">
+	</c:if>
+					<div class="card" data-num="1">
                         <img src="${pageContext.request.contextPath}/assets/img/myrecipe/빅터프랑켄슈타인.jpg" class="card-img-top inside" alt="빅터프랑켄슈타인이미지">
                         <div class="card-body">
                             <p class="card-text-1">레시피</p>
@@ -62,108 +66,17 @@
                             <p class="card-text-2"><small class="text-muted">HIT</small></p>
                         </div>
                     </div>
-                    <%-- <div class="card" data-num="1">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/빅터프랑켄슈타인.jpg" class="card-img-top inside" alt="빅터프랑켄슈타인이미지">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">빅터프랑켄슈타인</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/스위트로즈마티니.jpg" class="card-img-top inside" alt="스위트로즈마티니이미지">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">스위트로즈마티니</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/넥스트투라이크워드.jpg" class="card-img-top inside" alt="넥스트투라이크워드이미지">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">넥스트투라이크워드</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-group">
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/솔베이하이볼.jpg" class="card-img-top inside" alt="솔베이하이볼이미지">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">솔베이하이볼</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/플라이트오브패션칵테일.jpg" class="card-img-top inside" alt="플라이트오브패션이미지">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">플라이트오브패션</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/힙키스.jpg" class="card-img-top inside" alt="힙키스이미지">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">힙키스</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-group">
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/허니레몬에이드.jpg" class="card-img-top inside" alt="허니레몬에이드이미지">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">허니레몬에이드</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/장미샤워.jpg" class="card-img-top inside" alt="장미샤워이미지">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">장미샤워</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/깔루아밀크.jpg" class="card-img-top inside" alt="깔루아밀크이미지">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">깔루아밀크</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-group">
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/엘리나칵테일레시피.jpg" class="card-img-top inside" alt="엘리나칵테일이미지">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">엘리나칵테일</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/장미홍초.jpg" class="card-img-top inside" alt="장미홍초이미지">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">장미홍초</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="${pageContext.request.contextPath}/assets/img/myrecipe/카페와바시그니처ABC칵테일.jpg" class="card-img-top inside" alt="카페와바시그니처ABC">
-                        <div class="card-body">
-                            <p class="card-text-1">레시피</p>
-                            <h5 class="card-title inside">카페와바시그니처ABC</h5>
-                            <p class="card-text-2"><small class="text-muted">HIT</small></p>
-                        </div>
-                    </div> --%>
+	<c:if test="${idx.count % 3 == 0}">
+					</div>
+	</c:if>
+
+</c:forEach>            
+                <!-- 
+                	controller에서 jsp로 list라는 변수를 던져주면 row에 3개씩 나오게 작업은 해뒀음
+                	controller에서 List형태로 목록에 뿌려줄 마이레시피 데이터를 limit으로 가져옴. 몇개씩 끊어서 가져올지 정하기.
+                 -->
+                
+                
                 </div>
                 <div class="pagination-area ">
                     <style>

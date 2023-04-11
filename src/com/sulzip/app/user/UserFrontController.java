@@ -30,6 +30,9 @@ public class UserFrontController extends HttpServlet {
 		case "/user/joinOk.usr" :
 			new JoinOkController().execute(req, resp);
 			break;
+		case "/user/checkIdOk.usr" :
+		    new CheckIdOkController().execute(req, resp);
+		    break;
 		case "/user/withdrawal.usr" :
 			req.getRequestDispatcher("/app/user/withdrawal.jsp").forward(req, resp);
 			break;
