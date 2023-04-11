@@ -31,10 +31,12 @@ public class AdminSearchOkController implements Execute{
 		
 		String keyword = req.getParameter("keyword");
 		String category = req.getParameter("category");
+		String language = req.getParameter("language");
 		
-		System.out.println(keyword);
-		System.out.println(category);
-		
+//		System.out.println(keyword);
+//		System.out.println(category);
+		System.out.println("=================");
+		System.out.println(language);
 		
 		searchVO.setCategory(category);
 		searchVO.setKeyword(keyword);
@@ -42,35 +44,66 @@ public class AdminSearchOkController implements Execute{
 		
 		List<ProductVO> joined = new ArrayList<ProductVO>();
 		
-		if(category.equals("0")) {
-			List<ProductVO> searchPro = adminDAO.searchProAll(searchVO);
-			List<ProductVO> searchSul = adminDAO.searchSul(searchVO);
-			
-			joined.addAll(searchPro);
-			joined.addAll(searchSul);
-			
-			for(ProductVO join : joined) {
-				String replyJson = gson.toJson(join);
-				replies.add(JsonParser.parseString(replyJson));
+		
+		if(language.equals("1")) {
+			if(category.equals("0")) {
+				List<ProductVO> searchPro = adminDAO.searchProAll(searchVO);
+				List<ProductVO> searchSul = adminDAO.searchSul(searchVO);
+				
+				joined.addAll(searchPro);
+				joined.addAll(searchSul);
+				
+				for(ProductVO join : joined) {
+					String replyJson = gson.toJson(join);
+					replies.add(JsonParser.parseString(replyJson));
+				}
+				
+			}else if(category.equals("1")) {
+				List<ProductVO> searchSul = adminDAO.searchSul(searchVO);
+				
+				for(ProductVO sul : searchSul) {
+					String replyJson = gson.toJson(sul);
+					replies.add(JsonParser.parseString(replyJson));
+				}
+				
+			}else if(category.equals("2") || category.equals("3") || category.equals("4")) {
+				List<ProductVO> searchPro = adminDAO.searchPro(searchVO);
+				
+				for(ProductVO pro : searchPro) {
+					String replyJson = gson.toJson(pro);
+					replies.add(JsonParser.parseString(replyJson));
+				}
 			}
-			
-		}else if(category.equals("1")) {
-			List<ProductVO> searchSul = adminDAO.searchSul(searchVO);
-			
-			for(ProductVO sul : searchSul) {
-				String replyJson = gson.toJson(sul);
-				replies.add(JsonParser.parseString(replyJson));
-			}
-			
-		}else if(category.equals("2") || category.equals("3") || category.equals("4")) {
-			List<ProductVO> searchPro = adminDAO.searchPro(searchVO);
-			
-			for(ProductVO pro : searchPro) {
-				String replyJson = gson.toJson(pro);
-				replies.add(JsonParser.parseString(replyJson));
+		}else if(language.equals("2")) {
+			if(category.equals("0")) {
+				List<ProductVO> searchPro = adminDAO.searchProAllEng(searchVO);
+				List<ProductVO> searchSul = adminDAO.searchSulEng(searchVO);
+				
+				joined.addAll(searchPro);
+				joined.addAll(searchSul);
+				
+				for(ProductVO join : joined) {
+					String replyJson = gson.toJson(join);
+					replies.add(JsonParser.parseString(replyJson));
+				}
+				
+			}else if(category.equals("1")) {
+				List<ProductVO> searchSul = adminDAO.searchSulEng(searchVO);
+				
+				for(ProductVO sul : searchSul) {
+					String replyJson = gson.toJson(sul);
+					replies.add(JsonParser.parseString(replyJson));
+				}
+				
+			}else if(category.equals("2") || category.equals("3") || category.equals("4")) {
+				List<ProductVO> searchPro = adminDAO.searchProEng(searchVO);
+				
+				for(ProductVO pro : searchPro) {
+					String replyJson = gson.toJson(pro);
+					replies.add(JsonParser.parseString(replyJson));
+				}
 			}
 		}
-		
 		
 		
 		

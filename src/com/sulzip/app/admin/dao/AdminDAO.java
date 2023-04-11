@@ -43,6 +43,18 @@ public class AdminDAO {
 		return sqlsession.selectList("admin.searchProAll", searchVO);
 	}
 	
+	public List<ProductVO> searchProEng(SearchVO searchVO){
+		return sqlsession.selectList("admin.searchProEng", searchVO);
+	}
+	
+	public List<ProductVO> searchSulEng(SearchVO searchVO){
+		return sqlsession.selectList("admin.searchSulEng", searchVO);
+	}
+	
+	public List<ProductVO> searchProAllEng(SearchVO searchVO){
+		return sqlsession.selectList("admin.searchProAllEng", searchVO);
+	}
+	
 }
 
 
