@@ -78,9 +78,7 @@
                       </div> -->
 
                       <div class="login-btn">
-                        <button type="submit" class="btn btn-login">
-                            로그인
-                          </button>
+                        <button type="submit" class="btn btn-login">로그인</button>
                       </div>
                       </form>
           			  <div class="login-btn">
@@ -89,8 +87,8 @@
                       <div class="regis-wrap">
                         <ul class="join-n-find-wrap">
                           <li>
-                            <span>· 아직 쉐이킷 회원이 아니신가요?</span>
-                            <a href="/user/join.usr">쉐이킷 회원가입</a>
+                            <span>· 아직 술집 회원이 아니신가요?</span>
+                            <a href="/user/join.usr">술집 회원가입</a>
                           </li>
                           <li>
                             <span>· 아이디/비밀번호를 잊어버리셨나요?</span>

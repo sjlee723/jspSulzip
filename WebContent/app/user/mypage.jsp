@@ -71,7 +71,7 @@
                       </div>
                       탈퇴하기</a>
                   </li>
-                  <li><a href="">로그아웃</a></li>
+                  <li><a href="${pageContext.request.contextPath}/user/logoutOk.usr">로그아웃</a></li>
                 </ul>
         </div>
           <div class="mycontent">

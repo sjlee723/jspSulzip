@@ -3,6 +3,7 @@ package com.sulzip.app.user.dao;
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
+import com.sulzip.app.clientboard.dto.ClientBoardDTO;
 import com.sulzip.app.user.dto.UserDTO;
 
 public class UserDAO {
@@ -43,4 +44,5 @@ public class UserDAO {
 	public void modify(UserDTO userDTO) {
 		sqlSession.update("user.modify", userDTO);
 	}
+	
 }

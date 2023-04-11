@@ -25,7 +25,7 @@ public class WithdrawalOkController implements Execute {
 		String path = null;
 		if(userDAO.withCheck(userDTO) != 0) {
 			userDAO.withdrawal(userDTO);
-			path = "/";
+			path = "/user/logoutOk.usr";
 		}else {
 			path = "/user/withdrawal.usr?result=false";
 		}

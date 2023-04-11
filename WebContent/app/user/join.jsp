@@ -46,14 +46,6 @@
                             <input type="text" name="userId" class="join_id" id="id" autofocus>
                             <span class="text-details">&nbsp;영문자, 숫자, _만 입력 가능. 최소 3자 이상 입력하세요.<br></span>
 							<span class="check-msg" id="check-id-msg"></span>
-
-
-                        
-<!--                         	<button type="button" onclick="fn_dbCheckId()" name="dbCheckId" class="checkId">
-                        		중복확인
-                        	</button> -->
-                      
-                        	
                         </td>
                     </tr>
                     <tr class="join-tr">
@@ -103,14 +95,6 @@
                             <input type="text" name="userPhone" class="join_contact">
                         </td>
                     </tr>
-                    <!-- <tr class="join-tr">
-                        <th class="join-th">주소</th>
-                        <td class="join-td">
-                            <input type="text" name="join_address1" class="join_address1"><br/>
-                            <input type="text" name="join_address2" class="join_address2"><br/>
-                            <input type="text" name="join_address3" class="join_address3">
-                        </td>
-                    </tr>                    -->
                 </tbody>
             </table>    
             </section>
@@ -122,15 +106,15 @@
             <div class="register-agree">
                 <div class="agree-wrap">
                     <div class="all-check">
-                        <input type="checkbox" id="agree_all"><label for="agree_all">전체 동의합니다.</label>
+                        <input type="checkbox" id="agree_all" required><label for="agree_all">전체 동의합니다.</label>
                     </div>
                     <ul class="check-list-agrees">
                         <li class="agree di_flex">
-                            <input type="checkbox" name="agree" id="agree" value="1"><label for="agree">회원가입약관 동의</label>
+                            <input type="checkbox" name="agree" id="agree" value="1" required><label for="agree">회원가입약관 동의</label>
                             <a href="#none" data-toggle="modal" data-target="#decView01" class="view_dec text-right">내용보기</a>
                         </li>
                         <li class="agree di_flex">
-                            <input type="checkbox" name="agree2" id="agree2" value="1"><label for="agree2">개인정보처리방침안내 동의</label>
+                            <input type="checkbox" name="agree2" id="agree2" value="1" required><label for="agree2">개인정보처리방침안내 동의</label>
                             <a href="#none" data-toggle="modal" data-target="#decView02" class="view_dec text-right">내용보기</a>
                         </li>
                     </ul>
