@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -83,29 +85,22 @@
           <div class="board-ctg">
             <div class="ctg-board"><span>게시판 분류</span></div>
             <div class="ctg-board-select">
-              <span>나만의 레시피</span><input type="radio" name="board" value="나만의레시피"/>
-              <span>고객센터</span><input type="radio" name="board" value="고객센터"/>
-            </div>
-          </div>
-          <div class="upload-date">
-            <div class="date-title"><span>등록 날짜</span></div>
-            <div class="date-select">
-              <input type="date"/>
-              <span> ~ </span><input type="date"/>
+              <span>나만의 레시피</span><input type="radio" name="category" value="M" class="ctg" checked/>
+              <span>고객센터</span><input type="radio" name="category" value="C" class="ctg"/>
             </div>
           </div>
           <div class="board-id">
             <div class="id-title"><span>등록 회원</span></div>
             <div class="id-select">
-              <select name="회원명" id="id">
-                <option value="1">회원명</option>
-                <option value="2">회원ID</option>
+              <select name="select" id="id">
+                <option name="select" value="1">글제목</option>
+                <option name="select" value="2">회원ID</option>
               </select>
-              <input type="text"/>
+              <input type="text" id="keyword"/>
             </div>
           </div>
           <div class="search-btn">
-            <button>검색</button>
+            <button class="search">검색</button>
             <button>초기화</button>
           </div>
           <!-- 게시판 목록 -->
@@ -115,15 +110,34 @@
               <div class="delete"><button>삭제</button></div>
             </div>
             <div class="list-ctg">
-              <div class="ctg-1"><input type="checkbox"></div>
+              <div class="ctg-1"><input type="checkbox" id="checkAll"></div>
               <div class="ctg-2"><span>게시판제목</span></div>
               <div class="ctg-3"><span>게시글제목</span></div>
               <div class="ctg-4"><span>게시판ID</span></div>
               <div class="ctg-5"><span>게시물관리</span></div>
             </div>
             <div class="board-list">
-              <div class="list-ctg-2">
-                <div class="ctg-1"><input type="checkbox"></div>
+            
+            
+            	<c:forEach var="board" items="${myRecipeList}">
+            		<div class="list-ctg-2">
+		                <div class="ctg-1"><input type="checkbox" class="cbox"></div>
+		                <div class="ctg-2">
+		                			<c:out value="나만의 레시피"/>
+		                </div>
+		                <div class="ctg-3"><span> <c:out value="${board.getTitle()}"/> </span></div>
+		                <div class="ctg-4"><span><c:out value="${board.getId()}"/> </span></div>
+		                <div class="ctg-5">
+		                  <button type="button" class="read" data-num="${board.getNumber()}"> <span>글보기 ></span> 
+		                  </button>
+		                  <button  id="delete" data-num="${board.getNumber()}"><span>글삭제 ></span>
+		                  </button>
+		                </div>
+	              	</div>
+            	</c:forEach>
+            
+              <!-- <div class="list-ctg-2">
+                <div class="ctg-1"><input type="checkbox" class="cbox"></div>
                 <div class="ctg-2"><span>게시판제목</span></div>
                 <div class="ctg-3"><span>게시글제목</span></div>
                 <div class="ctg-4"><span>게시판ID</span></div>
@@ -132,6 +146,8 @@
                   <button>글삭제 ></button>
                 </div>
               </div>
+               -->
+              
             </div>
           </div>
         </div>
@@ -139,6 +155,7 @@
     <footer>
       <jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/js/admin/adminboard.js"></script>
   </body>
 </html>

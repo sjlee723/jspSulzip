@@ -107,8 +107,72 @@
 		</trim>
 		
 	</select>
+	<!-- 게시판 전체 리스트 -->
+	<select id="selectMyRecipeAll" resultType="BoardVO">
+		select myRecipe_name_kor title, u.user_id id, myRecipe_number number
+		from myrecipe m join `user` u 
+		on m.user_number = u.user_number
+	</select>
+	<select id="selectClientAll" resultType="BoardVO">
+		select board_title title , u.user_id id, board_number number
+		from client_board cb join `user` u 
+		on cb.user_number = u.user_number
+	</select>
+	
+	<!-- 제목으로 검색 -->
+	<select id="myRecipeName" parameterType="BoardSearchVO" resultType="BoardVO">
+		select myRecipe_name_kor title, u.user_id id, myRecipe_number number
+		from myrecipe m join `user` u 
+		on m.user_number = u.user_number
+		where myRecipe_name_kor like concat('%', #{keyword}, '%')
+	</select>
+	
+	<select id="clientName" parameterType="BoardSearchVO" resultType="BoardVO">
+		select board_title title , u.user_id id, board_number number
+		from client_board cb join `user` u 
+		on cb.user_number = u.user_number
+		where board_title like concat('%', #{keyword}, '%')
+	</select>
+	
+	<!-- 아이디로 검색 -->
+	<select id="myRecipeId" parameterType="BoardSearchVO" resultType="BoardVO">
+		select myRecipe_name_kor title, u.user_id id, myRecipe_number number
+		from myrecipe m join `user` u 
+		on m.user_number = u.user_number
+		where u.user_id like concat('%', #{keyword}, '%')
+	</select>
+	
+	<select id="clientId" parameterType="BoardSearchVO" resultType="BoardVO">
+		select board_title title , u.user_id id, board_number number
+		from client_board cb join `user` u 
+		on cb.user_number = u.user_number
+		where u.user_id like concat('%', #{keyword}, '%')
+	</select>
+	
+
+<!-- 	<select id="myRecipeList" parameterType="_int" resultType="BoardVO">
+		select myRecipe_name_kor title, u.user_id id, myRecipe_number number
+		from myrecipe m join `user` u 
+		on m.user_number = #{userNumber} and m.user_number = u.user_number
+	</select>
+	
+	<select id="clientList" parameterType="_int" resultType="BoardVO">
+		select board_title title , u.user_id id, board_number number
+		from client_board cb join `user` u 
+		on cb.user_number = #{userNumber} and cb.user_number = u.user_number
+	</select> -->
+	
 
 </mapper>
+
+
+
+
+
+
+
+
+
 
 
 

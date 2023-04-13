@@ -448,5 +448,9 @@ main {
   align-items: center;
 }
 
+button {
+  cursor: pointer;
+}
+
 
 
