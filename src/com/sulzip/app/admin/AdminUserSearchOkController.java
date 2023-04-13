@@ -41,11 +41,11 @@ public class AdminUserSearchOkController implements Execute {
 		userSearchVO.setDate(date);
 		userSearchVO.setGender(gender);
 		
-		System.out.println(userSearchVO);
+//		System.out.println(userSearchVO);
 		
 		List<UserListVO> userList = adminDAO.searchUser(userSearchVO);
 		
-		System.out.println(userList);
+//		System.out.println(userList);
 		
 		for(UserListVO user : userList) {
 			String jsonString = gson.toJson(user);
@@ -66,30 +66,30 @@ public class AdminUserSearchOkController implements Execute {
 //		System.out.println(select);
 		
 		
-//		if(select.equals("1")) {
-//			List<UserListVO> userId = adminDAO.userId(userSearchVO);
-//			
-//			joined.addAll(userId);
-//			
-//			System.out.println(userId);
-//			
-//			for(UserListVO join : joined) {
-//				String replyJson = gson.toJson(join);
-//				search.add(JsonParser.parseString(replyJson));
-//			}
-//			
-//		}else if(select.equals("2")){
-//			List<UserListVO> userName = adminDAO.userName(userSearchVO);
-//			
-//			joined.addAll(userName);
-//			
-//			System.out.println(userName);
-//			
-//			for(UserListVO join : joined) {
-//				String replyJson = gson.toJson(join);
-//				search.add(JsonParser.parseString(replyJson));
-//			}
-//		}
+		if(select.equals("1")) {
+			List<UserListVO> userId = adminDAO.userId(userSearchVO);
+			
+			joined.addAll(userId);
+			
+			System.out.println(userId);
+			
+			for(UserListVO join : joined) {
+				String replyJson = gson.toJson(join);
+				search.add(JsonParser.parseString(replyJson));
+			}
+			
+		}else if(select.equals("2")){
+			List<UserListVO> userName = adminDAO.userName(userSearchVO);
+			
+			joined.addAll(userName);
+			
+			System.out.println(userName);
+			
+			for(UserListVO join : joined) {
+				String replyJson = gson.toJson(join);
+				search.add(JsonParser.parseString(replyJson));
+			}
+		}
 		
 		
 		
