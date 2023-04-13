@@ -23,7 +23,6 @@ public class AdminUserController implements Execute {
 		req.setAttribute("userList", userList);
 		
 		req.getRequestDispatcher("/app/admin/adminuser.jsp").forward(req, resp);
-		System.out.println("jsp !!!!!!!!!!!!!");
 		
 	}
 

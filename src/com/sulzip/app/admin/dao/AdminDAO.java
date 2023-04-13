@@ -5,6 +5,8 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
+import com.sulzip.app.admin.vo.BoardSearchVO;
+import com.sulzip.app.admin.vo.BoardVO;
 import com.sulzip.app.admin.vo.SearchVO;
 import com.sulzip.app.admin.vo.UserListVO;
 import com.sulzip.app.admin.vo.UserSearchVO;
@@ -79,6 +81,39 @@ public class AdminDAO {
 		return sqlsession.selectList("admin.searchUser", userSearchVO);
 	}
 	
+//	============게시판관리===============
+	
+//	public List<BoardVO> myRecipeList(int userNumber){
+//		return sqlsession.selectList("admin.myRecipeList", userNumber);
+//	}
+//	
+//	public List<BoardVO> clientList(int userNumber){
+//		return sqlsession.selectList("admin.clientList", userNumber);
+//	}
+	
+	public List<BoardVO> selectMyRecipeAll(){
+		return sqlsession.selectList("admin.selectMyRecipeAll");
+	}
+	
+	public List<BoardVO> selectClientAll(){
+		return sqlsession.selectList("admin.selectClientAll");
+	}
+	
+	public List<BoardVO> myRecipeName(BoardSearchVO boardSearchVO){
+		return sqlsession.selectList("admin.myRecipeName", boardSearchVO);
+	}
+	
+	public List<BoardVO> clientName(BoardSearchVO boardSearchVO){
+		return sqlsession.selectList("admin.clientName", boardSearchVO);
+	}
+	
+	public List<BoardVO> myRecipeId(BoardSearchVO boardSearchVO){
+		return sqlsession.selectList("admin.myRecipeId", boardSearchVO);
+	}
+	
+	public List<BoardVO> clientId(BoardSearchVO boardSearchVO){
+		return sqlsession.selectList("admin.clientId", boardSearchVO);
+	}
 }
 
 

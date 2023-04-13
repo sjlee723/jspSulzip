@@ -247,14 +247,18 @@ main {
   align-items: center;
 }
 
+.list-ctg > div {
+	border-right : none;
+}
+
 .ctg-1,
 .ctg-2,
 .ctg-3,
 .ctg-4 {
   width: 50px;
   height: 100%;
-  border-right: 1px solid#ddd;
   display: flex;
+  border-right: 1px solid#ddd;
   align-items: center;
   justify-content: center;
   background-color: #f5f5f5;
@@ -286,7 +290,7 @@ main {
   height: 400px;
   border: 1px solid#ddd;
   border-top: none;
-  display: flex;
+  overflow: scroll;
 }
 
 .list-ctg-2 {
@@ -313,6 +317,10 @@ main {
   border: 1px solid#ddd;
   border-radius: 4px;
   margin-right: 8px;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* =============================================== */
@@ -418,3 +426,16 @@ footer {
 .footer-copyright-li:hover {
   text-decoration: underline;
 }
+
+.hidden{
+	display: none;
+	height: 30px;
+	width: 50px
+}
+
+
+
+
+
+
+
