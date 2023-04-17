@@ -41,7 +41,7 @@ main {
 
 .side-bar {
   width: 200px;
-  height: 250px;
+  height: 285px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   padding: 30px;
@@ -156,7 +156,7 @@ main {
 
 .date-title,
 .id-title {
-  width: 147.5px;
+  width: 150px;
   height: 40px;
   border: 1px solid#ddd;
   border-top: none;
@@ -169,7 +169,7 @@ main {
 
 .date-select,
 .id-select {
-  width: 630px;
+  width: 650px;
   height: 40px;
   border: 1px solid#ddd;
   border-top: none;

@@ -268,7 +268,7 @@ button {
 }
 
 .ctg-list-2 {
-  width: 800px;
+  width: 798px;
   height: 100px;
   border-bottom: 1px solid#ddd;
   display: flex;
@@ -318,11 +318,12 @@ button {
   border-right: 1px solid#ddd;
 }
 .list-pay {
-  width: 100px;
+  width: 95px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 button {
