@@ -17,6 +17,7 @@
 		<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
     </header>
     <main>
+    <form id="order" action="/order/orderOk.ord" method="post">
       <div class="order-title">주문서</div>
       <div class="content">
         <div class="order-container">
@@ -49,21 +50,32 @@
               <div class="info-content-box">
                 <div class="info-content">
                   <div class="customer-form">
-                    <label for="name">이름</label>
-                    <input type="text" name="name" />
+                    <label for="userName">이름</label>
+                    <input type="text" name="userName" />
                   </div>
                   <div class="customer-form">
-                    <label for="phone">연락처</label>
-                    <input type="text" name="phone" />
+                    <label for="userPhone">연락처</label>
+                    <input type="text" name="userPhone" />
                   </div>
+                   <div class="customer-form">
+                   <label for="pickupStore">픽업장소</label>
+                            <select name="pickupStore" id="pickupStore" class="pickupbtn" required>
+                              <option value="1">픽업할 매장의 위치를 선택하세요.</option>
+                              <option value="2">강남점</option>
+                              <option value="3">강동점</option>
+                              <option value="4">강서점</option>
+                              <option value="5">관악점</option>
+                              <option value="6">광진점</option>
+                              <option value="7">금천점</option>
+                              <option value="8">노원점</option>
+                              <option value="9">도봉점</option>
+                              <option value="10">동작점</option>
+                              <option value="11">마포점</option>
+                            </select>
+                   </div>
                   <div class="customer-form">
-                    <label for="message">요청사항</label>
-                    <textarea
-                      name="message"
-                      id=""
-                      cols="30"
-                      rows="10"
-                    ></textarea>
+                    <label for="orderMessage">요청사항</label>
+                    <textarea name="orderMessage" class="orderMessage" id="" cols="30" rows="10"></textarea>
                   </div>
                 </div>
               </div>
@@ -171,17 +183,13 @@
                           <div class="accout">
                             <select name="bank-account" id="">
                               <option value="1">선택하십시오.</option>
-                              <option value="2">
-                                우리은행 1002-854-969860 (주)SUL.ZIP
-                              </option>
+                              <option value="2">우리은행 1002-854-969860 (주)SUL.ZIP</option>
                             </select>
                           </div>
                         </div>
                         <div class="form-group-2">
                           <label for="card-account"><b>입금자명</b></label>
-                          <div class="accout">
-                            <input type="text" name="card-account" />
-                          </div>
+                          <div class="accout"><input type="text" name="card-account" /></div>
                         </div>
                       </div>
                     </div>
@@ -193,12 +201,13 @@
           <div class="order-page-side">
             <h3>결제 상세</h3>
             <div class="final-payment-amount"><span>최종 결제 금액</span></div>
-            <div class="final-price">12,000 <span>원</span></div>
+            <div class="final-price" id="final_price">12,000 <span>원</span></div>
             <div class="order-btn-box">주문하기<a href=""></a></div>
             <!-- <p><button id="check_module" type="button" onclick="requestPay()">주문하기</button></p> -->
           </div>
         </div>
       </div>
+     </form>
     </main>
     <footer><jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/></footer>
     <script
@@ -207,10 +216,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="${pageContext.request.contextPath}/assets/js/order/orderpage.js"></script>
-<!-- <script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.5.js"></script> -->
-<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
-
-<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+	<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
+	<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+    
     <script>
 
       $payBtn = $('.order-btn-box');
@@ -226,41 +234,79 @@
             pay_method : 'card', // 'card'만 지원됩니다.
             merchant_uid: "order_monthly_0001", // 상점에서 관리하는 주문 번호
             name : '최초인증결제',
-            amount : 0, // 결제창에 표시될 금액. 실제 승인이 이뤄지지는 않습니다.
             customer_uid : 'your-customer-unique-id', // 필수 입력.
+       		amount : $("#final_price").text().replace(",","").replace("원","").trim(), // 결제창에 표시될 금액. 실제 승인이 이뤄지지는 않습니다.
             buyer_email : 'test@portone.io',
             buyer_name : '포트원',
             buyer_tel : '02-1234-1234',
-            m_redirect_url : '{모바일에서 결제 완료 후 리디렉션 될 URL}' 
+            m_redirect_url : '{모바일에서 결제 완료 후 리디렉션 될 URL}'
         }, function(rsp) {
             if ( rsp.success ) {
-                alert('빌링키 발급 성공');
+            //    alert('빌링키 발급 성공');
+            
+            let productEa = "";
+            let productTotalPrice = "";
+            let pickupStore = "";
+            let orderMessage = "";
+            
+    		      // axios로 HTTP 요청
+    		      axios({
+    		        url: "{서버의 결제 정보를 받는 endpoint}",
+    		        method: "post",
+    		        headers: { "Content-Type": "application/json" },
+    		        data: {
+    		          // imp_uid: rsp.imp_uid,
+    		         // merchant_uid: rsp.merchant_uid
+    		        }
+    		      }).then((data) => {
+    		        // 서버 결제 API 성공시 로직
+    		      })
             } else {
-                alert('빌링키 발급 실패');
+                // alert('빌링키 발급 실패');
+            	 alert(`결제에 실패하였습니다. 에러 내용: ${rsp.error_msg}`);
             }
         });
 
       }
 
+      IMP.request_pay({ /** 요청 객체를 추가해주세요 */ },
+    		  rsp => {
+    		    if (rsp.success) {   
+    		      // axios로 HTTP 요청
+    		      axios({
+    		        url: "{서버의 결제 정보를 받는 endpoint}",
+    		        method: "post",
+    		        headers: { "Content-Type": "application/json" },
+    		        data: {
+    		          imp_uid: rsp.imp_uid,
+    		          merchant_uid: rsp.merchant_uid
+    		        }
+    		      }).then((data) => {
+    		        // 서버 결제 API 성공시 로직
+    		      })
+    		    } else {
+    		      alert(`결제에 실패하였습니다. 에러 내용: ${rsp.error_msg}`);
+    		    }
+    		  });
 
-        // IMP.request_pay({
-        //     pg : 'html5_inicis.{PG상점아이디}',  // 실제 계약 후에는 실제 상점아이디로 변경
-        //     pay_method : 'card', // 'card'만 지원됩니다.
-        //     merchant_uid: "order_monthly_0001", // 상점에서 관리하는 주문 번호
-        //     name : '최초인증결제',
-        //     amount : 0, // 결제창에 표시될 금액. 실제 승인이 이뤄지지는 않습니다.
-        //     customer_uid : 'your-customer-unique-id', // 필수 입력.
-        //     buyer_email : 'test@portone.io',
-        //     buyer_name : '포트원',
-        //     buyer_tel : '02-1234-1234',
-        //     m_redirect_url : '{모바일에서 결제 완료 후 리디렉션 될 URL}' 
-        // }, function(rsp) {
-        //     if ( rsp.success ) {
-        //         alert('빌링키 발급 성공');
-        //     } else {
-        //         alert('빌링키 발급 실패');
-        //     }
-        // });
+         IMP.request_pay({
+             pg : 'html5_inicis.{PG상점아이디}',  // 실제 계약 후에는 실제 상점아이디로 변경
+             pay_method : 'card', // 'card'만 지원됩니다.
+             merchant_uid: "order_monthly_0001", // 상점에서 관리하는 주문 번호
+             name : '최초인증결제',
+             amount : 0, // 결제창에 표시될 금액. 실제 승인이 이뤄지지는 않습니다.
+             customer_uid : 'your-customer-unique-id', // 필수 입력.
+             buyer_email : 'test@portone.io',
+             buyer_name : '포트원',
+             buyer_tel : '02-1234-1234',
+             m_redirect_url : '{모바일에서 결제 완료 후 리디렉션 될 URL}' 
+         }, function(rsp) {
+             if ( rsp.success ) {
+                 alert('빌링키 발급 성공');
+             } else {
+                 alert('빌링키 발급 실패');
+             }
+         });
     </script>
   </body>
 </html>
