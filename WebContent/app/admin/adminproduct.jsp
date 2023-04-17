@@ -83,11 +83,11 @@
         <div class="product-management">
           <div class="product-title"><span>상품관리</span></div>
           <div class="product-total">
-            <div class="product-ea"><span>전체 <a href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk"><c:out value="${dataTotal }"/></a></span>개</div>
-            <div class="product-ea"><span>칵테일키트<a href="${pageContext.request.contextPath}/sulkit/productSulkit1.suk"><c:out value="${sulkit }"/></a></span>개</div>
-            <div class="product-ea"><span>술</span><a href="${pageContext.request.contextPath}/product/productAlcohol1.prd"><c:out value="${atotal }"/></a>개</div>
-            <div class="product-ea"><span>재료</span><a href="${pageContext.request.contextPath}/product/productIngredients1.prd"><c:out value="${itotal }"/></a>개</div>
-            <div class="product-ea"><span>용품</span><a href="${pageContext.request.contextPath}/product/productSupplies1.prd"><c:out value="${stotal }"/></a>개</div>
+            <div class="product-ea"><span>전체 <a href="${pageContext.request.contextPath}/sulkit/sulkit.suk"><c:out value="${dataTotal }"/></a></span>개</div>
+            <div class="product-ea"><span>칵테일키트<a href="${pageContext.request.contextPath}/sulkit/sulkit.suk"><c:out value="${sulkit }"/></a></span>개</div>
+            <div class="product-ea"><span>술</span><a href="${pageContext.request.contextPath}/product/alcohol.prd"><c:out value="${atotal }"/></a>개</div>
+            <div class="product-ea"><span>재료</span><a href="${pageContext.request.contextPath}/product/ingredients.prd"><c:out value="${itotal }"/></a>개</div>
+            <div class="product-ea"><span>용품</span><a href="${pageContext.request.contextPath}/product/supplies.prd"><c:out value="${stotal }"/></a>개</div>
           </div>
           <div class="new-product"><button>상품등록</button></div>
           <!-- 상품검색 카테고리 -->

@@ -56,7 +56,7 @@ function showList(list){
 		<div class="result-box">
             	<ul class="search-result-box">
 	              <li>
-	                <div class="search-result-div"><input type="checkbox" class="cbox"/></div>
+	                <div class="search-result-div"><input type="checkbox" class="cbox" value="${content.userId}"/></div>
 	              </li>
 	              <li>
 	                <div class="search-result-div"><span>${content.userName }</span></div>
@@ -82,6 +82,37 @@ function showList(list){
 	
 	$('.ea');
 }
+
+ $('.delete').on('click', function(){
+	alert("정말 삭제하시겠습니까?")
+	
+	let userIdAr = [];
+	$('.cbox:checked').each(function(i, item){
+		console.log('=================');
+		console.log(item);
+		console.log(item.value);
+		userIdAr.push(item.value);
+	});
+	
+	console.log(userIdAr);
+
+	$.ajax({
+		url : '/admin/userDeleteOk.adm',
+		type : 'get',
+		data : {userList : userIdAr},
+		traditional: true,
+		success : function(){
+			location.reload();
+			alert("삭제되었습니다.")
+		},
+		error : function(a,b,c){
+			console.log("안 됨");
+		}
+	});
+	
+
+});
+
 
 
 

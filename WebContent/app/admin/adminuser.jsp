@@ -168,7 +168,7 @@
             	<div class="result-box">
             	<ul class="search-result-box">
 	              <li>
-	                <div class="search-result-div"><input type="checkbox" class="cbox"/></div>
+	                <div class="search-result-div"><input type="checkbox" class="cbox" value="${userList.userId}"/></div>
 	              </li>
 	              <li>
 	                <div class="search-result-div"><span><c:out value="${userList.userName }"/></span></div>
