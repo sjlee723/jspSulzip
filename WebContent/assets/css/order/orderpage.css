@@ -366,7 +366,7 @@ section {
 .info-content-box {
   position: relative;
   overflow: hidden;
-  height: 270px;
+  height: 300px;
   transition: 0.5s;
 }
 .info-content {
@@ -443,4 +443,12 @@ section {
 }
 .paying-type-hidden {
   display: none;
+}
+
+.pickupbtn{
+  width: 500px;
+}
+
+.orderMessage{
+	resize: none;
 }

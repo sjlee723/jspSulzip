@@ -3,11 +3,16 @@ package com.sulzip.app.order.dao;
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
+import com.sulzip.app.order.dto.OrderDTO;
 
 public class OrderDAO {
-	public SqlSession sqlsession;
+	public SqlSession sqlSession;
 	
 	public OrderDAO() {
-		sqlsession = MyBatisConfig.getSqlSessionFactory().openSession(true);
+		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
+	
+	public void insert(OrderDTO orderDTO) {
+		sqlSession.insert("order.orderInsert", orderDTO);
+	} 
 }

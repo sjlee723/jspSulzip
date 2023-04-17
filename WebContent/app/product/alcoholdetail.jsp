@@ -74,7 +74,7 @@
                 <div class="col-3"></div>
                 <div class="col-9">
                   <button class="btn btn-outline-secondary btn-sm">장바구니 담기</button>
-                  <button class="btn btn-danger btn-sm">바로 구매하기</button>
+                  <button class="btn btn-danger btn-sm" onclick="fn_go_to_link('${pageContext.request.contextPath}/order/order.ord')">바로 구매하기</button>
                 </div>
               </div>
               <div class="col-md-2"></div>
@@ -119,5 +119,5 @@
     $("#price").text(cal_price);
   }
   </script>
-
+  <script type="text/javascript">function fn_go_to_link(link){location.href=link;}</script>
 </html>

@@ -19,8 +19,8 @@ public class EdituserinfoOkController implements Execute {
 		req.setCharacterEncoding("utf-8");
 
 		HttpSession session = req.getSession();
-		Integer userNumber = (Integer)session.getAttribute("userNumber");
 		
+		Integer userNumber = (Integer)session.getAttribute("userNumber");
 		String userPw = req.getParameter("userPw");
 		String userEmail = req.getParameter("userEmail");
 		String userPhone = req.getParameter("userPhone");

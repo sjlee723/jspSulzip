@@ -37,23 +37,20 @@
 	                            <input type="text" name="userId" value="${userDTO.userId}" class="edit_id" readonly>
 	                        </td>
 	                    </tr>
-	                   <!--  <tr class="edit-tr">
-	                        <th class="edit-th">기존 비밀번호</th>
-	                        <td class="edit-td">
-	                            <input type="text" name="userPw" class="edit_pw" autofocus>
-	                        </td>
-	                    </tr> -->
 	                    <tr class="edit-tr">
 	                        <th class="edit-th">변경 할 비밀번호</th>
 	                        <td class="edit-td">
 	                        	<input type="hidden" id="userPw" name="userPw" />
 	                            <input type="password" id="userChangePw" class="edit_pw" autofocus>
+	                            <span class="check-msg" id="check-pw-msg"></span>
+	                            
 	                        </td>
 	                    </tr>
 	                    <tr class="edit-tr">
 	                        <th class="edit-th">변경 할 비밀번호 확인</th>
 	                        <td class="edit-td">
 	                            <input type="password" id="userChangePwConfirm" class="edit_pwconfirm">
+	                            <span class="check-msg" id="check-pw-msg2"></span>
 	                        </td>
 	                    </tr>
 	                    <tr class="edit-tr">

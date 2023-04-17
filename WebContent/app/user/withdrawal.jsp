@@ -25,7 +25,7 @@
 		<div class="title-text">개인정보 보호를 위한 비밀번호 재확인</div>
 		<div class="inner">
 			<div class="confirm-wrap">
-				<p class="info">비밀번호를 입력하시면 회원탈퇴가 완료됩니다.</p>
+				<p class="info">계정정보를 입력하시면 회원탈퇴가 완료됩니다.</p>
 				<form class="form" role="form" name="memberconfirm"
 					action="/user/withdrawalOk.usr" method="post">
 					<div class="form-wrap">

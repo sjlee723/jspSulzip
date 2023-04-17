@@ -17,6 +17,7 @@
 		<typeAlias type="com.sulzip.app.file.dto.FileDTO" alias="FileDTO"/>
 		<typeAlias type="com.sulzip.app.myrecipe.dto.MyRecipeDTO" alias="MyRecipeDTO"/>
 		<typeAlias type="com.sulzip.app.myrecipe.vo.MyRecipeVO" alias="MyRecipeVO"/>
+		<typeAlias type="com.sulzip.app.myrecipe.vo.MyRecipeListVO" alias="MyRecipeListVO"/>
 		<typeAlias type="com.sulzip.app.cart.dto.CartDTO" alias="CartDTO"/>
 		<typeAlias type="com.sulzip.app.order.dto.OrderDTO" alias="OrderDTO"/>
 		<typeAlias type="com.sulzip.app.sulkit.dto.SulkitDTO" alias="SulkitDTO"/>
@@ -24,6 +25,10 @@
 		<typeAlias type="com.sulzip.app.product.dto.ProductDTO" alias="ProductDTO"/>
 		<typeAlias type="com.sulzip.app.product.vo.ProductVO" alias="ProductVO"/>
 		<typeAlias type="com.sulzip.app.admin.vo.SearchVO" alias="SearchVO"/>
+		<typeAlias type="com.sulzip.app.admin.vo.UserListVO" alias="UserListVO"/>
+		<typeAlias type="com.sulzip.app.admin.vo.UserSearchVO" alias="UserSearchVO"/>
+		<typeAlias type="com.sulzip.app.admin.vo.BoardVO" alias="BoardVO"/>
+		<typeAlias type="com.sulzip.app.admin.vo.BoardSearchVO" alias="BoardSearchVO"/>
 		<typeAlias type="com.sulzip.app.category.dto.CategoryDTO" alias="CategoryDTO"/>
 		
 	</typeAliases>
