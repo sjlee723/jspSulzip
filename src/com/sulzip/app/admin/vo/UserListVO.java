@@ -7,6 +7,7 @@ public class UserListVO {
 	private String userPhone;
 	private String userGender;
 	private String userRegistrationDate;
+	private String userStatus;
 	
 	public UserListVO() {}
 
@@ -49,12 +50,23 @@ public class UserListVO {
 	public void setUserRegistrationDate(String userRegistrationDate) {
 		this.userRegistrationDate = userRegistrationDate;
 	}
+	
+
+	public String getUserStatus() {
+		return userStatus;
+	}
+
+	public void setUserStatus(String userStatus) {
+		this.userStatus = userStatus;
+	}
 
 	@Override
 	public String toString() {
 		return "UserListVO [userName=" + userName + ", userId=" + userId + ", userPhone=" + userPhone + ", userGender="
-				+ userGender + ", userRegistrationDate=" + userRegistrationDate + "]";
+				+ userGender + ", userRegistrationDate=" + userRegistrationDate + ", userStatus=" + userStatus + "]";
 	}
+
+	
 
 
 

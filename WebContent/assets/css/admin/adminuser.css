@@ -83,7 +83,7 @@ main {
 
 .side-bar {
   width: 200px;
-  height: 250px;
+  height: 280px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   padding: 30px;
@@ -296,7 +296,7 @@ main {
   width: 770px;
   margin-top: 5px;
   display: flex;
-  justify-content: flex-end;
+  margin-left: 570px;
 }
 
 .search-btn > button {
@@ -319,12 +319,13 @@ main {
 .user-list > span {
   font-size: 22px;
   font-weight: bold;
+  margin-bottom: 50px;
 }
 
 /* ================================================= */
 
 .user-total {
-  width: 750px;
+  width: 761px;
   height: 35px;
   display: flex;
   align-items: center;

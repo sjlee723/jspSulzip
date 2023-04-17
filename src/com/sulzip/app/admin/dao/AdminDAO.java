@@ -11,6 +11,7 @@ import com.sulzip.app.admin.vo.SearchVO;
 import com.sulzip.app.admin.vo.UserListVO;
 import com.sulzip.app.admin.vo.UserSearchVO;
 import com.sulzip.app.product.vo.ProductVO;
+import com.sulzip.app.user.dto.UserDTO;
 
 public class AdminDAO {
 	public SqlSession sqlsession;
@@ -61,8 +62,8 @@ public class AdminDAO {
 	
 //	============회원관리===============
 	
-	public List<UserListVO> userSelect(){
-		return sqlsession.selectList("admin.userSelect");
+	public List<UserListVO> userList(){
+		return sqlsession.selectList("admin.userList");
 	}
 	
 	public List<UserListVO> userId(UserSearchVO userSearchVO) {
@@ -79,6 +80,10 @@ public class AdminDAO {
 	
 	public List<UserListVO> searchUser(UserSearchVO userSearchVO){
 		return sqlsession.selectList("admin.searchUser", userSearchVO);
+	}
+	
+	public void delete(String userId) {
+		sqlsession.selectOne("admin.delete", userId);
 	}
 	
 //	============게시판관리===============
@@ -114,6 +119,7 @@ public class AdminDAO {
 	public List<BoardVO> clientId(BoardSearchVO boardSearchVO){
 		return sqlsession.selectList("admin.clientId", boardSearchVO);
 	}
+	
 }
 
 
