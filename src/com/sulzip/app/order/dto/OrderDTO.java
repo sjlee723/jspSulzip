@@ -11,13 +11,14 @@ package com.sulzip.app.order.dto;
 public class OrderDTO {
 	private int orderNumber;
 	private String orderDate;
-	private int productEa;
+	private int orderPay;
 	private int productTotalPrice;
 	private String pickupStore;
 	private String orderMessage;
 	private int userNumber;
 	
-	public OrderDTO() {}
+	public OrderDTO() {
+	}
 
 	public int getOrderNumber() {
 		return orderNumber;
@@ -35,12 +36,12 @@ public class OrderDTO {
 		this.orderDate = orderDate;
 	}
 
-	public int getProductEa() {
-		return productEa;
+	public int getOrderPay() {
+		return orderPay;
 	}
 
-	public void setProductEa(int productEa) {
-		this.productEa = productEa;
+	public void setOrderPay(int orderPay) {
+		this.orderPay = orderPay;
 	}
 
 	public int getProductTotalPrice() {
@@ -77,7 +78,7 @@ public class OrderDTO {
 
 	@Override
 	public String toString() {
-		return "OrderDTO [orderNumber=" + orderNumber + ", orderDate=" + orderDate + ", productEa=" + productEa
+		return "OrderDTO [orderNumber=" + orderNumber + ", orderDate=" + orderDate + ", orderPay=" + orderPay
 				+ ", productTotalPrice=" + productTotalPrice + ", pickupStore=" + pickupStore + ", orderMessage="
 				+ orderMessage + ", userNumber=" + userNumber + "]";
 	}

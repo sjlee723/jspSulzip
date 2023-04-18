@@ -51,11 +51,11 @@
                 <div class="info-content">
                   <div class="customer-form">
                     <label for="userName">이름</label>
-                    <input type="text" name="userName" />
+                    <input type="text" name="userName" value="${userDTO.userId}" readonly />
                   </div>
                   <div class="customer-form">
                     <label for="userPhone">연락처</label>
-                    <input type="text" name="userPhone" />
+                    <input type="text" name="userPhone" value="${userDTO.userPhone}" readonly />
                   </div>
                    <div class="customer-form">
                    <label for="pickupStore">픽업장소</label>
@@ -203,7 +203,6 @@
             <div class="final-payment-amount"><span>최종 결제 금액</span></div>
             <div class="final-price" id="final_price">12,000 <span>원</span></div>
             <div class="order-btn-box">주문하기<a href=""></a></div>
-            <!-- <p><button id="check_module" type="button" onclick="requestPay()">주문하기</button></p> -->
           </div>
         </div>
       </div>
@@ -216,6 +215,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="${pageContext.request.contextPath}/assets/js/order/orderpage.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquary-1.12.4.min.js"></script>
 	<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
 	<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
     
@@ -226,16 +226,16 @@
       $payBtn.on('click', payModule);
 
       function payModule(){
-        const userCode = 'imp24463063';
-        IMP.init(userCode); // 가맹점 식별 코드를 넣어 모듈을 초기화해주세요.
+        const IMP = window.IMP;
+        IMP.init("imp24463063"); // 가맹점 식별 코드를 넣어 모듈을 초기화해주세요.
 
         IMP.request_pay({
             pg : 'html5_inicis.INIBillTst',  // 실제 계약 후에는 실제 상점아이디로 변경
             pay_method : 'card', // 'card'만 지원됩니다.
             merchant_uid: "order_monthly_0001", // 상점에서 관리하는 주문 번호
             name : '최초인증결제',
-            customer_uid : 'your-customer-unique-id', // 필수 입력.
        		amount : $("#final_price").text().replace(",","").replace("원","").trim(), // 결제창에 표시될 금액. 실제 승인이 이뤄지지는 않습니다.
+            customer_uid : 'your-customer-unique-id', // 필수 입력.
             buyer_email : 'test@portone.io',
             buyer_name : '포트원',
             buyer_tel : '02-1234-1234',
@@ -244,10 +244,10 @@
             if ( rsp.success ) {
             //    alert('빌링키 발급 성공');
             
-            let productEa = "";
+/*             let productEa = "";
             let productTotalPrice = "";
             let pickupStore = "";
-            let orderMessage = "";
+            let orderMessage = ""; */
             
     		      // axios로 HTTP 요청
     		      axios({
@@ -288,8 +288,8 @@
     		      alert(`결제에 실패하였습니다. 에러 내용: ${rsp.error_msg}`);
     		    }
     		  });
-
-         IMP.request_pay({
+      
+       IMP.request_pay({
              pg : 'html5_inicis.{PG상점아이디}',  // 실제 계약 후에는 실제 상점아이디로 변경
              pay_method : 'card', // 'card'만 지원됩니다.
              merchant_uid: "order_monthly_0001", // 상점에서 관리하는 주문 번호
