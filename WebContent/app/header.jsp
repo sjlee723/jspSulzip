@@ -23,7 +23,7 @@
 <c:choose>
 <c:when test="${userId !=null}">            
 				<div class="h-join"><a href="${pageContext.request.contextPath}/user/mypage.usr"><c:out value="${userId}"/></div>
-				<div class="h-cart"><a href="${pageContext.request.contextPath}/app/cart/cart.jsp">장바구니</a></div>
+				<div class="h-cart"><a href="${pageContext.request.contextPath}/cart/cart.car">장바구니</a></div>
 </c:when>
 <c:otherwise>
               	<div class="h-cart"><a href="${pageContext.request.contextPath}/user/login.usr">로그인/회원가입</a></div>

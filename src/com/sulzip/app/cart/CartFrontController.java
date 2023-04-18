@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sulzip.app.clientboard.ServiceListOkController;
+
 public class CartFrontController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -21,8 +23,17 @@ public class CartFrontController extends HttpServlet{
 	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		System.out.println(target);
-		switch(target) {
 		
+		switch(target) {
+		case "/cart/cart.car":
+			new CartListOkController().execute(req, resp);
+			break;
+		case "/cart/cartDelOk.car":
+			new CartDelOkController().execute(req, resp);
+			break;
+		case "/cart/cartAddOk.car":
+			new CartAddOkController().execute(req, resp);
+			break;
 		}
 	}
 }

@@ -19,6 +19,8 @@
 		<typeAlias type="com.sulzip.app.myrecipe.vo.MyRecipeVO" alias="MyRecipeVO"/>
 		<typeAlias type="com.sulzip.app.myrecipe.vo.MyRecipeListVO" alias="MyRecipeListVO"/>
 		<typeAlias type="com.sulzip.app.cart.dto.CartDTO" alias="CartDTO"/>
+		<typeAlias type="com.sulzip.app.cart.vo.CartVO" alias="CartVO"/>
+		<typeAlias type="com.sulzip.app.cart.vo.CartVO2" alias="CartVO2"/>
 		<typeAlias type="com.sulzip.app.order.dto.OrderDTO" alias="OrderDTO"/>
 		<typeAlias type="com.sulzip.app.sulkit.dto.SulkitDTO" alias="SulkitDTO"/>
 		<typeAlias type="com.sulzip.app.sulkit.vo.SulkitVO" alias="SulkitVO"/>
