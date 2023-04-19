@@ -25,7 +25,10 @@ public class CartListOkController implements Execute {
 		int userNumber = (Integer)session.getAttribute("userNumber");
 		
 		UserDTO userDTO = userDAO.getUserDetail(userNumber);
-		List<CartVO> cartList = cartDAO.select(userNumber);
+		List<CartVO> cartList = cartDAO.select1(userNumber);
+		cartList.addAll(cartDAO.select2(userNumber));
+		
+		System.out.println(cartList.toString());
 		
 		req.setAttribute("userInfo", userDTO);
 		req.setAttribute("cartList", cartList);

@@ -73,7 +73,7 @@
 	            <td>
 	              <div class="item-img">
 	                <c:choose>
-	                	<c:when test="${cart.getCategoryNumber() == null}">
+	                	<c:when test="${cart.getCategoryNumber() == 0}">
 							<img src="${pageContext.request.contextPath}/assets/img/sulkit/${cart.getProductSystemName()}" width="100" height="100"/>
 						</c:when>
 						<c:when test="${cart.getCategoryNumber() == 2}">

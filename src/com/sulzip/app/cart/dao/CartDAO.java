@@ -16,8 +16,12 @@ public class CartDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	public List<CartVO> select(int userNumber) {
-		return sqlSession.selectList("cart.select", userNumber);
+	public List<CartVO> select1(int userNumber) {
+		return sqlSession.selectList("cart.select1", userNumber);
+	}
+	
+	public List<CartVO> select2(int userNumber) {
+		return sqlSession.selectList("cart.select2", userNumber);
 	}
 	
 	public void delete(Map<String, Integer> proInfo) {
