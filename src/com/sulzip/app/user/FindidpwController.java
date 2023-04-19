@@ -9,8 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.sulzip.app.Execute;
 
 public class FindidpwController implements Execute {
-	@Override
-	public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
-	}
+   @Override
+   public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      
+      req.getRequestDispatcher("/app/user/findidpw.jsp").forward(req, resp);
+      
+      
+   }
+
 }
