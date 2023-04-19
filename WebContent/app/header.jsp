@@ -22,9 +22,12 @@
             <div class="h-line-right">
 <c:choose>
 <c:when test="${userId !=null}">            
-				<div class="h-join"><a href="${pageContext.request.contextPath}/user/mypage.usr"><c:out value="${userId}"/>&nbsp;님&nbsp;&nbsp;&nbsp;&nbsp;</div>
+				<div class="h-join"><a href="${pageContext.request.contextPath}/user/mypage.usr"><c:out value="${userId}"/>&nbsp;님</a>&nbsp;&nbsp;&nbsp;&nbsp;</div>
 				<div class="h-cart"><a href="${pageContext.request.contextPath}/app/cart/cart.jsp">장바구니</a></div>
 </c:when>
+<%-- <c:when test="${userNumber == 0}">
+				<div class="h-jo"><a href="${pageContext.request.contextPath}/admin/user.adm"> <span>관리자</span> </a> &nbsp;님&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</c:when> --%>
 <c:otherwise>
               	<div class="h-cart"><a href="${pageContext.request.contextPath}/user/login.usr">로그인/회원가입</a></div>
 </c:otherwise>
