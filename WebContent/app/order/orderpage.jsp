@@ -219,16 +219,6 @@
 	<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
 	<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
     
-//int orderNumber;
-//String orderDate;
-//int productEa;
-//int productTotalPrice;
-//String pickupStore;
-//String orderMessage;
-//int userNumber;
-   
-
-    
     <script>
 
       $payBtn = $('.order-btn-box');
