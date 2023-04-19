@@ -45,4 +45,15 @@ public class UserDAO {
 		sqlSession.update("user.modify", userDTO);
 	}
 	
+//  아이디 찾기
+	public String selectId(UserDTO userDTO) {
+		return sqlSession.selectOne("user.selectId", userDTO);
+  }
+  
+//  비밀번호 찾기
+	public String selectPw(UserDTO userDTO) {
+		return sqlSession.selectOne("user.selectPw", userDTO);
+  }
+
 }
+

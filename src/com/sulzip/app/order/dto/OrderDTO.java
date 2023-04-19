@@ -9,6 +9,7 @@ package com.sulzip.app.order.dto;
 //int userNumber;
 
 public class OrderDTO {
+
    private int orderNumber;
    private String orderDate;
    private int orderPay;
@@ -19,6 +20,7 @@ public class OrderDTO {
    
    public OrderDTO() {
    }
+
 
    public int getOrderNumber() {
       return orderNumber;
@@ -36,6 +38,7 @@ public class OrderDTO {
       this.orderDate = orderDate;
    }
 
+
    public int getOrderPay() {
       return orderPay;
    }
@@ -43,6 +46,7 @@ public class OrderDTO {
    public void setOrderPay(int orderPay) {
       this.orderPay = orderPay;
    }
+
 
    public int getProductTotalPrice() {
       return productTotalPrice;
@@ -76,6 +80,7 @@ public class OrderDTO {
       this.userNumber = userNumber;
    }
 
+
    @Override
    public String toString() {
       return "OrderDTO [orderNumber=" + orderNumber + ", orderDate=" + orderDate + ", orderPay=" + orderPay
@@ -86,3 +91,4 @@ public class OrderDTO {
    
    
 }
+

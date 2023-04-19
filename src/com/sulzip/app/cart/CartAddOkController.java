@@ -35,6 +35,7 @@ public class CartAddOkController implements Execute {
 		cartVO2.setProductTotalPrice(productTotalPrice);
 		cartVO2.setProductEa(productEa);
 		
+		System.out.println(cartVO2);
 		Map<String, Integer> cartInfo = new HashMap<String, Integer>();
 		cartInfo.put("userNumber", userNumber);
 		cartInfo.put("productNumber", productNumber);
