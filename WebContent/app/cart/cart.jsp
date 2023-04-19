@@ -135,7 +135,7 @@
         <button type="button" class="cart-select-delete">선택삭제</button>
       </div>
       <div class="cart-buy-btn-wrap">
-        <button type="button" class="cart-buy-btn">주문하기</button>
+        <button type="button" class="cart-buy-btn" onclick="fn_go_to_link('${pageContext.request.contextPath}/order/order.ord')">주문하기</button>
       </div>
     </form>
 	<footer>
@@ -147,5 +147,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/assets/js/cart/cart.js"></script>
+    <script type="text/javascript">function fn_go_to_link(link){location.href=link;}</script>
   </body>
 </html>
