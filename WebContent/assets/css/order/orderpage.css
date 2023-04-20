@@ -41,7 +41,10 @@
 
 .order-container {
   width: 1200px;
+<<<<<<< HEAD
   min-height: 1000px;
+=======
+>>>>>>> work/clientboard23
   /* background-color: palegoldenrod; */
   display: flex;
 }
@@ -83,11 +86,19 @@
   width: 75px;
   height: 75px;
   background-color: wheat;
+<<<<<<< HEAD
 }
 
 .img-wrap > img{
 	border: 1px solid #ddd;
+=======
+  overflow: hidden;
+  /* vertical-align: middle; */
+  /* text-align: center; */
+>>>>>>> work/clientboard23
 }
+
+
 
 .info-wrap {
   width: calc(100% - 200px);
