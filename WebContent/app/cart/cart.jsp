@@ -31,7 +31,7 @@
 		</c:choose>
     </div>
 
-    <form action="" class="cart-form">
+    <form action="${pageContext.request.contextPath}/order/order.ord" class="cart-form">
       <table class="cart-table">
         <colgroup>
           <col width="5%" />
@@ -101,6 +101,7 @@
 	                <div>
 	                  <div class="quantity">
 	                  	<span class="quantity--in">${cart.getProductEa()}</span>개
+	                  	<input type="hidden" name="productEa" value="${cart.getProductEa()}" class="productEa" disabled>
 	                  </div>
 	                  <div>
 	                    <i class="bi bi-arrow-up-square" data-price="${cart.getProductPrice()}"></i>
@@ -115,6 +116,7 @@
 	              		<c:out value="${cart.getProductPrice()}"/>
 	              	</span>
 	              	원
+	              	<input type="hidden" name="productPrice" value="${cart.getProductPrice()}" class="productPrice" disabled>
 	              </span>
 	            </td>
 	          </tr>
@@ -135,7 +137,7 @@
         <button type="button" class="cart-select-delete">선택삭제</button>
       </div>
       <div class="cart-buy-btn-wrap">
-        <button type="button" class="cart-buy-btn" onclick="fn_go_to_link('${pageContext.request.contextPath}/order/order.ord')">주문하기</button>
+        <button type="button" class="cart-buy-btn">주문하기</button>
       </div>
     </form>
 	<footer>

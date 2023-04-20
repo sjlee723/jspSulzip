@@ -28,8 +28,6 @@ public class CartListOkController implements Execute {
 		List<CartVO> cartList = cartDAO.select1(userNumber);
 		cartList.addAll(cartDAO.select2(userNumber));
 		
-		System.out.println(cartList.toString());
-		
 		req.setAttribute("userInfo", userDTO);
 		req.setAttribute("cartList", cartList);
 		req.getRequestDispatcher("/app/cart/cart.jsp").forward(req, resp);
