@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,21 +18,41 @@
 		<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
     </header>
     <main>
-    <form id="order" action="/order/orderOk.ord" method="post">
+    <form id="order" action="${pageContext.request.contextPath}/order/orderOk.ord" method="post">
       <div class="order-title">주문서</div>
       <div class="content">
         <div class="order-container">
           <div class="order-page-main">
-            <div class="order-item-table">
-              <div class="order-wrap">
-                <div class="img-wrap"></div>
-                <div class="info-wrap">
-                  <div class="item-name">봄베이사파이어</div>
-                  <div class="item-ea">1개</div>
-                </div>
-                <div class="price-wrap">12,000원</div>
-              </div>
-            </div>
+	          <c:forEach var="check" items="${checkList}" varStatus="status">
+		            <div class="order-item-table">
+		              <div class="order-wrap">
+		                <div class="img-wrap">
+		                 <c:choose>
+		                	<c:when test="${check.getCategoryNumber() == 0}">
+								<img src="${pageContext.request.contextPath}/assets/img/sulkit/${check.getProductSystemName()}" width="75" height="75"/>
+							</c:when>
+							<c:when test="${check.getCategoryNumber() == 2}">
+								<img src="${pageContext.request.contextPath}/assets/img/alcohol/${check.getProductSystemName()}" width="75" height="75"/>
+							</c:when>
+							<c:when test="${check.getCategoryNumber() == 3}">
+								<img src="${pageContext.request.contextPath}/assets/img/ingredients/${check.getProductSystemName()}" width="75" height="75"/>
+							</c:when>
+							<c:when test="${check.getCategoryNumber() == 4}">
+								<img src="${pageContext.request.contextPath}/assets/img/supplies/${check.getProductSystemName()}" width="75" height="75"/>
+							</c:when>
+							<c:otherwise>
+								<img src="" alt="이미지 없음" width="75" height="75"/>
+							</c:otherwise>
+						</c:choose>
+		                </div>
+		                <div class="info-wrap">
+		                  <div class="item-name">${check.getProductNameKor()}</div>
+		                  <div class="item-ea"><span>${eaList[status.index]}</span>개</div>
+		                </div>
+		                <div class="price-wrap"><span>${priceList[status.index]}</span>원</div>
+		              </div>
+		            </div>
+	            </c:forEach>
             <section>
               <div class="order-info-title">
                 <span>주문 정보</span>
@@ -51,11 +72,11 @@
                 <div class="info-content">
                   <div class="customer-form">
                     <label for="userName">이름</label>
-                    <input type="text" name="userName" value="${userDTO.userId}" readonly />
+                    <div>${userInfo.getUserName()}</div>
                   </div>
                   <div class="customer-form">
                     <label for="userPhone">연락처</label>
-                    <input type="text" name="userPhone" value="${userDTO.userPhone}" readonly />
+                    <div>${userInfo.getUserPhone()}</div>
                   </div>
                    <div class="customer-form">
                    <label for="pickupStore">픽업장소</label>

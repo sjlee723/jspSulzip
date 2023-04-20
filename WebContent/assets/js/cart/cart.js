@@ -20,10 +20,13 @@ let $minus = $(".bi-arrow-down-square");
 
 $add.on('click', function(){
 	let ea = parseInt($(this).closest('.options').find('.quantity--in').text());
-	let price = parseInt($(this).data('price'));
+	let price = $(this).data('price');
 	
 	$(this).closest('.options').find('.quantity--in').text(ea+1);
 	$(this).closest('.cart-tr2').find('.sell-price--in').text(price*(ea+1));
+	
+	$(this).closest('.options').find('.productEa').val(ea+1);
+	$(this).closest('.cart-tr2').find('.productPrice').val(price*(ea+1));
 	
 	totalPrice();
 });
@@ -35,6 +38,10 @@ $minus.on('click', function(){
 	if(ea>1){
 		$(this).closest('.options').find('.quantity--in').text(ea-1);
 		$(this).closest('.cart-tr2').find('.sell-price--in').text(price*(ea-1));
+		
+		$(this).closest('.options').find('.productEa').val(ea-1);
+		$(this).closest('.cart-tr2').find('.productPrice').val(price*(ea-1));
+		
 		totalPrice();
 	}
 });
@@ -109,3 +116,23 @@ function selDel(){
     });
 	
 }
+
+/* 체크된거 제외 hidden으로 하려고 했던거에 disabled 적용, 폼태그를 가져온다음 .submit() */
+let $submitBtn = $('.cart-buy-btn');
+$submitBtn.on('click', function(){
+	$('.cart_check:checked').each(function(i, e){
+		$(this).closest('.cart-tr2').find('.productEa').attr("disabled", false);
+		$(this).closest('.cart-tr2').find('.productPrice').attr("disabled", false);
+	});
+	
+	$('.cart-form').submit();
+})
+
+
+
+
+
+
+
+
+
