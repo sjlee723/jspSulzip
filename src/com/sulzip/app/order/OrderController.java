@@ -24,6 +24,7 @@ public class OrderController implements Execute {
 		ProductDAO productDAO = new ProductDAO();
 		UserDAO userDAO = new UserDAO();
 		UserDTO userDTO = new UserDTO();
+
 		
 		//로그인한 유저의 상세정보 가져오기
 		userDTO = userDAO.getUserDetail((int)session.getAttribute("userNumber"));
