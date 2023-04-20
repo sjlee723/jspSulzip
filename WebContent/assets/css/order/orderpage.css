@@ -41,10 +41,7 @@
 
 .order-container {
   width: 1200px;
-<<<<<<< HEAD
   min-height: 1000px;
-=======
->>>>>>> work/clientboard23
   /* background-color: palegoldenrod; */
   display: flex;
 }
@@ -86,16 +83,10 @@
   width: 75px;
   height: 75px;
   background-color: wheat;
-<<<<<<< HEAD
 }
 
 .img-wrap > img{
 	border: 1px solid #ddd;
-=======
-  overflow: hidden;
-  /* vertical-align: middle; */
-  /* text-align: center; */
->>>>>>> work/clientboard23
 }
 
 
@@ -285,10 +276,8 @@ section {
   margin-left: 40px;
 }
 
-.accout > select {
-  width: 350px;
-  font-size: 14px;
-  height: 30px;
+.account {
+  font-size: 15px;
   line-height: 30px;
   margin-left: 20px;
 }
@@ -473,4 +462,13 @@ section {
 
 .orderMessage{
 	resize: none;
+}
+
+.userId,
+.userEmail{
+	display: none;
+}
+
+.disabled{
+	display : none;
 }

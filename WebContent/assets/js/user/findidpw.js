@@ -27,7 +27,7 @@ $idBtn.on('click', function(){
 })
 
 $pwBtn.on('click', function(){
-	console.log(6);
+	console.log(0);
    findPw();
 })
 

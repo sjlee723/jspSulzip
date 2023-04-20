@@ -18,12 +18,11 @@
 		<jsp:include page="${pageContext.request.contextPath}/app/header.jsp"/>
     </header>
     <main>
-    <form id="order" action="${pageContext.request.contextPath}/order/orderOk.ord" method="post">
+    <form id="order" class="cart-form" action="${pageContext.request.contextPath}/order/orderOk.ord" method="post">
       <div class="order-title">주문서</div>
       <div class="content">
         <div class="order-container">
           <div class="order-page-main">
-<<<<<<< HEAD
 	          <c:forEach var="check" items="${checkList}" varStatus="status">
 		            <div class="order-item-table">
 		              <div class="order-wrap">
@@ -50,47 +49,10 @@
 		                  <div class="item-name">${check.getProductNameKor()}</div>
 		                  <div class="item-ea"><span>${eaList[status.index]}</span>개</div>
 		                </div>
-		                <div class="price-wrap"><span>${priceList[status.index]}</span>원</div>
+		                <div class="price-wrap"><span class="unitPrice">${priceList[status.index]}</span>원</div>
 		              </div>
 		            </div>
 	            </c:forEach>
-=======
-          
-          <c:forEach var="cart" items="${checkedList}">
-           <div class="order-item-table">
-              <div class="order-wrap">
-                <div class="img-wrap">
-                  <c:choose>
-	                	<c:when test="${cart.getCategoryNumber() == null}">
-							<img src="${pageContext.request.contextPath}/assets/img/sulkit/${cart.getProductSystemName()}" width="75" height="75"/>
-						</c:when>
-						<c:when test="${cart.getCategoryNumber() == 2}">
-							<img src="${pageContext.request.contextPath}/assets/img/alcohol/${cart.getProductSystemName()}" width="75" height="75"/>
-						</c:when>
-						<c:when test="${cart.getCategoryNumber() == 3}">
-							<img src="${pageContext.request.contextPath}/assets/img/ingredients/${cart.getProductSystemName()}" width="75" height="75"/>
-						</c:when>
-						<c:when test="${cart.getCategoryNumber() == 4}">
-							<img src="${pageContext.request.contextPath}/assets/img/supplies/${cart.getProductSystemName()}" width="75" height="75"/>
-						</c:when>
-						<c:otherwise>
-							<img src="" alt="이미지 없음" width="100" height="100"/>
-						</c:otherwise>
-					</c:choose>
-					</div>
-                <div class="info-wrap">
-                  <div class="item-name"><c:out value="${cart.productNameKor }"/> </div>
-                  <div class="item-ea"><c:out value="${cart.productEa }"/>개 </div>
-                </div>
-                <div class="price-wrap"><c:out value="${cart.productPrice }"/>원</div>
-              </div>
-            </div>
-          </c:forEach>
-           
-            
-            
-            
->>>>>>> work/clientboard23
             <section>
               <div class="order-info-title">
                 <span>주문 정보</span>
@@ -110,34 +72,28 @@
                 <div class="info-content">
                   <div class="customer-form">
                     <label for="userName">이름</label>
-<<<<<<< HEAD
-                    <div>${userInfo.getUserName()}</div>
+                    <div class="userName">${userInfo.getUserName()}</div>
+                    <span class="userId">${userInfo.getUserId()}</span>
+                    <span class="userEmail">${userInfo.getUserEmail()}</span>
                   </div>
                   <div class="customer-form">
                     <label for="userPhone">연락처</label>
-                    <div>${userInfo.getUserPhone()}</div>
-=======
-                    <input type="text" name="userName" value="${userDTO.userId}" placeholder="${user.userName }" readonly />
-                  </div>
-                  <div class="customer-form">
-                    <label for="userPhone">연락처</label>
-                    <input type="text" name="userPhone" value="${userDTO.userPhone}" placeholder="${user.userPhone }" readonly />
->>>>>>> work/clientboard23
+                    <div class="userPhone">${userInfo.getUserPhone()}</div>
                   </div>
                    <div class="customer-form">
                    <label for="pickupStore">픽업장소</label>
                             <select name="pickupStore" id="pickupStore" class="pickupbtn" required>
-                              <option value="1">픽업할 매장의 위치를 선택하세요.</option>
-                              <option value="2">강남점</option>
-                              <option value="3">강동점</option>
-                              <option value="4">강서점</option>
-                              <option value="5">관악점</option>
-                              <option value="6">광진점</option>
-                              <option value="7">금천점</option>
-                              <option value="8">노원점</option>
-                              <option value="9">도봉점</option>
-                              <option value="10">동작점</option>
-                              <option value="11">마포점</option>
+                              <option value="" selected disabled class="disabled">픽업할 매장의 위치를 선택하세요.</option>
+                              <option value="강남점">강남점</option>
+                              <option value="강동점">강동점</option>
+                              <option value="강서점">강서점</option>
+                              <option value="관악점">관악점</option>
+                              <option value="광진점">광진점</option>
+                              <option value="금천점">금천점</option>
+                              <option value="노원점">노원점</option>
+                              <option value="도봉점">도봉점</option>
+                              <option value="동작점">동작점</option>
+                              <option value="마포점">마포점</option>
                             </select>
                    </div>
                   <div class="customer-form">
@@ -208,7 +164,7 @@
                           type="radio"
                           id="radio-card"
                           name="payingtype"
-                          value="1"
+                          value="2"
                           class="paying-type-hidden"
                         />
                         <svg
@@ -248,15 +204,12 @@
                         <div class="form-group">
                           <label for="bank-account"><b>입금할 계좌</b></label>
                           <div class="accout">
-                            <select name="bank-account" id="">
-                              <option value="1">선택하십시오.</option>
-                              <option value="2">우리은행 1002-854-969860 (주)SUL.ZIP</option>
-                            </select>
+                              <span class="account">우리은행 1002-854-969860 (주)SUL.ZIP</span>
                           </div>
                         </div>
                         <div class="form-group-2">
-                          <label for="card-account"><b>입금자명</b></label>
-                          <div class="accout"><input type="text" name="card-account" /></div>
+                          <label for="account-name"><b>입금자명</b></label>
+                          <div class="accout"><input type="text" name="accountName" /></div>
                         </div>
                       </div>
                     </div>
@@ -268,8 +221,10 @@
           <div class="order-page-side">
             <h3>결제 상세</h3>
             <div class="final-payment-amount"><span>최종 결제 금액</span></div>
-            <div class="final-price" id="final_price">12,000 <span>원</span></div>
-            <div class="order-btn-box">주문하기<a href=""></a></div>
+            <div class="final-price" id="final_price"></div>
+            <input type="hidden" name="productTotalPrice" class="productTotalPrice" value="">
+            <button type="button" class="order-btn-box">주문하기</button>
+            <!-- <div class="order-btn-box">주문하기<a href=""></a></div> -->
           </div>
         </div>
       </div>
@@ -288,7 +243,7 @@
     
     <script>
 
-      $payBtn = $('.order-btn-box');
+    /*   $payBtn = $('.order-btn-box');
 
       $payBtn.on('click', payModule);
 
@@ -301,42 +256,24 @@
             pay_method : 'card', // 'card'만 지원됩니다.
             /* merchant_uid: "order_monthly_00012", // 상점에서 관리하는 주문 번호 */
             merchant_uid: "order_" + new Date().getTime(), // 상점에서 관리하는 주문 번호
-            name : 'SUL.ZIP결제',
+            name : "SUL.ZIP결제",
        		amount : $("#final_price").text().replace(",","").replace("원","").trim(), // 결제창에 표시될 금액. 실제 승인이 이뤄지지는 않습니다.
 /*             customer_uid : 'your-customer-unique-id2'+new Date().getTime(), // 필수 입력. */
-            customer_uid : 'userId'+new Date().getTime(), // 필수 입력.
-            buyer_email : 'userEmail',
-            buyer_name : 'userName',
-            buyer_tel : 'userPhone',
-            /* m_redirect_url : '{모바일에서 결제 완료 후 리디렉션 될 URL}' */
+            customer_uid : $('.userId')+new Date().getTime(), // 필수 입력.
+            buyer_email : $('.userEmail').text(),
+            buyer_name : $('.userName').text(),
+            buyer_tel : $('.userPhone').text(),
+// 			m_redirect_url : '{모바일에서 결제 완료 후 리디렉션 될 URL}'
         }, function(rsp) {
             if ( rsp.success ) {
-            //    alert('빌링키 발급 성공');
-            
-/*          let productEa = "";
-            let productTotalPrice = "";
-            let pickupStore = "";
-            let orderMessage = ""; */
-            
-    		      // axios로 HTTP 요청
-    		      axios({
-    		        url: "{서버의 결제 정보를 받는 endpoint}",
-    		        method: "post",
-    		        headers: { "Content-Type": "application/json" },
-    		        data: {
-    		          // imp_uid: rsp.imp_uid,
-    		         // merchant_uid: rsp.merchant_uid
-    		        }
-    		      }).then((data) => {
-    		        // 서버 결제 API 성공시 로직
-    		      })
+            	alert('정상 결제 되었습니다.');
+            	console.log(rsp);
             } else {
-                // alert('빌링키 발급 실패');
             	 alert(`결제에 실패하였습니다. 에러 내용: ${rsp.error_msg}`);
             }
         });
 
-      }
+      } */
 
 /*       IMP.request_pay({  요청 객체를 추가해주세요  },
     		  rsp => {
