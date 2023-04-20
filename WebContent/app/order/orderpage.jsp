@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,16 +23,41 @@
       <div class="content">
         <div class="order-container">
           <div class="order-page-main">
-            <div class="order-item-table">
+          
+          <c:forEach var="cart" items="${checkedList}">
+           <div class="order-item-table">
               <div class="order-wrap">
-                <div class="img-wrap"></div>
+                <div class="img-wrap">
+                  <c:choose>
+	                	<c:when test="${cart.getCategoryNumber() == null}">
+							<img src="${pageContext.request.contextPath}/assets/img/sulkit/${cart.getProductSystemName()}" width="75" height="75"/>
+						</c:when>
+						<c:when test="${cart.getCategoryNumber() == 2}">
+							<img src="${pageContext.request.contextPath}/assets/img/alcohol/${cart.getProductSystemName()}" width="75" height="75"/>
+						</c:when>
+						<c:when test="${cart.getCategoryNumber() == 3}">
+							<img src="${pageContext.request.contextPath}/assets/img/ingredients/${cart.getProductSystemName()}" width="75" height="75"/>
+						</c:when>
+						<c:when test="${cart.getCategoryNumber() == 4}">
+							<img src="${pageContext.request.contextPath}/assets/img/supplies/${cart.getProductSystemName()}" width="75" height="75"/>
+						</c:when>
+						<c:otherwise>
+							<img src="" alt="이미지 없음" width="100" height="100"/>
+						</c:otherwise>
+					</c:choose>
+					</div>
                 <div class="info-wrap">
-                  <div class="item-name">봄베이사파이어</div>
-                  <div class="item-ea">1개</div>
+                  <div class="item-name"><c:out value="${cart.productNameKor }"/> </div>
+                  <div class="item-ea"><c:out value="${cart.productEa }"/>개 </div>
                 </div>
-                <div class="price-wrap">12,000원</div>
+                <div class="price-wrap"><c:out value="${cart.productPrice }"/>원</div>
               </div>
             </div>
+          </c:forEach>
+           
+            
+            
+            
             <section>
               <div class="order-info-title">
                 <span>주문 정보</span>
@@ -51,11 +77,11 @@
                 <div class="info-content">
                   <div class="customer-form">
                     <label for="userName">이름</label>
-                    <input type="text" name="userName" value="${userDTO.userId}" readonly />
+                    <input type="text" name="userName" value="${userDTO.userId}" placeholder="${user.userName }" readonly />
                   </div>
                   <div class="customer-form">
                     <label for="userPhone">연락처</label>
-                    <input type="text" name="userPhone" value="${userDTO.userPhone}" readonly />
+                    <input type="text" name="userPhone" value="${userDTO.userPhone}" placeholder="${user.userPhone }" readonly />
                   </div>
                    <div class="customer-form">
                    <label for="pickupStore">픽업장소</label>

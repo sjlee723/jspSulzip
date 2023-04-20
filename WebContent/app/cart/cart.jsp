@@ -31,7 +31,7 @@
 		</c:choose>
     </div>
 
-    <form action="" class="cart-form">
+    <form action="${pageContext.request.contextPath}/order/order.ord" class="cart-form">
       <table class="cart-table">
         <colgroup>
           <col width="5%" />
