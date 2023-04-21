@@ -27,18 +27,18 @@
 		            <div class="order-item-table">
 		              <div class="order-wrap">
 		                <div class="img-wrap">
-		                 <c:choose>
-		                	<c:when test="${check.getCategoryNumber() == 0}">
-								<img src="${pageContext.request.contextPath}/assets/img/sulkit/${check.getProductSystemName()}" width="75" height="75"/>
+		                <c:choose>
+		                	<c:when test="${check.getCategoryNumber() == null}">
+								<img src="${pageContext.request.contextPath}/assets/img/sulkit/${check.getImg()}" width="75" height="75"/>
 							</c:when>
 							<c:when test="${check.getCategoryNumber() == 2}">
-								<img src="${pageContext.request.contextPath}/assets/img/alcohol/${check.getProductSystemName()}" width="75" height="75"/>
+								<img src="${pageContext.request.contextPath}/assets/img/alcohol/${check.getImg()}" width="75" height="75"/>
 							</c:when>
 							<c:when test="${check.getCategoryNumber() == 3}">
-								<img src="${pageContext.request.contextPath}/assets/img/ingredients/${check.getProductSystemName()}" width="75" height="75"/>
+								<img src="${pageContext.request.contextPath}/assets/img/ingredients/${check.getImg()}" width="75" height="75"/>
 							</c:when>
 							<c:when test="${check.getCategoryNumber() == 4}">
-								<img src="${pageContext.request.contextPath}/assets/img/supplies/${check.getProductSystemName()}" width="75" height="75"/>
+								<img src="${pageContext.request.contextPath}/assets/img/supplies/${check.getImg()}" width="75" height="75"/>
 							</c:when>
 							<c:otherwise>
 								<img src="" alt="이미지 없음" width="75" height="75"/>
@@ -46,7 +46,7 @@
 						</c:choose>
 		                </div>
 		                <div class="info-wrap">
-		                  <div class="item-name">${check.getProductNameKor()}</div>
+		                  <div class="item-name">${check.getNameKor()}</div>
 		                  <div class="item-ea"><span>${eaList[status.index]}</span>개</div>
 		                </div>
 		                <div class="price-wrap"><span>${priceList[status.index]}</span>원</div>
@@ -222,7 +222,7 @@
           <div class="order-page-side">
             <h3>결제 상세</h3>
             <div class="final-payment-amount"><span>최종 결제 금액</span></div>
-            <div class="final-price" id="final_price">12,000 <span>원</span></div>
+            <div class="final-price" id="final_price"><span>12,000</span>원</div>
             <div class="order-btn-box">주문하기<a href=""></a></div>
           </div>
         </div>
