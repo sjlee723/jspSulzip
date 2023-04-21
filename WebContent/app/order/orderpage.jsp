@@ -27,18 +27,18 @@
 		            <div class="order-item-table">
 		              <div class="order-wrap">
 		                <div class="img-wrap">
-		                 <c:choose>
-		                	<c:when test="${check.getCategoryNumber() == 0}">
-								<img src="${pageContext.request.contextPath}/assets/img/sulkit/${check.getProductSystemName()}" width="75" height="75"/>
+		                <c:choose>
+		                	<c:when test="${check.getCategoryNumber() == null}">
+								<img src="${pageContext.request.contextPath}/assets/img/sulkit/${check.getImg()}" width="75" height="75"/>
 							</c:when>
 							<c:when test="${check.getCategoryNumber() == 2}">
-								<img src="${pageContext.request.contextPath}/assets/img/alcohol/${check.getProductSystemName()}" width="75" height="75"/>
+								<img src="${pageContext.request.contextPath}/assets/img/alcohol/${check.getImg()}" width="75" height="75"/>
 							</c:when>
 							<c:when test="${check.getCategoryNumber() == 3}">
-								<img src="${pageContext.request.contextPath}/assets/img/ingredients/${check.getProductSystemName()}" width="75" height="75"/>
+								<img src="${pageContext.request.contextPath}/assets/img/ingredients/${check.getImg()}" width="75" height="75"/>
 							</c:when>
 							<c:when test="${check.getCategoryNumber() == 4}">
-								<img src="${pageContext.request.contextPath}/assets/img/supplies/${check.getProductSystemName()}" width="75" height="75"/>
+								<img src="${pageContext.request.contextPath}/assets/img/supplies/${check.getImg()}" width="75" height="75"/>
 							</c:when>
 							<c:otherwise>
 								<img src="" alt="이미지 없음" width="75" height="75"/>
@@ -46,7 +46,7 @@
 						</c:choose>
 		                </div>
 		                <div class="info-wrap">
-		                  <div class="item-name">${check.getProductNameKor()}</div>
+		                  <div class="item-name">${check.getNameKor()}</div>
 		                  <div class="item-ea"><span>${eaList[status.index]}</span>개</div>
 		                </div>
 		                <div class="price-wrap"><span class="unitPrice">${priceList[status.index]}</span>원</div>
