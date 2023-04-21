@@ -99,7 +99,7 @@ public class MyRecipeUploadOkController implements Execute {
 			pmBridgeDTO.setMyRecipeNumber(myRecipeNumber);
 			myRecipeDAO.insertPmBridge(pmBridgeDTO);
 		}
-		resp.sendRedirect("/myrecipe/myRecipeUpload.mrb");
+		resp.sendRedirect("/myrecipe/myRecipe.mrb");
 		//추후 '작성된 글로 넘어가게' 처리
 	}
 
