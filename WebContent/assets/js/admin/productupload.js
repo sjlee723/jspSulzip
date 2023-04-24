@@ -9,16 +9,15 @@ $('#ex-file').on('change', function() {
 
 	let files = checkLength(this.files, 1);
 
-	console.log("1");
 	addPreview(files);
-	console.log("3");
+	addFile(files);
 
 });
 function checkLength(files, length) {
 
 	if (files.length > length) {
 		alert(`파일은 최대 ${length}개까지만 가능합니다.`);
-		return files;
+		return new DataTransfer().files;
 	}
 	return files;
 }
@@ -60,3 +59,49 @@ $imgPreview.on('click', '.img-cancel-btn', function() {
 function removePreview() {
 	$imgPreview.html(``).css('background-color', '#f5f5f5');
 }
+
+/* 파일 처리 */
+function addFile(files){
+	let  $fileInput = $('.productFileInput');
+	
+	$fileInput[0].files = files;
+	
+	console.log($fileInput[0].files);
+}
+
+
+$('#btn').on('click', function(){
+	let category = $('.ctg:checked').val();
+	
+	
+	let action = '';
+	
+	if(category == 2){
+		action = '/admin/alcoholUploadOk.adm';
+	}else if(category == 3){
+		action = '/admin/ingredientsUploadOk.adm';
+	}else if(category == 4){
+		action = '/admin/suppliesUploadOk.adm';
+	}
+
+	$('form').attr('action', action);
+	console.log($('form').attr('action'));
+	$('form').submit();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -43,20 +43,27 @@
 			<input type="file" id="ex-file" name="productFile" accept=".jpg, .jpeg, .png" multiple />
 				<div class="img-preview"></div>
 			</div>
-			<form action="/admin/sulkitUploadOk.adm" method="post" enctype="multipart/form-data">
+			<form action="/admin/productUploadOk.adm" method="post" enctype="multipart/form-data">
 				<input type="file" name="productFile" id="" class="productFileInput" /> <br />
         <!-- 상품 이름 입력 -->
+        <div class="ctg-title"><span>상품분류</span> <br></div>
+        <div class="ctg-box">
+        	술<input type="radio" name="category" value="2" class="ctg" checked/>
+        	재료<input type="radio" name="category" value="3" class="ctg"/>
+        	용품<input type="radio" name="category" value="4" class="ctg"/>
+        </div>
         <div class="name-title"><span>상품이름(국문)</span></div>
-        <input type="text" class="input" name="sulkitNameKor"/>
+        <input type="text" class="input" name="productNameKor"/>
         <div class="name-title"><span>상품이름(영문)</span></div>
-        <input type="text" class="input" name="sulkitNameEng"/>
+        <input type="text" class="input" name="productNameEng"/>
         <!-- 가격 입력 -->
         <div class="pro-price-title"><span>가격</span></div>
-        <input type="text" class="input" name="sulkitprice"/>
+        <input type="text" class="input" name="productPrice"/>
         <!-- 등록버튼 -->
         <div class="upload-btn-box">
-          <button type="submit"><span>업로드</span></button>
+          <button type="button" id="btn"><span>업로드</span></button>
         </div>
+        </form>
       </div>
       
     </main>
