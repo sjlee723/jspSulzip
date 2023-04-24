@@ -86,7 +86,6 @@
 	            <button type="button" onclick="fn_edituser('${userDTO.userId}');" class="edit-btn-submit" >정보수정</button>
 	        </section>
         </form>
-        
     </main>
     <footer>
     	<jsp:include page="${pageContext.request.contextPath}/app/footer.jsp"/>
