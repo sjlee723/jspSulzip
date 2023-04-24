@@ -44,29 +44,32 @@ public class AdminSulkitUploadOkController implements Execute {
 		sulkitDTO.setSulkitPrice(Integer.valueOf(multipartReq.getParameter("sulkitprice")) );
 		sulkitDTO.setSulkitRecipe(multipartReq.getParameter("sulkitRecipe"));
 		System.out.println("2");
-		sulkitDTO.setSulkitImg(multipartReq.getParameter("sulkitFile"));
-		System.out.println("3");
-		System.out.println("4");
 		
 		
-		int sulkitNumber = adminDAO.getSequence();
 		
 		Enumeration<String> fileNames = multipartReq.getFileNames();
 
 		while (fileNames.hasMoreElements()) {
 
 			String name = fileNames.nextElement();
+			
+			System.out.println(name);
 
 			String sulkitFile = multipartReq.getFilesystemName(name);
-			
+			System.out.println("**************"+ sulkitFile);
 			if (sulkitFile == null) {
+				System.out.println("null");
 				continue;
+				
 			}
+			System.out.println("3");
+			sulkitDTO.setSulkitImg(sulkitFile);
 			
-//			sulkitDTO.setSulkitImg(sulkitFile);
-//			sulkitDTO.setSulkitNumber(sulkitNumber);
 		}
+		
+		adminDAO.insert(sulkitDTO);
 
+		int sulkitNumber = adminDAO.getSequence();
 		
 		List<String> productList = Arrays.stream(multipartReq.getParameterValues("category1"))
 		.filter(cate -> !cate.equals("")).collect(Collectors.toList());
@@ -79,11 +82,12 @@ public class AdminSulkitUploadOkController implements Execute {
 		for (int i = 0; i < productList.size(); i++) {
 			psBridgeDTO.setProductNumber(Integer.parseInt(productList.get(i)));
 			psBridgeDTO.setPsBridgeVol(volList.get(i));
+			System.out.println("4");
 			psBridgeDTO.setSulkitNumber(sulkitNumber);
 			adminDAO.insertPs(psBridgeDTO);
+			System.out.println("5");
 		}
 		
-		adminDAO.insert(sulkitDTO);
 //		업로드 후 작성된 글로 이동
 		resp.sendRedirect("/sulkit/sulkit.suk");
 

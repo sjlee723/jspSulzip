@@ -140,6 +140,7 @@
         <div class="upload-btn-box">
           <button type="submit"><span>업로드</span></button>
         </div>
+        </form>
       </div>
       
     </main>

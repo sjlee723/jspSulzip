@@ -93,7 +93,7 @@
           <form action="${pageContext.request.contextPath}/admin/sulkitUpload.adm" method="get">
 	          <div class="new-product"><button class="sulkit-btn">술키트 등록</button></div>
           </form>
-          <form action="${pageContext.request.contextPath}/admin/sulkitUpload.adm" method="get">
+          <form action="${pageContext.request.contextPath}/admin/productUpload.adm" method="get">
 	          <div class="new-product-2"><button class="product-btn">재료 등록</button></div>
           </form>
           </div>
@@ -131,14 +131,11 @@
           <div class="product-list">
             <div class="list-title"><span>상품목록</span></div>
             <div class="product-total"> <span>총</span><span class="ea"><c:out value="${fn:length(joined)}"></c:out></span><span>개</span> </div>
-           <!--  <div class="product-status">
+            <div class="product-status">
               <div class="status-btn">
-                <button>분류수정</button>
-                <button>이름수정</button>
-                <button>가격수정</button>
-                <button>삭제</button>
+                <button type="button" id="board-delete">삭제</button>
               </div>
-            </div> -->
+            </div>
             <div class="product-ctg">
               <div class="ctg-box">
                 <div class="check"><input type="checkbox" id="checkAll" name="abox"/></div>
@@ -152,7 +149,7 @@
             
             	 <c:forEach var="admin" items="${joined}">
             	<div class="ctg-list-box">
-               	 <div class="list-check"><input type="checkbox" class="cbox"/></div>
+               	 <div class="list-check"><input type="checkbox" class="cbox" /></div>
                 	<div class="list-code"> <c:out value="${admin.number}"/> </div>
                 	<div class="list-ctg">
                 	<c:choose>
