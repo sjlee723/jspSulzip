@@ -10,6 +10,7 @@ import com.sulzip.app.admin.vo.BoardVO;
 import com.sulzip.app.admin.vo.OrderSearchVO;
 import com.sulzip.app.admin.vo.OrderVO;
 import com.sulzip.app.admin.vo.SearchVO;
+import com.sulzip.app.admin.vo.SulkitUploadVO;
 import com.sulzip.app.admin.vo.UserListVO;
 import com.sulzip.app.admin.vo.UserSearchVO;
 import com.sulzip.app.file.dto.FileDTO;
@@ -156,13 +157,18 @@ public class AdminDAO {
 		return sqlsession.selectList("admin.category", categoryNumber);
 	}
 	
+	public List<SulkitUploadVO> ingre(int sulkitNumber) {
+		return sqlsession.selectList("admin.ingre", sulkitNumber);
+	}
+	
+	public int getSequence() {
+		return sqlsession.selectOne("admin.getSequence");
+	}
+	
 	public void insert(SulkitDTO sulkitDTO) {
 	    sqlsession.insert("admin.insert", sulkitDTO);
 	}
 	
-	public void uploadFile(FileDTO fileDTO) {
-		sqlsession.insert("file.insert", fileDTO);
-	}
 	
 //	============글 삭제===============
 	public void myRecipeDel(MyRecipeDTO myRecipeDTO) {
@@ -176,6 +182,14 @@ public class AdminDAO {
 	public void pmBridgeDel(PmBridgeDTO pmBridgeDTO) {
 		sqlsession.delete("admin.pmBridgeDel", pmBridgeDTO);
 	}
+	
+//	============글 삭제===============
+	
+	public void productUpload(ProductDTO productDTO) {
+		sqlsession.insert("admin.productUpload", productDTO);
+	}
+	
+	
 	
 }
 

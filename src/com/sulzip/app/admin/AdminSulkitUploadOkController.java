@@ -29,26 +29,77 @@ public class AdminSulkitUploadOkController implements Execute {
 		AdminDAO adminDAO = new AdminDAO();
 		SulkitDTO sulkitDTO = new SulkitDTO();
 		PsBridgeDTO psBridgeDTO = new PsBridgeDTO();
-		FileDTO fileDTO = new FileDTO();
 		HttpSession session = req.getSession();
 
-		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "assets/img/myrecipe/";
+		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "assets/img/sulkit/";
 		int fileSize = 1024 * 1024 * 5; // 5mb
 		MultipartRequest multipartReq = new MultipartRequest(req, uploadPath, fileSize, "utf-8",
 				new DefaultFileRenamePolicy());
-
+		System.out.println("1");
 //글등록 1개
 		
 		sulkitDTO.setSulkitNameKor(multipartReq.getParameter("sulkitNameKor"));
 		sulkitDTO.setSulkitNameEng(multipartReq.getParameter("sulkitNameEng"));
 		sulkitDTO.setSulkitDesc(multipartReq.getParameter("sulkitDesc"));
-		sulkitDTO.setSulkitPrice((Integer)session.getAttribute("sulkitPrice"));
+		sulkitDTO.setSulkitPrice(Integer.valueOf(multipartReq.getParameter("sulkitprice")) );
 		sulkitDTO.setSulkitRecipe(multipartReq.getParameter("sulkitRecipe"));
-		adminDAO.insert(sulkitDTO);
+		System.out.println("2");
+		sulkitDTO.setSulkitImg(multipartReq.getParameter("sulkitFile"));
+		System.out.println("3");
+		System.out.println("4");
 		
+		
+		int sulkitNumber = adminDAO.getSequence();
+		
+		Enumeration<String> fileNames = multipartReq.getFileNames();
 
+		while (fileNames.hasMoreElements()) {
 
+			String name = fileNames.nextElement();
+
+			String sulkitFile = multipartReq.getFilesystemName(name);
+			
+			if (sulkitFile == null) {
+				continue;
+			}
+			
+//			sulkitDTO.setSulkitImg(sulkitFile);
+//			sulkitDTO.setSulkitNumber(sulkitNumber);
+		}
+
+		
+		List<String> productList = Arrays.stream(multipartReq.getParameterValues("category1"))
+		.filter(cate -> !cate.equals("")).collect(Collectors.toList());
+		// System.out.println(productList);
+
+		List<String> volList = Arrays.stream(multipartReq.getParameterValues("psBridgeVol"))
+		.filter(vol -> !vol.equals("")).collect(Collectors.toList());
+		// System.out.println(volList);
+
+		for (int i = 0; i < productList.size(); i++) {
+			psBridgeDTO.setProductNumber(Integer.parseInt(productList.get(i)));
+			psBridgeDTO.setPsBridgeVol(volList.get(i));
+			psBridgeDTO.setSulkitNumber(sulkitNumber);
+			adminDAO.insertPs(psBridgeDTO);
+		}
+		
+		adminDAO.insert(sulkitDTO);
+//		업로드 후 작성된 글로 이동
+		resp.sendRedirect("/sulkit/sulkit.suk");
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
