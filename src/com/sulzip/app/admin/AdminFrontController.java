@@ -34,6 +34,12 @@ public class AdminFrontController extends HttpServlet{
 		case "/admin/sulkitUploadOk.adm":
 			new AdminSulkitUploadOkController().execute(req, resp);
 			break;
+		case "/admin/productUpload.adm":
+			new AdminProductUploadController().execute(req, resp);
+			break;
+		case "/admin/productUploadOk.adm":
+			new AdminProductUploadOkController().execute(req, resp);
+			break;
 		case "/admin/user.adm":
 			new AdminUserController().execute(req,resp);
 			break;
