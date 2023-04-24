@@ -150,7 +150,7 @@ public class AdminDAO {
 //	============술키트 업로드===============
 	
 	public void insertPs(PsBridgeDTO psBridgeDTO) {
-		sqlsession.insert("PsBridge.insert", psBridgeDTO);
+		sqlsession.insert("PsBridge.insertPs", psBridgeDTO);
 	}
 	
 	public List<ProductDTO> category(int categoryNumber){
@@ -183,12 +183,25 @@ public class AdminDAO {
 		sqlsession.delete("admin.pmBridgeDel", pmBridgeDTO);
 	}
 	
-//	============글 삭제===============
+//	============상품 등록===============
 	
 	public void productUpload(ProductDTO productDTO) {
 		sqlsession.insert("admin.productUpload", productDTO);
 	}
 	
+//	============상품 삭제===============
+	
+	public void sulkitDelete(SulkitDTO sulkitDTO) {
+		sqlsession.delete("admin.sulkitDelete", sulkitDTO);
+	}
+	
+	public void productDelete(ProductDTO productDTO) {
+		sqlsession.delete("admin.productDelete", productDTO);
+	}
+	
+	public void psBridgeDelete(PsBridgeDTO psBridgeDTO) {
+		sqlsession.delete("admin.psBridgeDelete", psBridgeDTO);
+	}
 	
 	
 }
