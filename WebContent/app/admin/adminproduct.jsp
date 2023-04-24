@@ -89,9 +89,15 @@
             <div class="product-ea"><span>재료</span><a href="${pageContext.request.contextPath}/product/ingredients.prd"><c:out value="${itotal }"/></a>개</div>
             <div class="product-ea"><span>용품</span><a href="${pageContext.request.contextPath}/product/supplies.prd"><c:out value="${stotal }"/></a>개</div>
           </div>
-          <form action="${pageContext.request.contextPath}/app/admin/sulkitupload.jsp" method="get">
-	          <div class="new-product"><button>상품등록</button></div>
+          <div class="btn-box">
+          <form action="${pageContext.request.contextPath}/admin/sulkitUpload.adm" method="get">
+	          <div class="new-product"><button class="sulkit-btn">술키트 등록</button></div>
           </form>
+          <form action="${pageContext.request.contextPath}/admin/sulkitUpload.adm" method="get">
+	          <div class="new-product-2"><button class="product-btn">재료 등록</button></div>
+          </form>
+          </div>
+          
           <!-- 상품검색 카테고리 -->
           <div class="search-title"><span>상품검색</span></div>
           <div class="product-search">

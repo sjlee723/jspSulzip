@@ -1,58 +1,6 @@
-/* 카테고리 선택 시 술과 재료 목록 나오기 */
-
-console.log("aaa");
-
-$('.all').on('change', '.category', function(){
-	var v = $(this).val();
-		if (v == 2) {
-			$(this).siblings('.alcohol').show();
-			$(this).siblings('.ingre').hide();
-			$(this).siblings('.vol').show();
-		} else if (v == 3) {
-			$(this).siblings('.alcohol').hide();
-			$(this).siblings('.ingre').show();
-			$(this).siblings('.vol').show();
-		} else if (v == 1) {
-			$(this).siblings('.alcohol').hide();
-			$(this).siblings('.ingre').hide();
-			$(this).siblings('.vol').hide();
-		}
-});
-
-
-/* 재료정보 개수 추가 */
-let $plusBtn = $(".bi-plus-circle-fill");
-let $minusBtn = $(".bi-dash-circle-fill");
-let $sample = $(".ingre-sample");
-
-$plusBtn.on("click", function(){
-	plus();
-});
-
-$minusBtn.on("click", function(){
-	minus();
-})
-
-function plus() {
-	let cnt = $(".ingre-box").length;
-	if(cnt<11){
-		$(".all").append($sample.html());
-		$('.ingre-box').last().find('div').text(cnt+'.');
-		$('.ingre-cnt').text(cnt);
-	}
-}
-
-function minus(){
-	let cnt = $(".ingre-box").length;
-	if(cnt>2){
-		$('.ingre-box').last().remove();
-		$('.ingre-cnt').text(cnt-2);
-	}
-}
-
-/*===============================================*/
-/* 이미지 업로드 시 미리보기 나오기 */
-
+/**
+ * 
+ */
 
 let $imgPreview = $('.img-preview');
 
@@ -112,12 +60,3 @@ $imgPreview.on('click', '.img-cancel-btn', function() {
 function removePreview() {
 	$imgPreview.html(``).css('background-color', '#f5f5f5');
 }
-
-
-
-
-
-
-
-
-
