@@ -100,9 +100,7 @@ public class MyRecipeUploadOkController implements Execute {
 			myRecipeDAO.insertPmBridge(pmBridgeDTO);
 		}
 		
-		int boardNumber = myRecipeDAO.getSequence();
-		System.out.println(boardNumber);
-		resp.sendRedirect("/sulkit/sulkitDetail.suk?num="+boardNumber);
+		resp.sendRedirect("/myrecipe/myRecipeDetail.mrb?num="+myRecipeNumber);
 	}
 
 }
