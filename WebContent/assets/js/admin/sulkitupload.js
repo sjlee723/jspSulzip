@@ -64,13 +64,14 @@ $('#ex-file').on('change', function() {
 	console.log("1");
 	addPreview(files);
 	console.log("3");
+	addFile(files);
 
 });
 function checkLength(files, length) {
 
 	if (files.length > length) {
 		alert(`파일은 최대 ${length}개까지만 가능합니다.`);
-		return files;
+		return new DataTransfer().files;
 	}
 	return files;
 }
@@ -113,6 +114,14 @@ function removePreview() {
 	$imgPreview.html(``).css('background-color', '#f5f5f5');
 }
 
+/* 파일 처리 */
+function addFile(files){
+	let  $fileInput = $('.myRecipeFileInput');
+	
+	$fileInput[0].files = files;
+	
+	console.log($fileInput[0].files);
+}
 
 
 
