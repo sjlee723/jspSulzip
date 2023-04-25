@@ -32,6 +32,7 @@ public class MyRecipeDetailController implements Execute {
 		List<MyRecipeVO> ingreList = myRecipeDAO.ingre(mrbNum);
 		List<FileDTO> fileList = fileDAO.select(mrbNum);
 		
+		req.setAttribute("mrbNum", mrbNum);
 		req.setAttribute("userNumber", userNumber);
 		req.setAttribute("uploaderId", uploaderId);
 		req.setAttribute("myRecipe", myRecipeDTO);

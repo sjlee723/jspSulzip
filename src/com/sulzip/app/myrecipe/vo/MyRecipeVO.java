@@ -39,5 +39,5 @@ public class MyRecipeVO {
 		return "MyRecipeVO [productNameKor=" + productNameKor + ", productSystemName=" + productSystemName
 				+ ", pmBridgeVol=" + pmBridgeVol + "]";
 	}
-	
+
 }

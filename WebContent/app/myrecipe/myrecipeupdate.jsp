@@ -7,7 +7,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>myrecipeupload</title>
+<title>myrecipeupdate</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/myrecipe/myrecipeupload.css" />
 <link rel="stylesheet"
@@ -38,7 +38,7 @@
 				<div class="upload-box-img"></div>
 				<div class="upload-box-span">
 					<div class="upload-box-title">
-						<span>나만의 레시피 올리기</span>
+						<span>나만의 레시피 수정하기</span>
 					</div>
 					<div class="upload-box-title-s">
 						<span>술.ZIP가이드에 도전하세요!</span>
@@ -62,10 +62,10 @@
 				</label> <input type="file" id="ex-file" name="myRecipeFileList"
 					accept=".jpg, .jpeg, .png" multiple />
 				<div class="img-preview"></div>
-				<div class="img-preview"></div>
+				<div class="img-preview"></div>	
 				<div class="img-preview"></div>
 			</div>
-			<form action="/myrecipe/myRecipeUploadOk.mrb" method="post" enctype="multipart/form-data">
+			<form action="/myrecipe/myRecipeUpdateOk.mrb" method="post" enctype="multipart/form-data">
 				<input type="file" name="myRecipeFile1" id="" class="myRecipeFileInput" required/> <br />
 				<input type="file"	name="myRecipeFile2" id="" class="myRecipeFileInput" /> <br />
 				<input type="file" name="myRecipeFile3" id="" class="myRecipeFileInput" /> <br />
