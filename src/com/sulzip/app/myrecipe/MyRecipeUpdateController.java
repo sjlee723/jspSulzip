@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.sulzip.app.Execute;
 import com.sulzip.app.myrecipe.dao.MyRecipeDAO;
 import com.sulzip.app.myrecipe.dto.MyRecipeDTO;
+import com.sulzip.app.myrecipe.vo.MyRecipeVO;
 import com.sulzip.app.product.dto.ProductDTO;
 
 public class MyRecipeUpdateController implements Execute {
@@ -19,17 +20,16 @@ public class MyRecipeUpdateController implements Execute {
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		MyRecipeDAO myRecipeDAO = new MyRecipeDAO();
 		MyRecipeDTO myRecipeDTO = new MyRecipeDTO();
-		HttpSession session = req.getSession();
 		req.setCharacterEncoding("UTF-8");
-		
-		int userNumber = (int)session.getAttribute("userNumber");
 		
 		int boardNum = Integer.parseInt(req.getHeader("referer").substring("http://localhost:8085/myrecipe/myRecipeDetail.mrb?num=".length()));
 		
 		myRecipeDTO = myRecipeDAO.select(boardNum);
 		
 		req.setAttribute("myRecipeDTO", myRecipeDTO);
+		req.setAttribute("boardNum", boardNum);
 		
+		//	작성하기 원래 틀
 		//카테고리 넘버가 2(술)와 3(재료)인 상품목록을 List로 가져오기
 		List<ProductDTO> alcoholList = myRecipeDAO.category(2); 
 		List<ProductDTO> ingreList = myRecipeDAO.category(3); 

@@ -44,13 +44,18 @@
           </div>
           <div class="detail-btn-wrap">
 	          <div class="abv">
-	            <span>${uploaderId}</span>
+	            작성자 :&nbsp;<span>${uploaderId}</span>
 	          </div>
-	          <div class="">
-	             	<c:if test="${userNumber != null}">
-	                    <a href="${pageContext.request.contextPath}/myrecipe/myRecipeUpdate.mrb" class="writeBtn abv" style="color: white; background-color: #d61c6a;">수정하기</a>
-	               </c:if>
-	          </div>
+          </div>
+          <div class="detail-btn-wrap">
+          	<div class = "user-btn-wrap">
+               <c:if test="${userNumber == myRecipe.getUserNumber()}">
+                    <a href="${pageContext.request.contextPath}/myrecipe/myRecipeUpdate.mrb?num=${mrbNum}" class="writeBtn abv" style="color: white; background-color: #d61c6a;">수정하기</a>
+               </c:if>
+               <c:if test="${userNumber == myRecipe.getUserNumber()}">
+                    <a href="${pageContext.request.contextPath}/myrecipe/myRecipeDelete.mrb" id="deleteBtn" class="writeBtn abv" onclick="return false" style="color: white; background-color: #6e6e73;">삭제하기</a>
+               </c:if>
+          	</div>
           </div>
           <!-- 좋아요 버튼
           <div class="button-box">
