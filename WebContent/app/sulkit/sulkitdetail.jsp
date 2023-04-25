@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +67,8 @@
               </div>
               <div class="row price-area2">
                 <div class="col-12" style="text-align: right;">
-                  <span>총 수량</span>&nbsp;<span id="total_num">1</span><span>&nbsp;개&nbsp;&nbsp;|&nbsp;&nbsp;</span><span id="price"><c:out value="${sulkit.getSulkitPrice()}"/></span><span class="won">&nbsp;원</span>
+                  <span>총 수량</span>&nbsp;<span id="total_num">1</span><span>&nbsp;개&nbsp;&nbsp;|&nbsp;&nbsp;</span><span id="price"><fmt:formatNumber value="${sulkit.getSulkitPrice()}" pattern="#,###"/></span>
+                  <span class="won">&nbsp;원</span>
                 </div>
               </div>
               <div class="row mt-3">
@@ -176,6 +178,6 @@
     $("#price").text(cal_price);
   }
   </script>
-  <script type="text/javascript">function fn_go_to_link(link){location.href=link;}</script>
+  <!-- <script type="text/javascript">function fn_go_to_link(link){location.href=link;}</script> -->
 
 </html>
