@@ -59,4 +59,12 @@ public class MyRecipeDAO {
 	public void upThumb(Map<String, String> thumbInfo) {
 		sqlSession.update("myRecipe.upThumb", thumbInfo);
 	}
+	
+	public String getUserId(int mrbNumber) {
+		return sqlSession.selectOne("myRecipe.getUserId", mrbNumber);
+	}
+	
+	public void modify(MyRecipeDTO myRecipeDTO) {
+		sqlSession.update("myRecipe.modify", myRecipeDTO);
+	}
 }

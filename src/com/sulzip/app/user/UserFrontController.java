@@ -24,7 +24,6 @@ public class UserFrontController extends HttpServlet {
       switch(target) {
       
       case "/user/join.usr" : 
-         System.out.println("user!!!");
          req.getRequestDispatcher("/app/user/join.jsp").forward(req, resp);
          break;
       case "/user/joinOk.usr" :
@@ -40,7 +39,6 @@ public class UserFrontController extends HttpServlet {
          new WithdrawalOkController().execute(req, resp);
          break;
       case "/user/login.usr" : 
-         System.out.println("login!!!");
          new LoginController().execute(req, resp);
          break;
       case "/user/loginOk.usr" :

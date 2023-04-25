@@ -96,3 +96,7 @@
 .container-fluid{
 	padding: 0 !important;
 }
+  
+.card-img-top {
+    border-radius: 0.25rem!important;
+}
