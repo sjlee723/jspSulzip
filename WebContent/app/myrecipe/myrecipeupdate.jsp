@@ -93,7 +93,7 @@
 							viewBox="0 0 16 16">
               <path
 								d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
-            </svg> <span class="ingre-cnt">1</span> <svg xmlns="http://www.w3.org/2000/svg" width="20"
+            </svg> <span class="ingre-cnt">${originIngreList.size()}</span> <svg xmlns="http://www.w3.org/2000/svg" width="20"
 							height="20" fill="currentColor" class="bi bi-dash-circle-fill"
 							viewBox="0 0 16 16">
               <path
@@ -129,31 +129,64 @@
 							<input type="text" placeholder="용량, 단위" name="pmBridgeVol" class="myrecipe-vol pro" />
 						</div>
 					</div>
-					<div class="ingre-box">
-						<div>1.</div>
-						<select name="category" class="myrecipe-category category" required>
-							<option value="" selected disabled>카테고리</option>
-							<option value="2">술</option>
-							<option value="3">재료</option>
-						</select>
-						<select name="category1" class="myrecipe-alcohol pro">
-							<option value="" selected disabled>술</option>
-							<c:forEach var="alcohol" items="${alcoholList}">
-								<option value="${alcohol.getProductNumber()}">
-									<c:out value="${alcohol.getProductNameKor()}" />
-								</option>
-							</c:forEach>
-						</select>
-						<select name="category1" class="myrecipe-ingre pro">
-							<option value="" selected disabled>재료</option>
-							<c:forEach var="ingre" items="${ingreList}">
-								<option value="${ingre.getProductNumber()}">
-									<c:out value="${ingre.getProductNameKor()}" />
-								</option>
-							</c:forEach>
-						</select>
-						<input type="text" placeholder="용량, 단위" name="pmBridgeVol" class="myrecipe-vol pro"/>
-					</div>
+					<c:forEach var="origin" items="${originIngreList}" varStatus="status">
+						<div class="ingre-box">
+							<div>${status.count}.</div>
+							<c:choose>
+								<c:when test="${origin.getCategoryNumber() == 2}">
+									<select name="category" class="myrecipe-category category" required>
+										<option value="" disabled>카테고리</option>
+										<option value="2" selected>술</option>
+										<option value="3">재료</option>
+									</select>
+									<select name="category1" class="myrecipe-alcohol pro" style="display: block;">
+										<option value="${origin.getProductNumber()}" selected>
+											<c:out value="${origin.getProductNameKor()}" />
+										</option>
+										<c:forEach var="alcohol" items="${alcoholList}">
+											<option value="${alcohol.getProductNumber()}">
+												<c:out value="${alcohol.getProductNameKor()}" />
+											</option>
+										</c:forEach>
+									</select>
+									<select name="category1" class="myrecipe-ingre pro">
+									<option value="" selected disabled>재료</option>
+										<c:forEach var="ingre" items="${ingreList}">
+											<option value="${ingre.getProductNumber()}">
+												<c:out value="${ingre.getProductNameKor()}" />
+											</option>
+										</c:forEach>
+									</select>
+								</c:when>
+								<c:when test="${origin.getCategoryNumber() == 3}">
+									<select name="category" class="myrecipe-category category" required>
+										<option value="" disabled>카테고리</option>
+										<option value="2">술</option>
+										<option value="3" selected>재료</option>
+									</select>
+									<select name="category1" class="myrecipe-alcohol pro">
+									<option value="" selected disabled>술</option>
+										<c:forEach var="alcohol" items="${alcoholList}">
+											<option value="${alcohol.getProductNumber()}">
+												<c:out value="${alcohol.getProductNameKor()}" />
+											</option>
+										</c:forEach>
+									</select>
+									<select name="category1" class="myrecipe-ingre pro" style="display: block;">
+										<option value="${origin.getProductNumber()}" selected>
+											<c:out value="${origin.getProductNameKor()}" />
+										</option>
+										<c:forEach var="ingre" items="${ingreList}">
+											<option value="${ingre.getProductNumber()}">
+												<c:out value="${ingre.getProductNameKor()}" />
+											</option>
+										</c:forEach>
+									</select>
+								</c:when>
+							</c:choose>
+							<input type="text" placeholder="용량, 단위" value="${origin.getPmBridgeVol()}" name="pmBridgeVol" class="myrecipe-vol pro" style="display: block;"/>
+						</div>
+					</c:forEach>
 				</div>
 
 				<!-- 레시피 -->
