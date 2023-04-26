@@ -57,9 +57,14 @@
 	
 	<update id="modify" parameterType="MyRecipeDTO">
 		update myrecipe
-		set myRecipe_name_kor=#{myRecipeNameKor}, myRecipe_name_eng=#{myRecipeNameEng}, myRecipe_desc=#{myRecipeDesc}, myRecipe_recipe=#{myRecipeRecipe}, thumbnail=#{thumbnail}
-		where myRecipe_number = #{userNumber}
+		set myRecipe_name_kor=#{myRecipeNameKor}, myRecipe_name_eng=#{myRecipeNameEng}, myRecipe_desc=#{myRecipeDesc}, myRecipe_recipe=#{myRecipeRecipe}
+		where myRecipe_number = #{myRecipeNumber}
 	</update>
+	
+	<delete id="delete">
+		delete from myrecipe
+		where myRecipe_number = #{myRecipeNumber}
+	</delete>
 	
 </mapper>
 
