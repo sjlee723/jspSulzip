@@ -32,7 +32,7 @@ public class CartAddOkController implements Execute {
 			int userNumber = (int)session.getAttribute("userNumber");
 			int productNumber = Integer.valueOf(req.getParameter("productNumber"));
 			int productEa = Integer.valueOf(req.getParameter("productEa")); 
-			int productTotalPrice= Integer.valueOf(req.getParameter("productPrice")) * productEa;
+			int productTotalPrice= Integer.valueOf(req.getParameter("productPrice").trim().replaceAll(",","")) * productEa;
 			
 			cartVO2.setUserNumber(userNumber);
 			cartVO2.setProductNumber(productNumber);
