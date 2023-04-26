@@ -29,7 +29,9 @@ public class MyRecipeUpdateController implements Execute {
 		req.setAttribute("myRecipeDTO", myRecipeDTO);
 		req.setAttribute("boardNum", boardNum);
 		
-		//	작성하기 원래 틀
+		List<MyRecipeVO> originIngreList = myRecipeDAO.ingre(boardNum);
+		req.setAttribute("originIngreList", originIngreList);
+		
 		//카테고리 넘버가 2(술)와 3(재료)인 상품목록을 List로 가져오기
 		List<ProductDTO> alcoholList = myRecipeDAO.category(2); 
 		List<ProductDTO> ingreList = myRecipeDAO.category(3); 

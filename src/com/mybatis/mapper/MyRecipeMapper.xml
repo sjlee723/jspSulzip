@@ -16,7 +16,7 @@
 	</select>
 	
 	<select id="ingre" parameterType="_int" resultType="MyRecipeVO">
-		select p.product_name_kor, p.product_system_name, b.pmBridge_vol
+		select p.product_name_kor, p.product_system_name, b.pmBridge_vol, b.product_number, p.category_number
 		from pmbridge b, product p
 		where b.myRecipe_number = #{myRecipeNumber} and b.product_number = p.product_number
 	</select>

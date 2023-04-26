@@ -26,7 +26,7 @@ public class MyRecipeUpdateOkController implements Execute {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		myrecipe 글내용 업로드, 파일업로드, pmbridge업로드
+//		myrecipe, file, pmbridge 업데이트
 		MyRecipeDAO myRecipeDAO = new MyRecipeDAO();
 		MyRecipeDTO myRecipeDTO = new MyRecipeDTO();
 		PmBridgeDTO pmBridgeDTO = new PmBridgeDTO();
@@ -38,8 +38,7 @@ public class MyRecipeUpdateOkController implements Execute {
 		MultipartRequest multipartReq = new MultipartRequest(req, uploadPath, fileSize, "utf-8",
 				new DefaultFileRenamePolicy());
 		
-		
-//글등록 1개
+//마이레시피 게시글 수정
 		int myRecipeNumber = Integer.parseInt(req.getHeader("referer").substring("http://localhost:8085/myrecipe/myRecipeDetail.mrb?num=".length()));
 		myRecipeDTO.setMyRecipeNumber(myRecipeNumber);
 		myRecipeDTO.setMyRecipeNameKor(multipartReq.getParameter("myRecipeNameKor"));
@@ -48,9 +47,12 @@ public class MyRecipeUpdateOkController implements Execute {
 		myRecipeDTO.setMyRecipeRecipe(multipartReq.getParameter("myRecipeRecipe"));
 		myRecipeDTO.setUserNumber((Integer)session.getAttribute("userNumber"));
 		myRecipeDAO.modify(myRecipeDTO);
-		  
+		
 //파일업로드 for문
+		// db에서 기존 파일 삭제
+		myRecipeDAO.deleteFile(myRecipeNumber);
 		  
+		// db에 새로 등록
 		Enumeration<String> fileNames = multipartReq.getFileNames();
 		
 		while(fileNames.hasMoreElements()) {
@@ -75,17 +77,12 @@ public class MyRecipeUpdateOkController implements Execute {
 			
 			if (fileSystemName == null) { continue; }
 			
-			// db에서 기존 파일 삭제
-			myRecipeDAO.deleteFile(myRecipeNumber);
-			
-			// db에 새로 등록
 			fileDTO.setFileSystemName(fileSystemName);
 			fileDTO.setFileOriginalName(fileOriginalName);
 			fileDTO.setMyRecipeNumber(myRecipeNumber);
 			
 			myRecipeDAO.uploadFile(fileDTO);
 		}
-		
 //pmBridge업로드 for문
 		// db에서 기존 데이터 삭제
 		myRecipeDAO.deletePmBridge(myRecipeNumber);
